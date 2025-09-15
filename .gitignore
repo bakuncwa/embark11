@@ -1,0 +1,104 @@
+# EMBARK 11 - Static Website .gitignore
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor and IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-workspace
+.sublime-project
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Build and Distribution Files
+dist/
+build/
+*.min.css
+*.min.js
+
+# Image Processing Cache
+.image-cache/
+
+# Development Tools
+.sass-cache/
+*.css.map
+*.js.map
+
+# Frontend Development
+# CSS preprocessor cache
+.postcss-cache/
+
+# JavaScript bundling (if added later)
+webpack-stats.json
+.webpack/
+
+# Backup Files
+*.bak
+*.backup
+*.old
+
+# Archive Files (unless specifically needed)
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Environment Files
+.env
+.env.local
+.env.development
+.env.production
+
+# Package Manager Files (if you add them later)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Design Files (large source files)
+# Uncomment if you don't want to track these
+# *.psd
+# *.ai
+# *.sketch
+# *.fig
+# *.xd
+
+# Large Media Files (if any)
+# Uncomment and modify as needed
+# *.mov
+# *.mp4
+# *.avi
+# *.mkv
+# assets/videos/raw/
+
+# Documentation Drafts
+docs/drafts/
+*.draft.md
+
+# Local Configuration
+config.local.js
+settings.local.json
+
+# Browser Testing
+.browserstack/
+selenium-debug.log
+
+# Accessibility Testing
+pa11y-results/
+axe-results/
