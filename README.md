@@ -1,8 +1,8 @@
 # EMBARK Volume 11
 
-Hi E11 Devs! I created our website's initial setup and project structure for our references and guided with the files and directories.
+Hi E11 Devs! Here's our initial setup and project structure for our references and guide with the files and directories.
 
-Some directories are still subject to change and samples. You may also add or omit anything (if applicable).
+Some directories are still subject to change and samples/templates only. You may also add or omit anything (if applicable).
 
 **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
 
@@ -109,17 +109,18 @@ embark11/
 
 ## Website Structure
 
-Both Side A and Side B contain the same 9 sections:
+Both Side A and Side B contain the same 10 sections:
 
 1. **Navbar** (with toggle switch to switch between sides)
 2. **Hero Section** (main banner with title and key messaging)
-3. **About EMBARK 11** (info. about the current volume)
-4. **Read Now** (call-to-action section for reading content)
-5. **About Ad Astra** (info. about the organization)
-6. **EMBARK Team: SPU** (SPU Associates)
-7. **EMBARK Team: EB** (Editorial Board team members)   # single section for SPU + EB  
-8. **EMBARK Team: Directors + Staffers** (Directors and staff)
-9. **Footer** (contact info. and links)
+3. **Read Now Flip** (preview section before main read now)
+4. **Read Now** (call-to-action section)
+5. **About Ad Astra + EMBARK 11** (info. about the org. + current volume)
+6. **About Ad Astra** (info. about the organization)
+7. **EMBARK Team: SPU** (SPU Associates)
+8. **EMBARK Team: EB** (Editorial Board team members)   # single section for SPU + EB  
+9. **EMBARK Team: Directors + Staffers** (Directors and staff)
+10. **Footer** (contact info. and links)
 
 ## Development Workflow
 
@@ -132,8 +133,8 @@ Both Side A and Side B contain the same 9 sections:
    ```
 
 3. **Navigate to your assigned area**:
-   - Side A: Work primarily in `pages/side-a/` and `styles/side-a/`
-   - Side B: Work primarily in `pages/side-b/` and `styles/side-b/`
+   - Side A - Work primarily in `pages/side-a/` and `styles/side-a/`
+   - Side B - Work primarily in `pages/side-b/` and `styles/side-b/`
 
 ### Git Workflow
 
@@ -167,9 +168,9 @@ Both Side A and Side B contain the same 9 sections:
 ### Component Development Strategy
 
 #### Shared Components (Footer, Navbar)
-1. **Base Structure**: Create the base HTML structure and core CSS in `shared/components/`
-2. **Theme Styling**: Each team styles their theme version in their respective `components/` folder
-3. **Functionality**: Add JavaScript interactions in `shared/components/`
+1. **Base Structure** - create the base HTML structure and core CSS in `shared/components/`
+2. **Theme Styling** - each team styles their theme version in their respective `components/` folder
+3. **Functionality** - add JS interactions in `shared/components/`
 
 #### Example - Footer Implementation:
 ```html
@@ -179,10 +180,10 @@ Both Side A and Side B contain the same 9 sections:
 ```
 
 #### Asset Organization
-- **Shared assets** - Logos, icons used by both sides go in `assets/images/shared/`
-- **Side-specific assets** - Theme-specific images go in respective `side-a/` or `side-b/` folders
-- **Optimize images** - Use appropriate formats (WebP when possible, with fallbacks)
-- **Consistent naming** - Use descriptive, kebab-case file names
+- **Shared assets** - logos, icons used by both sides go in `assets/images/shared/`
+- **Side-specific assets** - theme-specific images go in respective `side-a/` or `side-b/` folders
+- **Optimize images** - use appropriate formats (WebP when possible, with fallbacks)
+- **Consistent naming** - use descriptive, kebab-case file names
 
 ## Troubleshooting
 
@@ -207,11 +208,11 @@ Both Side A and Side B contain the same 9 sections:
 
 ### Team Communication
 - Use repository Issues for bug reports and feature requests
-- Create Pull Requests for code review
-- Document any major architectural decisions
+- Create Pull Requests (PR) for code review
+- Document any major decisions
 
 ---
 
-**Repository**: https://github.com/bakuncwa/embark11
-**Last Updated**: September 15, 2025
-**[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
+- **Repository**: https://github.com/bakuncwa/embark11
+- **Last Updated**: September 15, 2025
+- **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
