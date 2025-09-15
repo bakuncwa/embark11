@@ -1,8 +1,8 @@
 # EMBARK Volume 11
 
-Hi E11 Devs! I created our website's initial setup and project structure for our references and guided with the files and directories.
+Hi E11 Devs! Here's our initial setup and project structure for our references and guide with the files and directories.
 
-Some directories are still subject to change and samples. You may also add or omit anything (if applicable).
+Some directories are still subject to change and samples/templates only. You may also add or omit anything (if applicable).
 
 **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
 
