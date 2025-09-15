@@ -167,9 +167,9 @@ Both Side A and Side B contain the same 9 sections:
 ### Component Development Strategy
 
 #### Shared Components (Footer, Navbar)
-1. **Base Structure**: Create the base HTML structure and core CSS in `shared/components/`
-2. **Theme Styling**: Each team styles their theme version in their respective `components/` folder
-3. **Functionality**: Add JavaScript interactions in `shared/components/`
+1. **Base Structure** - create the base HTML structure and core CSS in `shared/components/`
+2. **Theme Styling** - each team styles their theme version in their respective `components/` folder
+3. **Functionality** - add JS interactions in `shared/components/`
 
 #### Example - Footer Implementation:
 ```html
@@ -179,10 +179,10 @@ Both Side A and Side B contain the same 9 sections:
 ```
 
 #### Asset Organization
-- **Shared assets** - Logos, icons used by both sides go in `assets/images/shared/`
-- **Side-specific assets** - Theme-specific images go in respective `side-a/` or `side-b/` folders
-- **Optimize images** - Use appropriate formats (WebP when possible, with fallbacks)
-- **Consistent naming** - Use descriptive, kebab-case file names
+- **Shared assets** - logos, icons used by both sides go in `assets/images/shared/`
+- **Side-specific assets** - theme-specific images go in respective `side-a/` or `side-b/` folders
+- **Optimize images** - use appropriate formats (WebP when possible, with fallbacks)
+- **Consistent naming** - use descriptive, kebab-case file names
 
 ## Troubleshooting
 
