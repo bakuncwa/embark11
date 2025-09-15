@@ -109,17 +109,18 @@ embark11/
 
 ## Website Structure
 
-Both Side A and Side B contain the same 9 sections:
+Both Side A and Side B contain the same 10 sections:
 
 1. **Navbar** (with toggle switch to switch between sides)
 2. **Hero Section** (main banner with title and key messaging)
-3. **About EMBARK 11** (info. about the current volume)
-4. **Read Now** (call-to-action section for reading content)
-5. **About Ad Astra** (info. about the organization)
-6. **EMBARK Team: SPU** (SPU Associates)
-7. **EMBARK Team: EB** (Editorial Board team members)   # single section for SPU + EB  
-8. **EMBARK Team: Directors + Staffers** (Directors and staff)
-9. **Footer** (contact info. and links)
+3. **Read Now Flip** (preview section before main read now)
+4. **Read Now** (call-to-action section)
+5. **About Ad Astra + EMBARK 11** (info. about the org. + current volume)
+6. **About Ad Astra** (info. about the organization)
+7. **EMBARK Team: SPU** (SPU Associates)
+8. **EMBARK Team: EB** (Editorial Board team members)   # single section for SPU + EB  
+9. **EMBARK Team: Directors + Staffers** (Directors and staff)
+10. **Footer** (contact info. and links)
 
 ## Development Workflow
 
@@ -132,8 +133,8 @@ Both Side A and Side B contain the same 9 sections:
    ```
 
 3. **Navigate to your assigned area**:
-   - Side A: Work primarily in `pages/side-a/` and `styles/side-a/`
-   - Side B: Work primarily in `pages/side-b/` and `styles/side-b/`
+   - Side A - Work primarily in `pages/side-a/` and `styles/side-a/`
+   - Side B - Work primarily in `pages/side-b/` and `styles/side-b/`
 
 ### Git Workflow
 
@@ -207,8 +208,8 @@ Both Side A and Side B contain the same 9 sections:
 
 ### Team Communication
 - Use repository Issues for bug reports and feature requests
-- Create Pull Requests for code review
-- Document any major architectural decisions
+- Create Pull Requests (PR) for code review
+- Document any major decisions
 
 ---
 
