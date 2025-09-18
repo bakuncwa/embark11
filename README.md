@@ -29,6 +29,8 @@ EMBARK Vol. 11:
   - Dark theme styling, Side B interactions
 
 ### 📌 Web Delegations 📌
+- **Teaser Page**: Hazel
+    - Initial Checking: September 22 | Release Date: September 24 
 - **Navbar + Switch Function**: Luds
 - **Landing**: Hazel
 - **About EMBARK 11**: Gabby
