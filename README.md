@@ -20,13 +20,25 @@ EMBARK Vol. 11:
 ## Team Structure and Assigned Tasks
 
 ### Development Teams
-- **Side A**: 2 devs. (Gabby & Luds)
+- **Side A**:
   - Focus: `pages/side-a/` and related light theme assets
-  - Responsible for: Light theme styling, Side A interactions
+  - Light theme styling, Side A interactions
   
-- **Side B**: 2 devs. (Kurt & Zel)
+- **Side B**:
   - Focus: `pages/side-b/` and related dark theme assets
-  - Responsible for: Dark theme styling, Side B interactions
+  - Dark theme styling, Side B interactions
+
+### 📌 Web Delegations 📌
+- **Navbar + Switch Function**: Luds
+- **Landing**: Hazel
+- **About EMBARK 11**: Gabby
+- **Read Now 1**: Gabby
+- **Read Now 2**: Gabby
+- **EMBARKs**: Kurt
+- **About Ad Astra**: Ludrein
+- **SPU + EB**: Kurt
+- **Editorial Team**: Ludrein
+- **Footer**: Hazel
 
 ### Shared Responsibilities
 - Toggle switch functionality
@@ -214,5 +226,5 @@ Both Side A and Side B contain the same 10 sections:
 ---
 
 - **Repository**: https://github.com/bakuncwa/embark11
-- **Last Updated**: September 15, 2025
+- **Last Updated**: September 18, 2025
 - **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
