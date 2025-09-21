@@ -34,7 +34,6 @@ EMBARK Vol. 11:
 - **Navbar + Switch Function**: Luds (DONE)
 - **Landing**: Hazel
 - **About Ad Astra + EMBARK 11**: Luds (IN-PROGRESS)
-- **About EMBARK 11**: Gabby
 - **Read Now 1**: Gabby
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
