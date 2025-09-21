@@ -108,13 +108,6 @@ body {
   right: -1px;
 }
 
-/* .teaser-upper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-} */
-
 .teaser-upper {
   position: absolute;
   height: 72%;
@@ -123,21 +116,61 @@ body {
 }
 
 .teaser-bulbWrapper {
-  width: 100vw;
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0px;
+  /* bottom: 0px; */
   z-index: -1;
+  justify-self: center;
 }
+/* 
+height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center; */
 
 .teasera-light {
-  height: 640px;
+  height: 165%;
   object-fit: cover;
 }
 
 .teasera-light-mobile {
   display: none;
+}
+
+.teaser-text {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  flex-direction: column;
+}
+
+.teasera-logo {
+  width: 45%;
+}
+
+.teasera-subtitle {
+  font-family: "Poppins";
+  font-style: italic;
+  font-size: 42px;
+  margin: 12px 0px 0px 0px;
+  padding: 0;
+  color: #ff60d7;
+  font-weight: 600;
+}
+
+.teasera-description {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 24px;
+  color: #110349;
 }
 
 @media (max-width: 1024px) {
@@ -181,7 +214,7 @@ body {
 
   .teasera-light-mobile {
     display: block;
-    height: 730px;
+    height: 336%;
     object-fit: cover;
   }
 
@@ -233,6 +266,10 @@ body {
   .teaser-kite {
     right: -50px;
   }
+
+  .teaser-bulbWrapper {
+    width: 100%;
+  }
 }
 
 @media (max-width: 597px) {
@@ -259,17 +296,26 @@ body {
   }
 
   .teaser-hills {
-    bottom: -1px;
+    bottom: -10px;
   }
 
   .teaser-character {
     width: 45%;
-    bottom: 0px;
+    bottom: -10px;
     left: -70px;
   }
 
   .teaser-kite {
     width: 30%;
+  }
+
+  .teasera-light-mobile {
+    height: initial;
+    width: 100%;
+  }
+
+  .teaser-bulbWrapper {
+    z-index: -2;
   }
 }
 
@@ -283,12 +329,12 @@ body {
   }
 
   .teaser-hills {
-    bottom: 90px;
+    bottom: -5px;
   }
 
   .teaser-character {
     width: 70%;
-    bottom: 60px;
+    bottom: -50px;
     left: -100px;
   }
 
@@ -304,22 +350,26 @@ body {
   }
 
   .teasera-light-mobile {
-    width: 93%;
+    width: 99%;
     height: 100%;
+  }
+
+  .teaser-upper {
+    height: 88%;
   }
 }
 
 @media (max-width: 375px) {
   .teaser-bottom {
-    bottom: -120px;
+    bottom: -110px;
   }
 
   .teaser-hills {
-    bottom: 70px;
+    bottom: -15px;
   }
 
   .teaser-character {
-    bottom: 40px;
+    bottom: -50px;
     left: -90px;
   }
 
@@ -327,11 +377,15 @@ body {
   .teaser-banderitas--right {
     top: -130px;
   }
+
+  .teasera-light-mobile {
+    width: 95%;
+  }
 }
 
 @media (max-width: 320px) {
   .teaser-bottom {
-    bottom: -140px;
+    bottom: -100px;
   }
 
   .teaser-banderitas--left,
@@ -349,12 +403,12 @@ body {
   }
 
   .teaser-hills {
-    bottom: 50px;
+    bottom: 0px;
   }
 
   .teaser-character {
     width: 90%;
-    bottom: 10px;
+    bottom: -50px;
     left: -90px;
   }
 }
