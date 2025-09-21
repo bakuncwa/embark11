@@ -31,7 +31,7 @@ EMBARK Vol. 11:
 ### 📌 Web Delegations 📌
 - **Teaser Page**: Hazel
     - Initial Checking: September 22 | Release Date: September 24 
-- **Navbar + Switch Function**: Luds
+- **Navbar + Switch Function**: Luds   >>> IN-PROGRESS
 - **Landing**: Hazel
 - **About EMBARK 11**: Gabby
 - **Read Now 1**: Gabby
@@ -228,5 +228,5 @@ Both Side A and Side B contain the same 10 sections:
 ---
 
 - **Repository**: https://github.com/bakuncwa/embark11
-- **Last Updated**: September 18, 2025
+- **Last Updated**: September 21, 2025
 - **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
