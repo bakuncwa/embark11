@@ -31,13 +31,13 @@ EMBARK Vol. 11:
 ### 📌 Web Delegations 📌
 - **Teaser Page**: Hazel
     - Initial Checking: September 22 | Release Date: September 24 
-- **Navbar + Switch Function**: Luds   >>> IN-PROGRESS
+- **Navbar + Switch Function**: Luds (DONE)
 - **Landing**: Hazel
+- **About Ad Astra + EMBARK 11**: Luds (IN-PROGRESS)
 - **About EMBARK 11**: Gabby
 - **Read Now 1**: Gabby
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
-- **About Ad Astra**: Ludrein
 - **SPU + EB**: Kurt
 - **Editorial Team**: Ludrein
 - **Footer**: Hazel
