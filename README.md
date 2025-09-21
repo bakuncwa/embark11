@@ -215,6 +215,10 @@ Both Side A and Side B contain the same 10 sections:
 - **[E11] WEBSITE COPIES**: https://docs.google.com/document/d/16GPqIF4yAp9lQLSuBwYXxLCZMKaoGHhYAel0AFp9MZI/edit?tab=t.0
 - **[E11] CREDITS**: https://docs.google.com/document/d/15Z42PnOMi6drb3cmVoC383lvMdD5tkXTH3m-zSwUcjU/edit?tab=t.0
 
+#### GOOGLE FONTS TO EMBED/IMPORT IN CSS
+- **SORA**: https://fonts.google.com/specimen/Sora
+- **POPPINS**: https://fonts.google.com/specimen/Poppins
+
 ### Development Resources
 - [MDN Web Docs](https://developer.mozilla.org/) - HTML, CSS, JS reference
 - [W3C HTML Validator](https://validator.w3.org/) - HTML validation
