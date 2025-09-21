@@ -48,7 +48,7 @@ EMBARK Vol. 11:
 - Base CSS variables and utilities
 - Common JS utilities
 
-## File Structure Guide
+## File Structure Guide (as of Sept. 15)
 
 ```
 embark11/
