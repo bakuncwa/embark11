@@ -270,6 +270,14 @@ height: 100%;
   .teaser-bulbWrapper {
     width: 100%;
   }
+
+  .teasera-logo {
+    width: 60%;
+  }
+
+  .teasera-subtitle {
+    font-size: 38px;
+  }
 }
 
 @media (max-width: 597px) {
@@ -317,6 +325,18 @@ height: 100%;
   .teaser-bulbWrapper {
     z-index: -2;
   }
+
+  .teasera-logo {
+    width: 70%;
+  }
+
+  /* .teasera-subtitle {
+    font-size: 32px;
+  } */
+
+  /* .teasera-description {
+    font-size: 22px;
+  } */
 }
 
 @media (max-width: 425px) {
@@ -356,6 +376,10 @@ height: 100%;
 
   .teaser-upper {
     height: 88%;
+  }
+
+  .teasera-subtitle {
+    font-size: 28px;
   }
 }
 
