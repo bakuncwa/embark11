@@ -218,6 +218,9 @@ Both Side A and Side B contain the same 10 sections:
 - **SORA**: https://fonts.google.com/specimen/Sora
 - **POPPINS**: https://fonts.google.com/specimen/Poppins
 
+#### ASSET OPTIMIZATION
+- **TINYPNG**: https://tinypng.com/
+
 ### Development Resources
 - [MDN Web Docs](https://developer.mozilla.org/) - HTML, CSS, JS reference
 - [W3C HTML Validator](https://validator.w3.org/) - HTML validation
