@@ -1,0 +1,120 @@
+  /* READ NOW 1 */
+
+    .readnow-title {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 4;
+    width: 40%;
+    max-width: 721px;
+    opacity: 0;
+    transition: all 1.5s ease; 
+}
+
+    .readnow-title.visible {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    @keyframes floatNearOrigin {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.8;
+        }
+        25% {
+            transform: translateY(-5px) translateX(0px);
+            opacity: 0.85;
+        }
+        50% {
+            transform: translateY(-15px) translateX(-5px); 
+            opacity: 0.9;
+        }
+        75% {
+            transform: translateY(-5px) translateX(5px);
+            opacity: 0.85;
+        }
+        100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.8;
+        }
+    }
+    
+    .ppl1-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .ppl {
+        position: absolute;
+        bottom: 15%;
+        animation: floatNearOrigin 5s infinite ease-in-out;
+        opacity: 0.8;
+        will-change: transform;
+    }
+    
+    #ppl1 {
+        width: 25vw;
+        left: -10%;
+        animation-delay: 0s;
+    }
+    
+    #kite1 {
+        width: 10vw;
+        left: 30%;
+        animation-delay: 1s;
+        top: 20vh;
+    }
+    
+    #kite2 {
+        width: 8vw;
+        left: 25%;
+        animation-delay: 2s;
+        top: 45vh;
+    }
+    
+    #ppl2 {
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        will-change: transform;
+        padding-top: 30vh;
+        height: auto;
+        width: 50vw;
+    }
+
+
+@media only screen and (max-width: 992px) {
+    #ppl1 {
+        width: 35vw;
+        left: -13%;
+    }
+    
+    #kite1 {
+        width: 15vw;
+        left: 20%;
+        top: 15vh;
+    }
+    
+    #kite2 {
+        width: 9vw;
+        left: 20%;
+        top: 35vh;
+    }
+    
+
+    #ppl2 {
+        width: auto;
+        height: 120vh;
+        left: 95%;
+        top: 50%;
+    }
+
+    .ppl {
+        animation-duration: 4s;
+    }
+}
