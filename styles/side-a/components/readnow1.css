@@ -1,16 +1,15 @@
-  /* READ NOW 1 */
+/* READ NOW 1 */
 
 /* SPHERE */
 .decor-sphere {
+  z-index: 2;
   position: absolute;
   width: 22vw;
   max-width: 280px;
   top: -8%;
   left: -12%;
   z-index: 1;
-  animation: floatNearOrigin 12s infinite ease-in-out;
   opacity: 0.75;
-  filter: blur(2px);
 }
 
 /* PEOPLE */
@@ -29,7 +28,7 @@
 }
 
 #ppl2 {
-  width: 40vw;
+  width: 22vw;
   right: 5%;
   bottom: 0;
   z-index: 3;
