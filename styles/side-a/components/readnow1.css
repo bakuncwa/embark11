@@ -1,36 +1,46 @@
 /* READ NOW 1 */
 
 /* SPHERE */
-.decor-sphere {
-  z-index: 2;
+
+.decor-container {
   position: absolute;
-  width: 22vw;
-  max-width: 280px;
-  top: -8%;
-  left: -12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
-  opacity: 0.75;
+}
+
+.decor-sphere {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 250vmin;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 /* PEOPLE */
 .ppl {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   animation: floatNearOrigin 6s infinite ease-in-out;
   opacity: 0.85;
   will-change: transform;
 }
 
 #ppl1 {
-  width: 22vw;
+  width: 30vw;
   left: 5%;
+  top: 62%;
   z-index: 2;
 }
 
 #ppl2 {
-  width: 22vw;
+  width: 30vw;
   right: 5%;
-  bottom: 0;
+  top: 60%;
   z-index: 3;
   animation-duration: 7s;
 }
@@ -38,18 +48,18 @@
 /* KITES */
 #kite1 {
   position: absolute;
-  width: 12vw;
-  left: 35%;
-  top: 18%;
+  width: 20vw;
+  left: 0%;
+  top: 30%;
   z-index: 2;
   animation: floatNearOrigin 5s infinite ease-in-out;
 }
 
 #kite2 {
   position: absolute;
-  width: 10vw;
-  left: 28%;
-  top: 42%;
+  width: 30vw;
+  left: 82%;
+  top: 0%;
   z-index: 2;
   animation: floatNearOrigin 6s infinite ease-in-out;
   animation-delay: 1s;
@@ -58,43 +68,44 @@
 /* STAR */
 #star {
   position: absolute;
-  width: 6vw;
-  right: 15%;
-  top: 12%;
-  z-index: 1;
+  width: 15vw;
+  left: 42%;
+  top: 67%;
+  z-index: 2;
   opacity: 0.8;
   animation: floatNearOrigin 8s infinite ease-in-out;
 }
 
 /* TEXT BLOCK */
-.readnow-title {
+.readnow1-title {
   position: absolute;
-  top: 40%;
-  left: 55%;
+  top: 20%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  z-index: 5;
-  width: 35%;
-  max-width: 600px;
+  z-index: 10;
+  width: 30%;
+  max-width: 800px;
   opacity: 0;
   transition: all 1.5s ease;
 }
-.readnow-title.visible {
+
+.readnow1-title.visible {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.readnow-text {
+.readnow1-text {
   position: absolute;
-  top: 58%;
-  left: 55%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  z-index: 5;
-  width: 28vw;
-  max-width: 450px;
+  z-index: 10;
+  width: 90%;
+  max-width: 800px;
   opacity: 0;
   transition: all 1.5s ease;
 }
-.readnow-text.visible {
+.readnow1-text.visible {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
