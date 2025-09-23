@@ -1,6 +1,6 @@
 class SideAReadNow {
   constructor() {
-    this.elementsToShow = document.querySelectorAll('.readnow-title');
+    this.elementsToShow = document.querySelectorAll('.readnow1-title, .readnow1-text');
     this.ppl2 = document.getElementById('ppl2');
     this.ppl1 = document.getElementById('ppl1');
     this.kite1 = document.getElementById('kite1');
@@ -16,6 +16,7 @@ class SideAReadNow {
       this.handleParallax();
     });
 
+    // Run once on load
     this.handleScroll();
     this.handleParallax();
   }
