@@ -7,6 +7,7 @@
     <title>EMBARK 11 - Side A</title>
     <link rel="stylesheet" href="../../styles/side-a/components/navbar.css" />
     <link rel="stylesheet" href="../../styles/side-a/components/readnow1.css" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -96,9 +97,12 @@
       </div>
     </div>
 
-        <section id="readnow1" style="display: flex; position: relative; height: 100vh; background-image: url('../../assets/images/readnow1bg-a.png'); background-size: cover;
-      background-position: center; overflow: hidden;">
-      <img src="../../assets/images/readnow1sphere-a.png">
+    <section id="readnow1" style="display: flex; position: relative; height: 100vh; background-image: url('../../assets/images/readnow1bg-a.png'); 
+    background-size: cover; background-position: center; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; 
+    text-align: center; padding: 2rem;">
+      
+      <img src="../../assets/images/readnow1sphere-a.png" class="decor decor-sphere">
+      
       <div class="ppl1-container">
         <img class="ppl" id="ppl1" src="../../assets/images/readnow1ppl1-a.png">
       </div>
@@ -114,21 +118,19 @@
       <div class="ppl2-container">
         <img class="ppl" id="ppl2" src="../../assets/images/readnow1ppl2-a.png">
       </div>
-      <div class="container d-flex flex-column align-items-center">
-        <h1 class="readnow-title" style="height: auto; width: 30rem;">READ NOW</h1>
-        <p>The good and the bad. The beautiful and the ugly.</p>
-        <p>We are in the world continuously governed by that of 
-            which we deem polarities: two opposing sides. 
-            But it’s never been black and white, has it?</p>
-        <p>EMBARK 11 allows us to see beyond false dichotomies 
-            and binaries. The path ahead is unlimited.
-            </p> 
-        <p><b>The space between is where we begin.</b></p>
-      </div>
-      <div>
 
+      <div class="readnow-text">
+        <h1 class="readnow-title">Read Now</h1>
+        <p class="lead">The good and the bad. The beautiful and the ugly.</p>
+        <p>We are in the world continuously governed by that of <br>
+          which we deem polarities: two opposing sides. <br>
+          But it’s never been black and white, has it?</p>
+        <p>EMBARK 11 allows us to see beyond false dichotomies <br>
+          and binaries. The path ahead is unlimited.</p>
+        <p><strong>The space between is where we begin.</strong></p>
       </div>
     </section>
+
 
     <script src="../../scripts/side-a/components/navbar.js"></script>
     <script src="../../scripts/side-a/components/readnow1.js"></script>
