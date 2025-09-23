@@ -38,7 +38,7 @@ EMBARK Vol. 11:
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
 - **SPU + EB**: Kurt
-- **Editorial Team**: Ludrein
+- **Editorial Team**: Gabby
 - **Footer**: Hazel
 
 ### Shared Responsibilities
