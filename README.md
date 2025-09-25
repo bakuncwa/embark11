@@ -30,13 +30,14 @@ EMBARK Vol. 11:
 
 ### 📌 Web Delegations 📌
 - **Teaser Page**: Hazel
-    - Initial Checking: September 22 | Release Date: September 24 
+    - Initial Checking: September 22 | Target Release Date: September 24 
 - **Navbar + Switch Function**: Luds (DONE)
-- **Landing**: Hazel
-- **About Ad Astra + EMBARK 11**: Luds (IN-PROGRESS)
+- **Landing/Hero**: Hazel
+- **Pre-Read Now**: Luds
 - **Read Now 1**: Gabby
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
+- **About Ad Astra + EMBARK 11**: Luds (IN-PROGRESS)
 - **SPU + EB**: Kurt
 - **Editorial Team**: Gabby
 - **Footer**: Hazel
@@ -47,77 +48,119 @@ EMBARK Vol. 11:
 - Base CSS variables and utilities
 - Common JS utilities
 
-## File Structure Guide (as of Sept. 15)
+## File Structure Guide (as of Sept. 25)
 
 ```
 embark11/
-├── index.html                  # Main entry point (redirects to teaser)
-├── teaser.html                 # Teaser/landing page
-├── README.md                   # This documentation file
-├── .gitignore                  # Git ignore rules
+Volume serial number is 1662-C742
+C:.
+│   .gitignore
+│   index.html
+│   README.md
+│   teaser.html
 │
-├── pages/
-│   ├── side-a/
-│   │   └── index.html          # Side A main page
-│   └── side-b/
-│       └── index.html          # Side B main page
+├───assets
+│   ├───fonts
+│   └───images
+│       │   readnow1bg-a.png
+│       │   readnow1kite1-a.png
+│       │   readnow1kite2-a.png
+│       │   readnow1ppl1-a.png
+│       │   readnow1ppl2-a.png
+│       │   readnow1sphere-a.png
+│       │   readnow1star-a.png
+│       │   readnow1text-a.png
+│       │   readnow1title-a.png
+│       │
+│       ├───shared
+│       │   ├───backgrounds
+│       │   ├───icons
+│       │   │   └───social-icons
+│       │   └───logos
+│       │           side-a-navbar-ad-astra-logo.png
+│       │           side-a-navbar-embark-logo.png
+│       │           side-b-navbar-embark-logo.png
+│       │
+│       ├───side-a
+│       │   ├───about
+│       │   ├───decorative
+│       │   ├───hero
+│       │   └───team
+│       │       ├───directors
+│       │       ├───eb
+│       │       └───spu
+│       └───side-b
+│           ├───about
+│           ├───decorative
+│           ├───hero
+│           └───team
+│               ├───directors
+│               ├───eb
+│               └───spu
+├───css
+│       teaser.css
 │
-├── assets/
-│   ├── fonts/                  # Web fonts for both sides (e.g. Sora, Poppins)
-│   └── images/
-│       ├── shared/             # Images used by both sides
-│       │   ├── logos/          # EMBARK and Ad Astra logos
-│       │   ├── backgrounds/    # Shared background images
-│       │   └── icons/          # Icons and social media icons
-│       ├── side-a/             # Side A specific images
-│       │   ├── hero/           # Hero section images
-│       │   ├── about/          # About section images
-│       │   ├── decorative/     # Decorative elements
-│       │   └── team/           # Team member photos
-│       │       ├── spu/        # SPU team photos
-│       │       ├── eb/         # EB team photos
-│       │       └── directors/  # Directors and staff photos
-│       └── side-b/             # Dark side specific images
-│           ├── hero/           # Hero section images
-│           ├── about/          # About section images
-│           ├── decorative/     # Decorative elements
-│           └── team/           # Team member photos
-│               ├── spu/        # SPU team photos
-│               ├── eb/         # EB team photos
-│               └── directors/  # Directors and staff photos
+├───data
+│   ├───content
+│   ├───shared
+│   └───team
+├───docs
+├───img
+│       favicon.png
+│       teasaer-a5Mobile.png
+│       teaser-a1.png
+│       teaser-a2.png
+│       teaser-a3.png
+│       teaser-a4.png
+│       teaser-a5.png
+│       teaser-b1.png
+│       teaser-b2.png
+│       teaser-b3.png
+│       teaser-b4.png
+│       teaser-b5.png
+│       teaser-logo.png
+│       teasera-a5-mobile.png
+│       teasera-a6.png
 │
-├── styles/
-│   ├── shared/
-│   │   └── components/             # Shared component base styles
-│   │       ├── footer.css          # Base footer structure
-│   │       ├── navbar.css          # Base navbar structure
-│   │       └── toggle-switch.css   # Toggle switch functionality
-│   ├── side-a/
-│   │   ├── components/             # Light theme component styles
-│   │   │   ├── footer-theme.css    # Light footer theme
-│   │   │   └── navbar-theme.css    # Light navbar theme
-│   │   └── pages/                  # Side A page-specific styles
-│   └── side-b/
-│       ├── components/             # Dark theme component styles
-│       │   ├── footer-theme.css    # Dark footer theme
-│       │   └── navbar-theme.css    # Dark navbar theme
-│       └── pages/                  # Side B page-specific styles
+├───pages
+│   ├───side-a
+│   │       navbar.html
+│   │       readnow.html
+│   │
+│   └───side-b
+│           navbar.html
 │
-├── scripts/
-│   ├── shared/
-│   │   └── components/             # Shared JavaScript components
-│   │       ├── footer.js           # Footer functionality
-│   │       ├── navbar.js           # Navbar interactions
-│   │       └── toggle-switch.js    # Side switching logic
-│   ├── side-a/                     # Light side specific JavaScript
-│   └── side-b/                     # Dark side specific JavaScript
+├───scripts
+│   ├───components
+│   ├───shared
+│   │   └───components
+│   ├───side-a
+│   │   ├───components
+│   │   │       navbar.js
+│   │   │       readnow1.js
+│   │   │
+│   │   └───pages
+│   └───side-b
+│       └───components
+│               navbar.js
 │
-├── data/
-│   ├── shared/                 # Shared configuration data
-│   ├── content/                # Content data files (e.g. website copies)
-│   └── team/                   # Team member data (if applicable)
-│
-└── docs/                       # Additional documentation
+└───styles
+    │   styles.css
+    │
+    ├───shared
+    │   └───components
+    ├───side-a
+    │   ├───components
+    │   │       navbar.css
+    │   │       readnow1.css
+    │   │
+    │   └───pages
+    └───side-b
+        ├───components
+        │       navbar.css
+        │       readnow1.css
+        │
+        └───pages
 ```
 
 ## Website Structure
@@ -234,5 +277,5 @@ Both Side A and Side B contain the same 10 sections:
 ---
 
 - **Repository**: https://github.com/bakuncwa/embark11
-- **Last Updated**: September 23, 2025
+- **Last Updated**: September 25, 2025
 - **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
