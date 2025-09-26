@@ -6,17 +6,6 @@ Some directories are still subject to change and samples/templates only. You may
 
 **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
 
-## Project Overview
-
-EMBARK Vol. 11:
-- **Side A (Light Side)**
-- **Side B (Dark Side)**
-
-## Repository Info
-
-- **Repository**: https://github.com/bakuncwa/embark11
-- **Main Branch**: `main`
-
 ## Team Structure and Assigned Tasks
 
 ### Development Teams
@@ -178,6 +167,39 @@ Both Side A and Side B contain the same 10 sections:
 9. **EMBARK Team: Directors + Staffers** (Directors and staff)
 10. **Footer** (contact info. and links)
 
+## Resources and References
+
+### Design Resources
+- **[E11] FIGMA FILE**: https://www.figma.com/design/HwenAFyBThaoM9GEokSwuX/EMBARK-11?node-id=262-204&t=8qV0e49RHjJVTllQ-1
+- **[E11] PITCH DECK**: https://docs.google.com/presentation/d/1GQ6B15Mf4u0DZls6ioRQOep94nt3mbnh1e6fMuHvelc/edit#slide=id.g3203186aec0_0_5
+- **[E11] WEB ASSETS**: https://drive.google.com/drive/folders/1xJ63M-fALzeR2Ent54Rw2Tji-7Kz9aiQ
+- **[E11] WEBSITE COPIES**: https://docs.google.com/document/d/16GPqIF4yAp9lQLSuBwYXxLCZMKaoGHhYAel0AFp9MZI/edit?tab=t.0
+- **[E11] CREDITS**: https://docs.google.com/document/d/15Z42PnOMi6drb3cmVoC383lvMdD5tkXTH3m-zSwUcjU/edit?tab=t.0
+
+#### GOOGLE FONTS TO EMBED/IMPORT IN CSS
+- **SORA**: https://fonts.google.com/specimen/Sora
+- **POPPINS**: https://fonts.google.com/specimen/Poppins
+
+#### ASSET OPTIMIZATION
+- **TINYPNG**: https://tinypng.com/
+
+#### GRAINY BACKGROUND WITH CSS AND SVG FILTERS
+- **Grainy Backgrounds with CSS and SVG Filters**: https://www.youtube.com/watch?v=vi-vi4_UpqM
+- **Grainy Gradient playground**: https://grainy-gradients.vercel.app/
+- **URL-encoder for SVG**: https://yoksel.github.io/url-encoder/
+
+### Development Resources
+- [MDN Web Docs](https://developer.mozilla.org/) - HTML, CSS, JS reference
+- [W3C HTML Validator](https://validator.w3.org/) - HTML validation
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - CSS validation
+
+  
+#### Asset Organization
+- **Shared assets** - logos, icons used by both sides go in `assets/images/shared/`
+- **Side-specific assets** - theme-specific images go in respective `side-a/` or `side-b/` folders
+- **Optimize images** - use appropriate formats (WebP when possible, with fallbacks)
+- **Consistent naming** - use descriptive, kebab-case file names
+
 ## Development Workflow
 
 ### Getting Started
@@ -220,54 +242,13 @@ Both Side A and Side B contain the same 10 sections:
    ```
 
 5. **Create a Pull Request** on GitHub for code review
-
-### Component Development Strategy
-
-#### Shared Components (Footer, Navbar)
-1. **Base Structure** - create the base HTML structure and core CSS in `shared/components/`
-2. **Theme Styling** - each team styles their theme version in their respective `components/` folder
-3. **Functionality** - add JS interactions in `shared/components/`
-
-#### Example - Footer Implementation:
-```html
-<!-- Both sides include base + theme -->
-<link rel="stylesheet" href="../../styles/shared/components/footer.css">
-<link rel="stylesheet" href="../../styles/side-a/components/footer-theme.css">
-```
-
-#### Asset Organization
-- **Shared assets** - logos, icons used by both sides go in `assets/images/shared/`
-- **Side-specific assets** - theme-specific images go in respective `side-a/` or `side-b/` folders
-- **Optimize images** - use appropriate formats (WebP when possible, with fallbacks)
-- **Consistent naming** - use descriptive, kebab-case file names
-
+   
 ## Troubleshooting
 
 **Git conflicts**:
 - Communicate with the devs. about file changes
 - Pull latest changes before starting work
 - Use feature branches to avoid conflicts
-
-## Resources and References
-
-### Design Resources
-- **[E11] FIGMA FILE**: https://www.figma.com/design/HwenAFyBThaoM9GEokSwuX/EMBARK-11?node-id=262-204&t=8qV0e49RHjJVTllQ-1
-- **[E11] PITCH DECK**: https://docs.google.com/presentation/d/1GQ6B15Mf4u0DZls6ioRQOep94nt3mbnh1e6fMuHvelc/edit#slide=id.g3203186aec0_0_5
-- **[E11] WEB ASSETS**: https://drive.google.com/drive/folders/1xJ63M-fALzeR2Ent54Rw2Tji-7Kz9aiQ
-- **[E11] WEBSITE COPIES**: https://docs.google.com/document/d/16GPqIF4yAp9lQLSuBwYXxLCZMKaoGHhYAel0AFp9MZI/edit?tab=t.0
-- **[E11] CREDITS**: https://docs.google.com/document/d/15Z42PnOMi6drb3cmVoC383lvMdD5tkXTH3m-zSwUcjU/edit?tab=t.0
-
-#### GOOGLE FONTS TO EMBED/IMPORT IN CSS
-- **SORA**: https://fonts.google.com/specimen/Sora
-- **POPPINS**: https://fonts.google.com/specimen/Poppins
-
-#### ASSET OPTIMIZATION
-- **TINYPNG**: https://tinypng.com/
-
-### Development Resources
-- [MDN Web Docs](https://developer.mozilla.org/) - HTML, CSS, JS reference
-- [W3C HTML Validator](https://validator.w3.org/) - HTML validation
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - CSS validation
 
 ### Team Communication
 - Use repository Issues for bug reports and feature requests
@@ -277,5 +258,5 @@ Both Side A and Side B contain the same 10 sections:
 ---
 
 - **Repository**: https://github.com/bakuncwa/embark11
-- **Last Updated**: September 25, 2025
+- **Last Updated**: September 26, 2025
 - **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
