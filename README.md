@@ -37,7 +37,7 @@ Some directories are still subject to change and samples/templates only. You may
 - Base CSS variables and utilities
 - Common JS utilities
 
-## File Structure Guide (as of Sept. 25)
+## File Structure Guide (as of Sept. 27)
 
 ```
 embark11/
@@ -49,7 +49,6 @@ C:.
 │   teaser.html
 │
 ├───assets
-│   ├───fonts
 │   └───images
 │       │   readnow1bg-a.png
 │       │   readnow1kite1-a.png
@@ -64,14 +63,37 @@ C:.
 │       ├───shared
 │       │   ├───backgrounds
 │       │   ├───icons
+│       │   │   │   side-a-facebook.png
+│       │   │   │   side-a-instagram.png
+│       │   │   │   side-a-mail.png
+│       │   │   │   side-a-tiktok.png
+│       │   │   │   side-a-x.png
+│       │   │   │   side-b-facebook.png
+│       │   │   │   side-b-instagram.png
+│       │   │   │   side-b-mail.png
+│       │   │   │   side-b-tiktok.png
+│       │   │   │   side-b-x.png
+│       │   │   │
 │       │   │   └───social-icons
 │       │   └───logos
+│       │           side-a-footer-ad-astra-logo.png
 │       │           side-a-navbar-ad-astra-logo.png
 │       │           side-a-navbar-embark-logo.png
+│       │           side-b-footer-ad-astra-logo.png
 │       │           side-b-navbar-embark-logo.png
 │       │
 │       ├───side-a
 │       │   ├───about
+│       │   │       side-a-about-aa-embark-logo.png
+│       │   │       side-a-about-aa-noise-rectangle.png
+│       │   │       side-a-about-embark-logo.png
+│       │   │       side-a-about-girl.png
+│       │   │       side-a-about-pinwheel-swirl.png
+│       │   │       side-a-about-wave.png
+│       │   │       side-a-left-btn.svg
+│       │   │       side-a-mobile-about-bottom-assets.png
+│       │   │       side-a-right-btn.svg
+│       │   │
 │       │   ├───decorative
 │       │   ├───hero
 │       │   └───team
@@ -80,6 +102,16 @@ C:.
 │       │       └───spu
 │       └───side-b
 │           ├───about
+│           │       side-b-about-aa-embark-logo.png
+│           │       side-b-about-aa-logo.png
+│           │       side-b-about-aa-noise-rectangle.png
+│           │       side-b-about-left-frame-path.png
+│           │       side-b-about-right-frame-path.png
+│           │       side-b-left-btn.svg
+│           │       side-b-mobile-about-bottom-assets.png
+│           │       side-b-mobile-about-top-assets.png
+│           │       side-b-right-btn.svg
+│           │
 │           ├───decorative
 │           ├───hero
 │           └───team
@@ -89,11 +121,6 @@ C:.
 ├───css
 │       teaser.css
 │
-├───data
-│   ├───content
-│   ├───shared
-│   └───team
-├───docs
 ├───img
 │       favicon.png
 │       teasaer-a5Mobile.png
@@ -113,10 +140,15 @@ C:.
 │
 ├───pages
 │   ├───side-a
+│   │       about-aa.html
+│   │       footer.html
+│   │       index.html
 │   │       navbar.html
 │   │       readnow.html
 │   │
 │   └───side-b
+│           about-aa.html
+│           footer.html
 │           navbar.html
 │
 ├───scripts
@@ -125,12 +157,14 @@ C:.
 │   │   └───components
 │   ├───side-a
 │   │   ├───components
+│   │   │       about-aa.js
 │   │   │       navbar.js
 │   │   │       readnow1.js
 │   │   │
 │   │   └───pages
 │   └───side-b
 │       └───components
+│               about-aa.js
 │               navbar.js
 │
 └───styles
@@ -140,16 +174,23 @@ C:.
     │   └───components
     ├───side-a
     │   ├───components
+    │   │       footer.css
     │   │       navbar.css
     │   │       readnow1.css
     │   │
     │   └───pages
+    │           about-ad-astra.css
+    │           about-decorative-assets.css
+    │
     └───side-b
         ├───components
+        │       footer.css
         │       navbar.css
         │       readnow1.css
         │
         └───pages
+                about-ad-astra.css
+                about-decorative-assets.css
 ```
 
 ## Website Structure
