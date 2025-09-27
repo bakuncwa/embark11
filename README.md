@@ -22,11 +22,11 @@ Some directories are still subject to change and samples/templates only. You may
     - Initial Checking: September 22 | Target Release Date: September 24 
 - **Navbar + Switch Function**: Luds (DONE)
 - **Landing/Hero**: Hazel
-- **Pre-Read Now**: Luds
+- **Pre-Read Now**: Luds (IN-PROGRESS)
 - **Read Now 1**: Gabby
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
-- **About Ad Astra + EMBARK 11**: Luds (IN-PROGRESS)
+- **About Ad Astra + EMBARK 11**: Luds (DONE)
 - **SPU + EB**: Kurt
 - **Editorial Team**: Gabby
 - **Footer**: Hazel
@@ -258,5 +258,5 @@ Both Side A and Side B contain the same 10 sections:
 ---
 
 - **Repository**: https://github.com/bakuncwa/embark11
-- **Last Updated**: September 26, 2025
+- **Last Updated**: September 27, 2025
 - **[EMBARK 11] GitHub Guide GDocs**: https://docs.google.com/document/d/1xzlTQJBSVEaB0Um6BlJxnjtuLAp2pO4wN1_bYwpMWjI/edit?usp=sharing
