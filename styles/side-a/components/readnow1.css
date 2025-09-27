@@ -118,3 +118,180 @@
   75%  { transform: translateY(-5px) translateX(4px); opacity: 0.9; }
   100% { transform: translateY(0) translateX(0); opacity: 0.85; }
 }
+
+/* ========================= */
+/* MEDIA QUERIES RESPONSIVE  */
+/* ========================= */
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+  .decor-sphere {
+    width: 300vmin;
+    top: 75%;
+  }
+
+  #ppl1, #ppl2 {
+    width: 40vw;
+  }
+
+  #ppl1{
+    left: -5%;
+  }
+
+    #ppl2{
+    right: -4%;
+  }
+
+  #kite1 {
+    width: 25vw;
+    top: 45%;
+  }
+
+  #kite2 {
+    width: 35vw;
+    left: 75%;
+    top: 5%;
+  }
+
+  #star {
+    width: 18vw;
+    top: 67%;
+  }
+
+  .readnow1-title {
+    width: 35%;
+  }
+
+  .readnow1-text {
+    width: 55%;
+    top: 50%;
+  }
+}
+
+/* Large Mobile (<=768px) */
+@media (max-width: 768px) {
+  .decor-sphere {
+    width: 340vmin;
+    top: 78%;
+  }
+
+  #ppl1, #ppl2 {
+    width: 48vw;
+    margin: 8%;
+    top: 65%;
+  }
+
+  #kite1 {
+    width: 30vw;
+    top: 59%;
+  }
+
+  #kite2 {
+    width: 40vw;
+    left: 70%;
+    top: 10%;
+  }
+
+  #star {
+    width: 20vw;
+    top: 72%;
+  }
+
+  .readnow1-title {
+    width: 60%;
+    top: 20%;
+  }
+
+  .readnow1-text {
+    width: 95%;
+    top: 48%;
+  }
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  .decor-sphere {
+    width: 420vmin;
+    top: 80%;
+  }
+
+  #ppl1, #ppl2 {
+    width: 70vw;
+    top: 60%;
+  }
+
+  #ppl1{
+    left: -18%;
+    rotate: -5deg;
+  }
+
+  #ppl2{
+    right: -13%;
+    rotate: 5deg;
+  }
+
+  #kite1 {
+    width: 35vw;
+    top: 60%;
+  }
+
+  #kite2 {
+    width: 45vw;
+    left: 65%;
+    top: 2%;
+  }
+
+  #star {
+    width: 25vw;
+    top: 65%;
+    left: 58%;
+  }
+
+  .readnow1-title {
+    width: 80%;
+    top: 25%;
+  }
+
+  .readnow1-text {
+    width: 100%;
+    top: 47%;
+  }
+}
+
+/* Extra Small Mobile (<=344px) */
+@media (max-width: 344px) {
+  .decor-sphere {
+    width: 500vmin;
+    top: 87%;
+  }
+
+  #ppl1, #ppl2 {
+    width: 65vw;
+    top: 68%
+  }
+
+  #kite1 {
+    width: 40vw;
+    top: 60%;
+  }
+
+  #kite2 {
+    width: 50vw;
+    left: 65%;
+  }
+
+  #star {
+    width: 28vw;
+    top: 68%;
+  }
+
+  .readnow1-title {
+    width: 85%;
+    top: 30%;
+  }
+
+  .readnow1-text {
+    width: 100%;
+    top: 47%;
+  }
+}
