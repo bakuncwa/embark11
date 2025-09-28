@@ -125,36 +125,42 @@
 /* MEDIA QUERIES RESPONSIVE  */
 /* ========================= */
 
-/* Tablets (<=1024px) */
-@media (max-width: 1024px) {
+/* Tablets (<=1280px) */
+@media (max-width: 1280px) {
   .decor2-sphere {
     width: 300vmin;
     top: 75%;
   }
 
   #boat, #footprint {
-    width: 40vw;
+    width: 30vw;
   }
 
   #boat{
     left: -5%;
+    top: 50%;
   }
 
     #footprint{
     right: -4%;
+    top: 65%;
   }
 
   .readnow2-title {
-    width: 35%;
+    width: 40%;
+    top: 80%;
   }
 
   .readnow2-text {
-    width: 55%;
-    top: 50%;
+    width: 30%;
+    top: 85%;
   }
 
-  .iframe-container {
-   margin-top: -100px;
+   .iframe-container {
+   margin-top: 5%;
+   left: 15%;
+    width: 50%;
+    height: auto;
   }
   
     .paragraph-container {
@@ -165,8 +171,54 @@
   }
 }
 
-/* Large Mobile (<=768px) */
-@media (max-width: 768px) {
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+  .decor2-sphere {
+    width: 300vmin;
+    top: 75%;
+  }
+
+  #boat, #footprint {
+    width: 30vw;
+  }
+
+  #boat{
+    left: -5%;
+    top: 75%;
+  }
+
+    #footprint{
+    right: -4%;
+    top: 82%;
+  }
+
+  .readnow2-title {
+    width: 50%;
+    top: 75%;
+  }
+
+  .readnow2-text {
+    width: 30%;
+    top: 80%;
+  }
+
+   .iframe-container {
+   margin-top: 20%;
+   left: 0;
+    width: 50%;
+    height: auto;
+  }
+  
+    .paragraph-container {
+    z-index: 1000;
+  }
+  .magazine-paragraph{
+     font-size: 0.8rem;
+  }
+}
+
+/* Large Mobile (<=920px) */
+@media (max-width: 920px) {
   .decor2-sphere {
     width: 340vmin;
     top: 78%;
@@ -189,8 +241,8 @@
   }
 
     .iframe-container {
-      width: 100%; 
-      padding-top: 160%; 
+      width: 50%; 
+      height: auto;
   }
 
   .paragraph-container {
@@ -209,8 +261,8 @@
   }
 
   #boat, #footprint {
-    width: 70vw;
-    top: 60%;
+    width: 55vw;
+    top: 70%;
   }
 
   #boat{
@@ -225,16 +277,16 @@
 
   .readnow2-title {
     width: 80%;
-    top: 25%;
+    top: 65%;
   }
 
   .readnow2-text {
-    width: 100%;
-    top: 47%;
+    width: 50%;
+    top: 70%;
   }
 
    .iframe-container {
-   margin-top: 95%;
+   margin-top: 60%;
    left: -0.2%;
     width: 100%;
     height: auto;
@@ -248,30 +300,33 @@
   }
 }
 
-/* Extra Small Mobile (<=344px) */
-@media (max-width: 344px) {
+/* Extra Small Mobile (<=375px) */
+@media (max-width: 375px) {
   .decor2-sphere {
     width: 500vmin;
     top: 87%;
   }
 
   #boat, #footprint {
-    width: 65vw;
-    top: 68%
+    width: 60vw;
+    top: 62%
   }
 
   .readnow2-title {
-    width: 85%;
-    top: 30%;
+    width: 80%;
+    top: 55%;
   }
 
   .readnow2-text {
-    width: 100%;
-    top: 47%;
+    width: 60%;
+    top: 60%;
   }
 
-     .iframe-container {
-   margin-top: -100px;
+   .iframe-container {
+   margin-top: 50%;
+   left: -0.2%;
+    width: 100%;
+    height: auto;
   }
   
     .paragraph-container {

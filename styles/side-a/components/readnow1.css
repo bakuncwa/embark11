@@ -164,7 +164,7 @@
 
   .readnow1-text {
     width: 55%;
-    top: 50%;
+    top: 40%;
   }
 }
 
@@ -267,12 +267,12 @@
 
   #ppl1, #ppl2 {
     width: 65vw;
-    top: 68%
+    top: 55%
   }
 
   #kite1 {
     width: 40vw;
-    top: 60%;
+    top: 50%;
   }
 
   #kite2 {
@@ -282,16 +282,16 @@
 
   #star {
     width: 28vw;
-    top: 68%;
+    top: 55%;
   }
 
   .readnow1-title {
     width: 85%;
-    top: 30%;
+    top: 20%;
   }
 
   .readnow1-text {
     width: 100%;
-    top: 47%;
+    top: 37%;
   }
 }
