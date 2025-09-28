@@ -1,0 +1,285 @@
+/* READ NOW 2 */
+
+/* IFRAME */
+.iframe-container {
+  margin-top: 10svh;
+  left: 32vmin;
+  position: relative;
+  width: 70%; 
+  height: 80%; 
+  max-width: 1500px; 
+  padding-top: 35%; 
+  z-index: 2;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* SPHERE */
+
+.decor2-container {
+  position: absolute;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  rotate: 180deg;
+}
+
+.decor2-sphere {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 250vmin;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* ASSETS */
+.readnow2-assets {
+  position: absolute;
+  bottom: 5%;
+  animation: floatNearOrigin 6s infinite ease-in-out;
+  opacity: 0.85;
+  will-change: transform;
+}
+
+#boat {
+  width: 30vw;
+  left: -0.5%;
+  top: 50%;
+  z-index: 2;
+}
+
+#footprint {
+  width: 30vw;
+  right: -1%;
+  top: 70%;
+  z-index: 3;
+  animation-duration: 7s;
+}
+
+/* TEXT BLOCK */
+.readnow2-title {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 10;
+  width: 30%;
+  max-width: 800px;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.readnow2-title.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.readnow2-text {
+  background-color: #6043CF;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  size: 0.2rem;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
+  
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 10;
+  width: 15%;
+  max-width: 800px;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.readnow2-text.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* FLOATING ANIMATION */
+@keyframes floatNearOrigin {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.85; }
+  25%  { transform: translateY(-5px) translateX(2px); opacity: 0.9; }
+  50%  { transform: translateY(-12px) translateX(-4px); opacity: 0.95; }
+  75%  { transform: translateY(-5px) translateX(4px); opacity: 0.9; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.85; }
+}
+
+/* ========================= */
+/* MEDIA QUERIES RESPONSIVE  */
+/* ========================= */
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+  .decor2-sphere {
+    width: 300vmin;
+    top: 75%;
+  }
+
+  #boat, #footprint {
+    width: 40vw;
+  }
+
+  #boat{
+    left: -5%;
+  }
+
+    #footprint{
+    right: -4%;
+  }
+
+  .readnow2-title {
+    width: 35%;
+  }
+
+  .readnow2-text {
+    width: 55%;
+    top: 50%;
+  }
+
+  .iframe-container {
+   margin-top: -100px;
+  }
+  
+    .paragraph-container {
+    z-index: 1000;
+  }
+  .magazine-paragraph{
+     font-size: 0.8rem;
+  }
+}
+
+/* Large Mobile (<=768px) */
+@media (max-width: 768px) {
+  .decor2-sphere {
+    width: 340vmin;
+    top: 78%;
+  }
+
+  #boat, #footprint {
+    width: 48vw;
+    margin: 8%;
+    top: 65%;
+  }
+
+  .readnow2-title {
+    width: 60%;
+    top: 20%;
+  }
+
+  .readnow2-text {
+    width: 95%;
+    top: 48%;
+  }
+
+    .iframe-container {
+      width: 100%; 
+      padding-top: 160%; 
+  }
+
+  .paragraph-container {
+    min-width: 100%;
+    max-width: 0;
+    z-index: 100;
+    margin: 0 auto; 
+  }  
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  .decor-sphere {
+    width: 420vmin;
+    top: 80%;
+  }
+
+  #boat, #footprint {
+    width: 70vw;
+    top: 60%;
+  }
+
+  #boat{
+    left: -18%;
+    rotate: -5deg;
+  }
+
+  #footprint{
+    right: -13%;
+    rotate: 5deg;
+  }
+
+  .readnow2-title {
+    width: 80%;
+    top: 25%;
+  }
+
+  .readnow2-text {
+    width: 100%;
+    top: 47%;
+  }
+
+   .iframe-container {
+   margin-top: 95%;
+   left: -0.2%;
+    width: 100%;
+    height: auto;
+  }
+  
+    .paragraph-container {
+    z-index: 1000;
+  }
+  .magazine-paragraph{
+     font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Mobile (<=344px) */
+@media (max-width: 344px) {
+  .decor2-sphere {
+    width: 500vmin;
+    top: 87%;
+  }
+
+  #boat, #footprint {
+    width: 65vw;
+    top: 68%
+  }
+
+  .readnow2-title {
+    width: 85%;
+    top: 30%;
+  }
+
+  .readnow2-text {
+    width: 100%;
+    top: 47%;
+  }
+
+     .iframe-container {
+   margin-top: -100px;
+  }
+  
+    .paragraph-container {
+    z-index: 1000;
+  }
+  .magazine-paragraph{
+     font-size: 0.8rem;
+  }
+  
+}
+
