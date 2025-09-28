@@ -67,11 +67,8 @@
 }
 
 .hero-button-play-circle {
-  /* position: absolute; */
   width: 30.32px;
   height: 30.32px;
-  /* left: 215px;
-  top: 7.34px; */
   background: #f05f7d;
   display: flex;
   justify-content: center;
@@ -80,8 +77,22 @@
   color: white;
 }
 
-.hero-button:hover {
+/* Hover v1 */
+/* .hero-button:hover {
   transform: scale(1.1);
+} */
+
+/* Hover v2 */
+.hero-button:hover {
+  background: #f69b6c;
+}
+
+.hero-button:hover .hero-button-text {
+  color: white;
+}
+
+.hero-button:hover .hero-button-play-circle {
+  background: #561487;
 }
 
 .hero-blob1 {
