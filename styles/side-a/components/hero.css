@@ -1,5 +1,5 @@
 .hero-page {
-  background: linear-gradient(to bottom, #ffe495, #fff5db);
+  background: linear-gradient(to bottom, #fde7a2 10%, #fff5db 90%);
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -11,10 +11,77 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
+  flex-direction: column;
 }
 
 .hero-EMBARK {
   width: 50%;
+}
+
+.hero-Vol11 {
+  font-size: 4vw;
+  font-family: "Sora";
+  color: #ff71a3;
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  font-weight: 800;
+}
+
+.hero-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 7px;
+
+  width: 220px;
+  height: 43px;
+
+  background: #ffe495;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  border: none;
+  margin-top: 40px;
+
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.hero-button-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /* line-height: 30px; */
+  /* identical to box height */
+  text-align: center;
+
+  color: #110349;
+  padding: 0px;
+  margin: 0px;
+}
+
+.hero-button-play {
+  width: 30.32px;
+  height: 30.32px;
+}
+
+.hero-button-play-circle {
+  /* position: absolute; */
+  width: 30.32px;
+  height: 30.32px;
+  /* left: 215px;
+  top: 7.34px; */
+  background: #f05f7d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.hero-button:hover {
+  transform: scale(1.1);
 }
 
 .hero-blob1 {
@@ -78,6 +145,14 @@
     left: -70px;
     height: 18%;
   }
+
+  .hero-EMBARK {
+    width: 60%;
+  }
+
+  .hero-Vol11 {
+    font-size: 5vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -99,6 +174,14 @@
   .hero-blob1 {
     left: -90px;
   }
+
+  .hero-EMBARK {
+    width: 70%;
+  }
+
+  .hero-Vol11 {
+    font-size: 6vw;
+  }
 }
 
 @media (max-width: 597px) {
@@ -117,12 +200,21 @@
     width: 40%;
     transform: rotate(25deg);
     left: -50px;
+    top: -30px;
   }
 
   .hero-blob1 {
     top: unset;
     bottom: 180px;
     height: 17%;
+  }
+
+  .hero-title {
+    height: 95vh;
+  }
+
+  .hero-Vol11 {
+    font-size: 7vw;
   }
 }
 
@@ -143,9 +235,21 @@
   }
 
   .hero-character1 {
-    width: 60%;
-    left: -80px;
+    width: 50%;
+    left: -40px;
     top: -30px;
+  }
+
+  .hero-EMBARK {
+    width: 80%;
+  }
+
+  .hero-Vol11 {
+    font-size: 8vw;
+  }
+
+  .hero-button {
+    margin-top: 20px;
   }
 }
 
@@ -160,7 +264,8 @@
   }
 
   .hero-character1 {
-    left: -60px;
+    left: -50px;
+    width: 60%;
   }
 
   .hero-character2 {
@@ -177,6 +282,11 @@
   .hero-blob1 {
     height: 15%;
     left: -80px;
+  }
+
+  .hero-character1 {
+    top: -10px;
+    left: -40px;
   }
 }
 
