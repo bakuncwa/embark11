@@ -1,8 +1,10 @@
 class SideAReadNow {
   constructor() {
-    this.elementsToShow = document.querySelectorAll('.readnow1-title, .readnow1-text');
+    this.elementsToShow = document.querySelectorAll('.readnow1-title, .readnow1-text, .readnow2-title, .readnow2-text');
     this.ppl2 = document.getElementById('ppl2');
     this.ppl1 = document.getElementById('ppl1');
+    this.footprint = document.getElementById('footprint');
+    this.boat = document.getElementById('boat');
     this.kite1 = document.getElementById('kite1');
     this.kite2 = document.getElementById('kite2');
 
@@ -34,6 +36,8 @@ class SideAReadNow {
 
     if (this.ppl2) this.ppl2.style.transform = `translateY(${scrollPosition * 0.03}px)`;
     if (this.ppl1) this.ppl1.style.transform = `translateY(${scrollPosition * 0.03}px)`;
+    if (this.footprint) this.footprint.style.transform = `translateY(${scrollPosition * 0.03}px)`;
+    if (this.boat) this.boat.style.transform = `translateY(${scrollPosition * 0.03}px)`;
     if (this.kite1) this.kite1.style.transform = `translateY(${scrollPosition * 0.02}px)`;
     if (this.kite2) this.kite2.style.transform = `translateY(${scrollPosition * 0.04}px)`;
   }
