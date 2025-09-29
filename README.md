@@ -22,7 +22,7 @@ Some directories are still subject to change and samples/templates only. You may
     - Initial Checking: September 22 | Target Release Date: September 24 
 - **Navbar + Switch Function**: Luds (DONE)
 - **Landing/Hero**: Hazel
-- **Pre-Read Now**: Luds (IN-PROGRESS)
+- **Pre-Read Now**: Luds (DONE)
 - **Read Now 1**: Gabby
 - **Read Now 2**: Gabby
 - **EMBARKs**: Kurt
@@ -37,7 +37,7 @@ Some directories are still subject to change and samples/templates only. You may
 - Base CSS variables and utilities
 - Common JS utilities
 
-## File Structure Guide (as of Sept. 27)
+## File Structure Guide (as of Sept. 29)
 
 ```
 embark11/
@@ -50,6 +50,12 @@ C:.
 │
 ├───assets
 │   └───images
+│       │   hero-blob1-a.png
+│       │   hero-blob2-a.png
+│       │   hero-character1-a.png
+│       │   hero-character2-a.png
+│       │   hero-EMBARK-a.png
+│       │   hero-hills-a.png
 │       │   readnow1bg-a.png
 │       │   readnow1kite1-a.png
 │       │   readnow1kite2-a.png
@@ -59,6 +65,9 @@ C:.
 │       │   readnow1star-a.png
 │       │   readnow1text-a.png
 │       │   readnow1title-a.png
+│       │   readnow2boat-a.png
+│       │   readnow2footprint-a.png
+│       │   readnow2title-a.png
 │       │
 │       ├───shared
 │       │   ├───backgrounds
@@ -96,6 +105,13 @@ C:.
 │       │   │
 │       │   ├───decorative
 │       │   ├───hero
+│       │   ├───pre-readnow
+│       │   │       side-a-pre-readnow-left-camera.png
+│       │   │       side-a-pre-readnow-left-girl.png
+│       │   │       side-a-pre-readnow-left-noise.png
+│       │   │       side-a-pre-readnow-right-boy.png
+│       │   │       side-a-pre-readnow-right-noise.png
+│       │   │
 │       │   └───team
 │       │       ├───directors
 │       │       ├───eb
@@ -114,6 +130,14 @@ C:.
 │           │
 │           ├───decorative
 │           ├───hero
+│           ├───pre-readnow
+│           │       side-b-pre-readnow-left-coin-1.png
+│           │       side-b-pre-readnow-left-coin-2.png
+│           │       side-b-pre-readnow-left-face.png
+│           │       side-b-pre-readnow-right-coin-3.png
+│           │       side-b-pre-readnow-right-coin-4.png
+│           │       side-b-pre-readnow-right-face.png
+│           │
 │           └───team
 │               ├───directors
 │               ├───eb
@@ -142,30 +166,33 @@ C:.
 │   ├───side-a
 │   │       about-aa.html
 │   │       footer.html
+│   │       hero.html
 │   │       index.html
 │   │       navbar.html
+│   │       pre-readnow.html
+│   │       prev-embarks.html
 │   │       readnow.html
 │   │
 │   └───side-b
 │           about-aa.html
 │           footer.html
 │           navbar.html
+│           pre-readnow.html
 │
 ├───scripts
-│   ├───components
-│   ├───shared
-│   │   └───components
 │   ├───side-a
-│   │   ├───components
-│   │   │       about-aa.js
-│   │   │       navbar.js
-│   │   │       readnow1.js
-│   │   │
-│   │   └───pages
+│   │   └───components
+│   │           about-aa.js
+│   │           hero.js
+│   │           navbar.js
+│   │           pre-readnow.js
+│   │           readnow1.js
+│   │
 │   └───side-b
 │       └───components
 │               about-aa.js
 │               navbar.js
+│               pre-readnow.js
 │
 └───styles
     │   styles.css
@@ -175,12 +202,16 @@ C:.
     ├───side-a
     │   ├───components
     │   │       footer.css
+    │   │       hero.css
     │   │       navbar.css
     │   │       readnow1.css
+    │   │       readnow2.css
     │   │
     │   └───pages
     │           about-ad-astra.css
     │           about-decorative-assets.css
+    │           pre-readnow-assets.css
+    │           pre-readnow.css
     │
     └───side-b
         ├───components
@@ -191,6 +222,8 @@ C:.
         └───pages
                 about-ad-astra.css
                 about-decorative-assets.css
+                pre-readnow-assets.css
+                pre-readnow.css
 ```
 
 ## Website Structure
