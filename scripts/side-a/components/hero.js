@@ -5,6 +5,10 @@ const b1 = document.getElementById("hero-blob1");
 const b2 = document.getElementById("hero-blob2");
 const section = document.getElementById("hero-page");
 
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-loaded");
+});
+
 hills.style.transform = "rotate(4deg)";
 hills.style.zIndex = "1";
 
@@ -97,6 +101,8 @@ function scrollAnimation() {
     hills.style.right = "-10px";
     hills.style.width = "150%";
     hills.style.bottom = "-50px";
+
+    c1.classList.add("float-animate");
     // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
       // Stop being fixed — become absolute inside section
