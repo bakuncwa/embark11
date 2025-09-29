@@ -1,0 +1,551 @@
+/* (SIDE A) PRE-READNOW ASSETS */
+
+/* ASSETS BASE STYLES */
+.decorative-asset {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  user-select: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.left-camera {
+  top: clamp(10px, 5vh, 80px);
+  left: -20px;
+  width: clamp(180px, 26vw, 400px);
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(-30px) translateY(-20px);
+  animation: slideInFromTopLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s
+    forwards;
+}
+
+.left-noise {
+  bottom: clamp(-50px, -5vh, -20px);
+  left: -30px;
+  width: clamp(220px, 30vw, 470px);
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(-30px) translateY(20px);
+  animation: slideInFromBottomLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+    forwards;
+}
+
+.left-girl {
+  bottom: clamp(30px, 7vh, 90px);
+  left: -30px;
+  width: clamp(220px, 30vw, 470px);
+  height: auto;
+  z-index: 6;
+  opacity: 0;
+  transform: translateX(-30px) translateY(20px);
+  animation: slideInFromBottomLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+      forwards,
+    floatGirl 3s ease-in-out 2s infinite;
+}
+
+.right-noise {
+  top: clamp(-30px, -3vh, -10px);
+  right: 0;
+  width: clamp(150px, 22vw, 340px);
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(30px) translateY(-20px);
+  animation: slideInFromTopRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s
+    forwards;
+}
+
+.right-boy {
+  bottom: 0;
+  right: clamp(10px, 4vw, 100px);
+  width: clamp(170px, 24vw, 370px);
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(30px) translateY(20px);
+  animation: slideInFromBottomRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s
+    forwards;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* (320px and below) */
+@media (max-width: 320px) {
+  .left-camera {
+    width: clamp(400px, 90vw, 450px);
+    top: clamp(2px, 1vh, 10px);
+    left: -5px;
+  }
+
+  .left-noise {
+    width: clamp(420px, 95vw, 480px);
+    bottom: clamp(-30px, -3vh, -10px);
+    left: -15px;
+  }
+
+  .left-girl {
+    width: clamp(420px, 95vw, 480px);
+    bottom: clamp(3px, 3vh, 5px);
+    left: -15px;
+  }
+
+  .right-noise {
+    width: clamp(380px, 85vw, 420px);
+    top: clamp(-20px, -2vh, -5px);
+    right: 0;
+  }
+
+  .right-boy {
+    width: clamp(400px, 90vw, 450px);
+    bottom: 0;
+    right: clamp(2px, 1vw, 10px);
+  }
+}
+
+/* Mobile Phones (321px to 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  .left-camera {
+    top: clamp(5px, 2vh, 25px);
+    left: -10px;
+    width: clamp(180px, 32vw, 230px);
+  }
+
+  .left-noise {
+    bottom: clamp(-40px, -8vh, -15px);
+    left: -50px;
+    width: clamp(220px, 38vw, 280px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -50px;
+    width: clamp(220px, 38vw, 280px);
+  }
+
+  .right-noise {
+    top: clamp(-25px, -2vh, -8px);
+    right: 0;
+    width: clamp(160px, 28vw, 210px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(5px, 2vw, 15px);
+    width: clamp(170px, 30vw, 220px);
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .left-camera {
+    top: clamp(15px, 4vh, 45px);
+    left: -15px;
+    width: clamp(180px, 26vw, 240px);
+  }
+
+  .left-noise {
+    bottom: clamp(-35px, -3vh, -10px);
+    left: -55px;
+    width: clamp(210px, 30vw, 280px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -55px;
+    width: clamp(210px, 30vw, 280px);
+  }
+
+  .right-noise {
+    top: clamp(-20px, -2vh, -5px);
+    right: 0;
+    width: clamp(160px, 24vw, 220px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(15px, 4vw, 35px);
+    width: clamp(170px, 26vw, 240px);
+  }
+}
+
+/* Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .left-camera {
+    top: clamp(25px, 5vh, 60px);
+    left: -20px;
+    width: clamp(180px, 22vw, 240px);
+  }
+
+  .left-noise {
+    bottom: clamp(-30px, -3vh, -5px);
+    left: -60px;
+    width: clamp(210px, 26vw, 280px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -60px;
+    width: clamp(210px, 26vw, 280px);
+  }
+
+  .right-noise {
+    top: clamp(-20px, -2vh, 0px);
+    right: 0;
+    width: clamp(160px, 20vw, 220px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(3px, 2vw, 60px);
+    width: clamp(180px, 22vw, 240px);
+  }
+}
+
+/* Desktop (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .left-camera {
+    top: clamp(35px, 6vh, 70px);
+    left: -25px;
+    width: clamp(200px, 21vw, 280px);
+  }
+
+  .left-noise {
+    bottom: clamp(-25px, -2vh, 0px);
+    left: -65px;
+    width: clamp(240px, 24vw, 320px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -65px;
+    width: clamp(240px, 24vw, 320px);
+  }
+
+  .right-noise {
+    top: clamp(-15px, -1vh, 5px);
+    right: 0;
+    width: clamp(180px, 18vw, 260px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(35px, 4vw, 80px);
+    width: clamp(200px, 20vw, 280px);
+  }
+}
+
+/* Large Desktop (1441px - 1919px) */
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .left-camera {
+    top: clamp(45px, 7vh, 90px);
+    left: -30px;
+    width: clamp(230px, 20vw, 310px);
+  }
+
+  .left-noise {
+    bottom: clamp(-140px, -7vh, -15px);
+    left: -78px;
+    width: clamp(270px, 23vw, 350px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -78px;
+    width: clamp(270px, 23vw, 350px);
+  }
+
+  .right-noise {
+    top: clamp(-50px, -8vh, -5px);
+    right: clamp(-20px, -15vw, -10px);
+    width: clamp(200px, 17vw, 290px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(2px, 2vw, 6px);
+    width: clamp(220px, 19vw, 310px);
+  }
+}
+
+/* Ultra Wide (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .left-camera {
+    top: clamp(55px, 8vh, 110px);
+    left: -40px;
+    width: clamp(260px, 19vw, 340px);
+  }
+
+  .left-noise {
+    bottom: clamp(-15px, 0vh, 15px);
+    left: -90px;
+    width: clamp(300px, 22vw, 380px);
+  }
+
+  .left-girl {
+    bottom: clamp(3px, 3vh, 5px);
+    left: -90px;
+    width: clamp(300px, 22vw, 380px);
+  }
+
+  .right-noise {
+    top: clamp(-20px, 7vh, 5px);
+    right: 0;
+    width: clamp(230px, 16vw, 320px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(5px, 2vw, 120px);
+    width: clamp(250px, 18vw, 340px);
+  }
+}
+
+/* Extra Ultra Wide (2560px+) */
+@media (min-width: 2560px) {
+  .left-camera {
+    top: clamp(65px, 6vh, 100px);
+    left: -50px;
+    width: clamp(570px, 11vw, 340px);
+  }
+
+  .left-noise {
+    bottom: clamp(-10px, 1vh, 20px);
+    left: -160px;
+    width: clamp(620px, 13vw, 420px);
+  }
+
+  .left-girl {
+    bottom: clamp(70px, 14vh, 120px);
+    left: -160px;
+    width: clamp(620px, 13vw, 420px);
+  }
+
+  .right-noise {
+    top: clamp(0px, 2vh, 20px);
+    right: 0;
+    width: clamp(240px, 10vw, 320px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(65px, 3vw, 100px);
+    width: clamp(330px, 11vw, 370px);
+  }
+}
+
+/* LANDSCAPE ORIENTATION */
+@media (orientation: landscape) and (max-height: 600px) {
+  .left-camera {
+    top: clamp(5px, 2vh, 25px);
+    left: -15px;
+    width: clamp(80px, 12vw, 140px);
+  }
+
+  .left-noise {
+    bottom: clamp(-20px, -2vh, -5px);
+    left: -20px;
+    width: clamp(100px, 14vw, 160px);
+  }
+
+  .left-girl {
+    bottom: clamp(20px, 6vh, 40px);
+    left: -20px;
+    width: clamp(100px, 14vw, 160px);
+  }
+
+  .right-noise {
+    top: clamp(-15px, -1vh, 0px);
+    right: 0;
+    width: clamp(70px, 11vw, 130px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(5px, 2vw, 30px);
+    width: clamp(80px, 12vw, 140px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) and (max-width: 768px) {
+  .left-camera {
+    top: clamp(3px, 1vh, 15px);
+    left: -10px;
+    width: clamp(70px, 10vw, 100px);
+  }
+
+  .left-noise {
+    bottom: clamp(-15px, -1vh, 0px);
+    left: -15px;
+    width: clamp(80px, 11vw, 120px);
+  }
+
+  .left-girl {
+    bottom: clamp(15px, 4vh, 30px);
+    left: -15px;
+    width: clamp(80px, 11vw, 120px);
+  }
+
+  .right-noise {
+    top: clamp(-10px, -0.5vh, 5px);
+    right: 0;
+    width: clamp(60px, 8.5vw, 100px);
+  }
+
+  .right-boy {
+    bottom: 0;
+    right: clamp(3px, 1vw, 20px);
+    width: clamp(65px, 9vw, 105px);
+  }
+}
+
+/* VERY SMALL SCREENS (320px and below) */
+@media (max-width: 320px) {
+  .left-camera {
+    width: clamp(80px, 16vw, 105px);
+    top: clamp(2px, 1vh, 10px);
+    left: -5px;
+  }
+
+  .left-noise {
+    width: clamp(100px, 19vw, 130px);
+    bottom: clamp(-30px, -3vh, -10px);
+    left: -15px;
+  }
+
+  .left-girl {
+    width: clamp(100px, 19vw, 130px);
+    bottom: clamp(50px, 9vh, 80px);
+    left: -15px;
+  }
+
+  .right-noise {
+    width: clamp(70px, 14vw, 95px);
+    top: clamp(-20px, -2vh, -5px);
+    right: 0;
+  }
+
+  .right-boy {
+    width: clamp(75px, 16vw, 105px);
+    bottom: 0;
+    right: clamp(2px, 1vw, 10px);
+  }
+}
+
+/* EXTRA TALL SCREENS */
+@media (min-height: 1080px) and (orientation: portrait) {
+  .left-camera,
+  .right-noise {
+    top: clamp(45px, 4vh, 80px);
+  }
+
+  .left-noise,
+  .left-girl {
+    bottom: clamp(50px, 9vh, 100px);
+  }
+
+  .right-boy {
+    bottom: 0;
+  }
+}
+
+/* ANIMATION */
+@keyframes slideInFromTopLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromTopRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromBottomRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* FLOATING GIRL ANIMATION */
+@keyframes floatGirl {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-15px) translateX(3px);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-3px);
+  }
+  75% {
+    transform: translateY(-12px) translateX(2px);
+  }
+}
+
+/* HOVER FOR DESKTOP */
+@media (hover: hover) and (pointer: fine) {
+  .decorative-asset {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .decorative-asset:hover {
+    transform: scale(1.05);
+  }
+
+  /* Disable hover effect on girl to preserve floating animation */
+  .left-girl:hover {
+    transform: none;
+  }
+}
+
+/* ACCESSIBILITY & PERFORMANCE */
+@media (prefers-reduced-motion: reduce) {
+  .left-camera,
+  .left-noise,
+  .left-girl,
+  .right-noise,
+  .right-boy {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .decorative-asset {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
