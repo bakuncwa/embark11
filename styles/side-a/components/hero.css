@@ -1,6 +1,6 @@
 .hero-page {
   background: linear-gradient(to bottom, #fde7a2 10%, #fff5db 90%);
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   position: relative;
   overflow: hidden;
@@ -98,26 +98,29 @@
 .hero-blob1 {
   position: absolute;
   left: -100px;
-  top: 230px;
-  height: 20%;
-  animation: floatNearOrigin 8s infinite ease-in-out;
+  /* top: 230px; */
+  width: 25%;
+  /* animation: floatNearOrigin 8s infinite ease-in-out; */
+  transition: transform 0.2s ease-out;
 }
 
 .hero-blob2 {
   position: absolute;
   right: -100px;
-  top: 0px;
-  height: 25%;
-  animation: floatNearOrigin 8s infinite ease-in-out;
+  /* top: 0px; */
+  width: 25%;
+  /* animation: floatNearOrigin 8s infinite ease-in-out; */
+  transition: transform 0.2s ease-out;
 }
 
 .hero-character1 {
-  position: absolute;
+  position: fixed;
   bottom: -50px;
   width: 23%;
   z-index: 2;
   left: 50px;
-  animation: floatNearOrigin 6s infinite ease-in-out;
+  /* animation: floatNearOrigin 6s infinite ease-in-out; */
+  transition: transform 0.2s ease-out;
 }
 
 .hero-character2 {
@@ -126,12 +129,13 @@
   width: 18%;
   z-index: 2;
   right: 100px;
-  animation: floatNearOrigin 7s infinite ease-in-out;
+  /* animation: floatNearOrigin 7s infinite ease-in-out; */
+  transition: transform 0.2s ease-out;
 }
 
-.hero-hills {
+#hero-hills {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: -100px;
   transform: rotate(4deg);
   z-index: 1;
@@ -154,7 +158,7 @@
 
   .hero-blob1 {
     left: -70px;
-    height: 18%;
+    /* width: 18%; */
   }
 
   .hero-EMBARK {
@@ -183,7 +187,8 @@
   }
 
   .hero-blob1 {
-    left: -90px;
+    left: -50px;
+    width: 30%;
   }
 
   .hero-EMBARK {
@@ -207,17 +212,21 @@
   }
 
   .hero-character1 {
-    bottom: unset;
+    /* bottom: unset; */
     width: 40%;
     transform: rotate(25deg);
     left: -50px;
-    top: -30px;
+    /* top: -30px; */
   }
 
   .hero-blob1 {
     top: unset;
-    bottom: 180px;
-    height: 17%;
+    /* bottom: 180px; */
+    width: 40%;
+  }
+
+  .hero-blob2 {
+    width: 40%;
   }
 
   .hero-title {
@@ -241,14 +250,19 @@
   }
 
   .hero-blob1 {
-    left: -120px;
+    /* left: -120px; */
     bottom: 160px;
+    width: 50%;
+  }
+
+  .hero-blob2 {
+    width: 50%;
   }
 
   .hero-character1 {
     width: 50%;
     left: -40px;
-    top: -30px;
+    /* top: -30px; */
   }
 
   .hero-EMBARK {
@@ -266,8 +280,12 @@
 
 @media (max-width: 375px) {
   .hero-blob1 {
-    left: -100px;
+    left: -30px;
     bottom: 150px;
+  }
+
+  .hero-blob2 {
+    width: 60%;
   }
 
   .hero-hills {
@@ -286,17 +304,17 @@
 
 @media (max-width: 320px) {
   .hero-blob2 {
-    height: 20%;
+    /* height: 20%; */
     right: -50px;
   }
 
   .hero-blob1 {
-    height: 15%;
-    left: -80px;
+    /* width: 15%; */
+    /* left: -80px; */
   }
 
   .hero-character1 {
-    top: -10px;
+    /* top: -10px; */
     left: -40px;
   }
 }
