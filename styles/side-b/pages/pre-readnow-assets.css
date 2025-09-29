@@ -1,0 +1,697 @@
+/* (SIDE B) PRE-READNOW ASSETS */
+
+/* ASSETS STYLES */
+.decorative-asset {
+  position: absolute;
+  z-index: 5;
+  user-select: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.left-coin-1,
+.left-coin-2,
+.right-coin-3,
+.right-coin-4 {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.left-face {
+  bottom: clamp(20px, 8vh, 100px);
+  left: clamp(60px, 8vw, 140px);
+  width: clamp(200px, 28vw, 450px);
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-30px) translateY(20px);
+  animation: slideInFromBottomLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s
+    forwards;
+}
+
+.left-coin-1 {
+  bottom: clamp(120px, 20vh, 220px);
+  left: clamp(10px, 3vw, 60px);
+  width: clamp(80px, 12vw, 160px);
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  transform: translateX(-30px) translateY(20px);
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform;
+  animation: slideInFromBottomLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+      forwards,
+    floatAndRotateCoin1 6s ease-in-out 2s infinite;
+}
+
+.left-coin-1:hover {
+  z-index: 100 !important;
+  opacity: 1 !important;
+  animation-play-state: paused;
+}
+
+.left-coin-2 {
+  bottom: clamp(-10px, 2vh, 40px);
+  left: clamp(-10px, 0vw, 20px);
+  width: clamp(70px, 10vw, 140px);
+  height: auto;
+  z-index: 3;
+  opacity: 0;
+  transform: translateX(-30px) translateY(20px);
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform;
+  animation: slideInFromBottomLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s
+      forwards,
+    floatAndRotateCoin2 7s ease-in-out 2.2s infinite;
+}
+
+.left-coin-2:hover {
+  z-index: 100 !important;
+  opacity: 1 !important;
+  animation-play-state: paused;
+}
+
+.right-face {
+  top: clamp(10px, 5vh, 80px);
+  right: clamp(80px, 12vw, 200px);
+  width: clamp(180px, 26vw, 400px);
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(30px) translateY(-20px);
+  animation: slideInFromTopRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s
+    forwards;
+}
+
+.right-coin-3 {
+  top: clamp(120px, 18vh, 200px);
+  right: clamp(30px, 6vw, 100px);
+  width: clamp(90px, 13vw, 170px);
+  height: auto;
+  z-index: 4;
+  opacity: 0;
+  transform: translateX(30px) translateY(-20px);
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform;
+  animation: slideInFromTopRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.6s
+      forwards,
+    floatAndRotateCoin3 8s ease-in-out 2.6s infinite;
+}
+
+.right-coin-3:hover {
+  z-index: 100 !important;
+  opacity: 1 !important;
+  animation-play-state: paused;
+}
+
+.right-coin-4 {
+  top: clamp(200px, 30vh, 320px);
+  right: clamp(50px, 8vw, 130px);
+  width: clamp(80px, 11vw, 150px);
+  height: auto;
+  z-index: 3;
+  opacity: 0;
+  transform: translateX(30px) translateY(-20px);
+  pointer-events: auto;
+  cursor: pointer;
+  will-change: transform;
+  animation: slideInFromTopRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.8s
+      forwards,
+    floatAndRotateCoin4 6.5s ease-in-out 2.8s infinite;
+}
+
+.right-coin-4:hover {
+  z-index: 100 !important;
+  opacity: 1 !important;
+  animation-play-state: paused;
+}
+
+/* FLOATING AND ROTATION */
+@keyframes floatAndRotateCoin1 {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-5px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-12px) translateX(3px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes floatAndRotateCoin2 {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) translateX(-6px) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(-18px) translateX(4px) rotate(-180deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-3px) rotate(-270deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes floatAndRotateCoin3 {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateX(-5px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-16px) translateX(6px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-14px) translateX(-4px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes floatAndRotateCoin4 {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-14px) translateX(4px) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px) rotate(-180deg);
+  }
+  75% {
+    transform: translateY(-16px) translateX(2px) rotate(-270deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(-360deg);
+  }
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* (320px and below) */
+@media (max-width: 320px) {
+  .left-face {
+    width: clamp(150px, 45vw, 180px);
+    bottom: clamp(10px, 3vh, 25px);
+    left: clamp(5px, 3vw, 15px);
+  }
+
+  .left-coin-1 {
+    width: clamp(50px, 15vw, 70px);
+    bottom: clamp(50px, 8vh, 70px);
+    left: clamp(5px, 2vw, 15px);
+  }
+
+  .left-coin-2 {
+    width: clamp(45px, 13vw, 65px);
+    bottom: clamp(-5px, 1vh, 15px);
+    left: clamp(15px, 3vw, 25px);
+  }
+
+  .right-face {
+    width: clamp(130px, 40vw, 160px);
+    top: clamp(5px, 2vh, 20px);
+    right: clamp(5px, 4vw, 30px);
+  }
+
+  .right-coin-3 {
+    width: clamp(55px, 16vw, 75px);
+    top: clamp(230px, 10vh, 90px);
+    right: clamp(20px, 4vw, 30px);
+  }
+
+  .right-coin-4 {
+    width: clamp(50px, 14vw, 70px);
+    top: clamp(170px, 12vh, 110px);
+    right: clamp(30px, 5vw, 40px);
+  }
+}
+
+/* Mobile Phones (321px to 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  .left-face {
+    bottom: clamp(15px, 5vh, 35px);
+    left: clamp(2px, 4vw, 4px);
+    width: clamp(170px, 35vw, 220px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(60px, 10vh, 90px);
+    left: clamp(8px, 2vw, 25px);
+    width: clamp(60px, 12vw, 90px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-8px, 1vh, 20px);
+    left: clamp(18px, 4vw, 35px);
+    width: clamp(55px, 10vw, 80px);
+  }
+
+  .right-face {
+    top: clamp(3px, 2vh, 3px);
+    right: clamp(5px, 2vw, 30px);
+    width: clamp(150px, 30vw, 200px);
+  }
+
+  .right-coin-3 {
+    top: clamp(170px, 6vh, 85px);
+    right: clamp(25px, 5vw, 45px);
+    width: clamp(65px, 13vw, 95px);
+  }
+
+  .right-coin-4 {
+    top: clamp(240px, 6vh, 85px);
+    right: clamp(35px, 6vw, 55px);
+    width: clamp(60px, 11vw, 85px);
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .left-face {
+    bottom: clamp(18px, 6vh, 45px);
+    left: clamp(-2px, -5vw, -2px);
+    width: clamp(190px, 30vw, 260px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(220px, 12vh, 110px);
+    left: clamp(80px, 3vw, 35px);
+    width: clamp(70px, 11vw, 110px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-20px, 20vh, 5px);
+    left: clamp(15px, 2vw, 25px);
+    width: clamp(100px, 9vw, 95px);
+  }
+
+  .right-face {
+    top: clamp(12px, 4vh, 40px);
+    right: clamp(5px, 1vw, 1px);
+    width: clamp(170px, 26vw, 230px);
+  }
+
+  .right-coin-3 {
+    top: clamp(250px, 5vh, 80px);
+    right: clamp(2px, 5vw, 4px);
+    width: clamp(75px, 12vw, 115px);
+  }
+
+  .right-coin-4 {
+    top: clamp(350px, 18vh, 170px);
+    right: clamp(40px, 6vw, 70px);
+    width: clamp(70px, 10vw, 105px);
+  }
+}
+
+/* Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .left-face {
+    bottom: clamp(20px, 7vh, 60px);
+    left: clamp(-3px, -5vw, -28px);
+    width: clamp(210px, 28vw, 300px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(275px, 13vh, 130px);
+    left: clamp(100px, 3vw, 45px);
+    width: clamp(80px, 11vw, 130px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-90px, 3vh, 5px);
+    left: clamp(2px, 4vw, 5px);
+    width: clamp(120px, 9vw, 115px);
+  }
+
+  .right-face {
+    top: clamp(15px, 4vh, 50px);
+    right: clamp(-3px, 4vw, 10px);
+    width: clamp(190px, 24vw, 270px);
+  }
+
+  .right-coin-3 {
+    top: clamp(430px, 5vh, 80px);
+    right: clamp(5px, 5vw, 70px);
+    width: clamp(85px, 11vw, 135);
+  }
+
+  .right-coin-4 {
+    top: clamp(300px, 5vh, 80px);
+    right: clamp(5px, 3vw, 45px);
+    width: clamp(80px, 10vw, 125px);
+  }
+}
+
+/* Desktop (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .left-face {
+    bottom: clamp(20px, 3vh, 50px);
+    left: clamp(-3px, -5vw, -28px);
+    width: clamp(230px, 26vw, 350px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(300px, 13vh, 130px);
+    left: clamp(130px, 3vw, 45px);
+    width: clamp(80px, 11vw, 130px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-90px, 3vh, 5px);
+    left: clamp(2px, 4vw, 5px);
+    width: clamp(130px, 9vw, 115px);
+  }
+
+  .right-face {
+    top: clamp(15px, 4vh, 50px);
+    right: clamp(-3px, 4vw, 10px);
+    width: clamp(190px, 24vw, 270px);
+  }
+
+  .right-coin-3 {
+    top: clamp(480px, 5vh, 80px);
+    right: clamp(5px, 5vw, 70px);
+    width: clamp(85px, 11vw, 135);
+  }
+
+  .right-coin-4 {
+    top: clamp(350px, 5vh, 80px);
+    right: clamp(10px, 3vw, 5px);
+    width: clamp(80px, 10vw, 125px);
+  }
+}
+
+/* Large Desktop (1441px - 1919px) */
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .left-face {
+    bottom: clamp(20px, 3vh, 50px);
+    left: clamp(-3px, -5vw, -28px);
+    width: clamp(230px, 26vw, 350px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(300px, 13vh, 130px);
+    left: clamp(130px, 3vw, 45px);
+    width: clamp(80px, 11vw, 130px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-90px, 3vh, 5px);
+    left: clamp(2px, 4vw, 5px);
+    width: clamp(130px, 9vw, 115px);
+  }
+
+  .right-face {
+    top: clamp(15px, 4vh, 50px);
+    right: clamp(-3px, 4vw, 10px);
+    width: clamp(190px, 24vw, 270px);
+  }
+
+  .right-coin-3 {
+    top: clamp(480px, 5vh, 80px);
+    right: clamp(5px, 5vw, 70px);
+    width: clamp(85px, 11vw, 135);
+  }
+
+  .right-coin-4 {
+    top: clamp(350px, 5vh, 80px);
+    right: clamp(10px, 3vw, 5px);
+    width: clamp(80px, 10vw, 125px);
+  }
+}
+
+/* Ultra Wide (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .left-face {
+    bottom: clamp(20px, 3vh, 50px);
+    left: clamp(-3px, -5vw, -28px);
+    width: clamp(330px, 26vw, 400px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(330px, 13vh, 130px);
+    left: clamp(100px, 3vw, 45px);
+    width: clamp(180px, 11vw, 130px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-90px, 3vh, 5px);
+    left: clamp(2px, 4vw, 5px);
+    width: clamp(150px, 9vw, 115px);
+  }
+
+  .right-face {
+    top: clamp(15px, 4vh, 50px);
+    right: clamp(-3px, 4vw, 10px);
+    width: clamp(320px, 26vw, 200px);
+  }
+
+  .right-coin-3 {
+    top: clamp(600px, 50vh, 80px);
+    right: clamp(5px, 5vw, 70px);
+    width: clamp(230px, 11vw, 135px);
+  }
+
+  .right-coin-4 {
+    top: clamp(420px, 50vh, 80px);
+    right: clamp(10px, 3vw, 5px);
+    width: clamp(150px, 10vw, 125px);
+  }
+}
+
+/* Extra Ultra Wide (2560px+) */
+@media (min-width: 2560px) {
+  .left-face {
+    bottom: clamp(20px, 3vh, 50px);
+    left: clamp(-3px, -5vw, -28px);
+    width: clamp(330px, 26vw, 550px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(450px, 13vh, 150px);
+    left: clamp(170px, 3vw, 45px);
+    width: clamp(150px, 11vw, 250px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-90px, 3vh, 5px);
+    left: clamp(2px, 4vw, 5px);
+    width: clamp(150px, 9vw, 250px);
+  }
+
+  .right-face {
+    top: clamp(15px, 4vh, 50px);
+    right: clamp(-3px, 4vw, 10px);
+    width: clamp(330px, 24vw, 470px);
+  }
+
+  .right-coin-3 {
+    top: clamp(880px, 5vh, 80px);
+    right: clamp(5px, 5vw, 70px);
+    width: clamp(285px, 11vw, 135px);
+  }
+
+  .right-coin-4 {
+    top: clamp(650px, 5vh, 80px);
+    right: clamp(30px, 3vw, 15px);
+    width: clamp(180px, 10vw, 125px);
+  }
+}
+
+/* LANDSCAPE ORIENTATION */
+@media (orientation: landscape) and (max-height: 600px) {
+  .left-face {
+    bottom: clamp(3px, 1vh, 15px);
+    left: clamp(2px, -2vw, -1px);
+    width: clamp(80px, 11vw, 120px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(65px, 4vh, 40px);
+    left: clamp(30px, 1vw, 15px);
+    width: clamp(35px, 5vw, 55px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-3px, 0vh, 10px);
+    left: clamp(1px, 2vw, 2px);
+    width: clamp(30px, 4vw, 50px);
+  }
+
+  .right-face {
+    top: clamp(2px, 0.5vh, 12px);
+    right: clamp(2px, 2vw, 2px);
+    width: clamp(70px, 9vw, 105px);
+  }
+
+  .right-coin-3 {
+    top: clamp(110px, 3vh, 30px);
+    right: clamp(15px, 2vw, 28px);
+    width: clamp(40px, 5vw, 60px);
+  }
+
+  .right-coin-4 {
+    top: clamp(80px, 4vh, 50px);
+    right: clamp(1px, 2vw, 3px);
+    width: clamp(35px, 4vw, 55px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) and (max-width: 768px) {
+  .left-face {
+    bottom: clamp(3px, 1vh, 15px);
+    left: clamp(2px, -2vw, -1px);
+    width: clamp(80px, 11vw, 120px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(65px, 4vh, 40px);
+    left: clamp(30px, 1vw, 15px);
+    width: clamp(35px, 5vw, 55px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(-3px, 0vh, 10px);
+    left: clamp(1px, 2vw, 2px);
+    width: clamp(30px, 4vw, 50px);
+  }
+
+  .right-face {
+    top: clamp(2px, 0.5vh, 12px);
+    right: clamp(2px, 2vw, 2px);
+    width: clamp(70px, 9vw, 105px);
+  }
+
+  .right-coin-3 {
+    top: clamp(110px, 3vh, 30px);
+    right: clamp(15px, 2vw, 28px);
+    width: clamp(40px, 5vw, 60px);
+  }
+
+  .right-coin-4 {
+    top: clamp(80px, 4vh, 50px);
+    right: clamp(1px, 2vw, 3px);
+    width: clamp(35px, 4vw, 55px);
+  }
+}
+
+/* ANIMATION */
+@keyframes slideInFromTopLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromTopRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInFromBottomRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* EXTRA TALL SCREENS */
+@media (min-height: 1080px) and (orientation: portrait) {
+  .left-face {
+    bottom: clamp(40px, 6vh, 100px);
+  }
+
+  .left-coin-1 {
+    bottom: clamp(120px, 16vh, 200px);
+  }
+
+  .left-coin-2 {
+    bottom: clamp(20px, 4vh, 60px);
+  }
+
+  .right-face {
+    top: clamp(30px, 5vh, 90px);
+  }
+
+  .right-coin-3 {
+    top: clamp(120px, 15vh, 200px);
+  }
+
+  .right-coin-4 {
+    top: clamp(220px, 28vh, 320px);
+  }
+}
+
+/* HOVER FOR DESKTOP */
+@media (hover: hover) and (pointer: fine) {
+  .left-coin-1:hover,
+  .left-coin-2:hover,
+  .right-coin-3:hover,
+  .right-coin-4:hover {
+    transform: scale(1.15) !important;
+  }
+}
+
+/* ACCESSIBILITY & PERFORMANCE */
+@media (prefers-reduced-motion: reduce) {
+  .left-face,
+  .left-coin-1,
+  .left-coin-2,
+  .right-face,
+  .right-coin-3,
+  .right-coin-4 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .decorative-asset {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
