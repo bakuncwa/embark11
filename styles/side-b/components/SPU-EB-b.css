@@ -213,6 +213,8 @@
 
   .spu-section-b {
     /* background: linear-gradient(to bottom, #FFF5DB 40%, #ff61c8af 100%); */
+    background-repeat: no-repeat;
+    background-size: cover; 
 
   }
 
