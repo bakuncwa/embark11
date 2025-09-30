@@ -225,6 +225,28 @@ class SideANavbar {
       }
     });
 
+    // Close dropdown on scroll 
+    let isScrolling = false;
+
+    window.addEventListener("scroll", () => {
+      if (
+        dropdownMenu &&
+        dropdownMenu.classList.contains("active") &&
+        !isScrolling
+      ) {
+        isScrolling = true;
+
+        requestAnimationFrame(() => {
+          this.closeDropdown(dropdownMenu);
+          burgerMenuBtn.classList.remove("active");
+
+          setTimeout(() => {
+            isScrolling = false;
+          }, 300);
+        });
+      }
+    });
+
     if (dropdownMenu) {
       dropdownMenu.addEventListener("click", (e) => {
         if (e.target === dropdownMenu) {
@@ -264,6 +286,10 @@ class SideANavbar {
 
   openDropdown(dropdownMenu) {
     dropdownMenu.classList.add("active");
+
+    // // Freeze scrolling when dropdown opens
+    // document.body.classList.add("dropdown-open");
+
     const dropdownContent = dropdownMenu.querySelector(".dropdown-content");
     if (dropdownContent) {
       dropdownContent.style.transform = "translateY(-10px)";
@@ -277,6 +303,9 @@ class SideANavbar {
   }
 
   closeDropdown(dropdownMenu) {
+    // // Unfreeze scrolling when dropdown closes
+    // document.body.classList.remove("dropdown-open");
+
     const dropdownContent = dropdownMenu.querySelector(".dropdown-content");
     if (dropdownContent) {
       dropdownContent.style.transform = "translateY(-10px)";
