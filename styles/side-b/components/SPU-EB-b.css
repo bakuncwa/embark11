@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+/* ---------- reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+/* ---------- SPU SECTION ---------- */
+.spu-section-b {
+  min-height: 150vh;         
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Sora", sans-serif;
+
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+
+  overflow: hidden;
+
+  /* Gradient background */
+  background-image: url('/assets/images/spu-bg-b.png');
+}
+
+.spu-heading-b {
+  font-weight: 800;
+  font-size: 2.25rem;
+  color: #F3F3F3;
+  text-align: center;
+}
+
+/* Top 3 portraits row */
+.spu-top-portraits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+/* Grid of 12 portraits */
+.spu-grid-portraits {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.portrait-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portrait-card img {
+  width: 190px;       
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.portrait-card .name-b {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 1.034rem;
+  margin: 0;
+}
+
+.portrait-card .position-b {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin: 0.2rem 0 0;
+}
+
+.position-b, .name-b {
+    color: #F3F3F3
+}
+
+/* EXTRA ASSETS */
+.right-banner {
+    position: absolute;
+    right: -35%;
+    top: -27%;
+    width: 73%;
+    max-width: 73%;
+}
+
+.left-banner {
+    position: absolute;
+    left: -35%;
+    top: -27%;
+    width: 73%;
+}
+
+.right-confetti {
+    position: absolute;
+    right: -4%;
+    top: 20%;
+    width: 17%;
+}
+
+.left-confetti {
+    position: absolute;
+    left: -4%;
+    top: 26%;
+    width: 16%;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+
+@media (max-width: 2560px) and (min-width: 1800px) {
+    .left-banner, .right-banner {
+        width: 60%;
+    }
+}
+@media (max-width: 1330px) and (min-width: 1025px) {
+  /* Top 3 portraits */
+  .spu-top-portraits .portrait-card img {
+    max-width: 160px; 
+  }
+
+  /* Grid of 12 portraits */
+  .spu-grid-portraits .portrait-card img {
+    max-width: 150px; 
+  }
+}
+
+/* Tablets: 3 portraits -> 3 per row, 12 portraits -> 4 per row */
+@media (max-width: 1024px) {
+  .spu-top-portraits {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 768px; 
+  }
+
+  .spu-grid-portraits {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 768px;
+  }
+
+  .portrait-card img {
+    width: 160px;
+  }
+
+  .right-banner {
+    position: absolute;
+    right: -50%;
+    top: -11%;
+    width: 73%;
+    
+}
+
+.left-banner {
+    position: absolute;
+    left: -50%;
+    top: -11%;
+    width: 73%;
+}
+
+
+.right-confetti {
+    top: 28.5%;
+}
+
+.left-confetti {
+    top: 30%;
+}
+
+}
+
+@media (max-width: 738px) and (min-width: 541px) {
+  /* Top 3 portraits */
+  .spu-top-portraits .portrait-card img {
+    max-width: 120px; 
+  }
+
+  /* Grid of 12 portraits */
+  .spu-grid-portraits .portrait-card img {
+    max-width: 110px; 
+  }
+}
+
+/* Mobile: 3 portraits -> 1 per row, 12 portraits -> 2 per row */
+@media (max-width: 540px) {
+/* Top 3 portraits */
+  .spu-top-portraits .portrait-card img {
+    width: 190px; 
+  }
+  .spu-top-portraits {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .spu-grid-portraits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .portrait-card img {
+    width: 120px; 
+  }
+
+  .spu-heading-b {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .spu-section-b {
+    background: linear-gradient(to bottom, #FFF5DB 40%, #ff61c8af 100%);
+
+  }
+
+  .right-confetti, .left-confetti {
+    display: none;
+}
+}
+
+/* SPU subheading */
+.spu-sub-heading-b {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;           
+  font-size: 1.5rem;           
+  color: #F3F3F3;
+  text-align: center;
+  margin-bottom: 2rem;          
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 1024px) {
+  .spu-sub-heading-b {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spu-sub-heading-b {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
