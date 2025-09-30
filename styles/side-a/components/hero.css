@@ -213,9 +213,9 @@
 
   .hero-character1 {
     /* bottom: unset; */
-    width: 40%;
-    transform: rotate(25deg);
-    left: -50px;
+    width: 35%;
+    /* transform: rotate(25deg); */
+    left: -40px;
     /* top: -30px; */
   }
 
@@ -230,7 +230,7 @@
   }
 
   .hero-title {
-    height: 95vh;
+    height: 80vh;
   }
 
   .hero-Vol11 {
@@ -245,7 +245,7 @@
   }
 
   .hero-character2 {
-    width: 45%;
+    width: 40%;
     right: 0px;
   }
 
@@ -260,7 +260,7 @@
   }
 
   .hero-character1 {
-    width: 50%;
+    width: 45%;
     left: -40px;
     /* top: -30px; */
   }
@@ -294,7 +294,7 @@
 
   .hero-character1 {
     left: -50px;
-    width: 60%;
+    width: 55%;
   }
 
   .hero-character2 {
@@ -305,7 +305,7 @@
 @media (max-width: 320px) {
   .hero-blob2 {
     /* height: 20%; */
-    right: -50px;
+    right: -90px;
   }
 
   .hero-blob1 {

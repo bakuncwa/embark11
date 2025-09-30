@@ -41,7 +41,7 @@ function scrollAnimation() {
 
     b2.style.position = "absolute";
     b2.style.right = "-100px";
-    b2.style.bottom = "50%";
+    b2.style.bottom = "43%";
   } else {
     // Keep it fixed
     hills.style.position = "fixed";
@@ -60,7 +60,7 @@ function scrollAnimation() {
 
     b2.style.position = "fixed";
     b2.style.transform = `translateX(-${scrollInSection * 1}px)`;
-    b2.style.bottom = "70%";
+    b2.style.bottom = "60%";
   }
 
   if (window.matchMedia("(max-width: 1024px").matches) {
@@ -101,30 +101,31 @@ function scrollAnimation() {
     hills.style.right = "-10px";
     hills.style.width = "150%";
     hills.style.bottom = "-50px";
-
-    c1.classList.add("float-animate");
     // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
       // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
 
-      c1.style.bottom = `50%`;
-      c1.style.left = "-50px";
+      c1.style.bottom = `40%`;
+      c1.style.left = "-35px";
 
       c2.style.right = "10px";
 
       b1.style.bottom = "14%";
+      b1.style.left = "-30px";
     } else {
       // Keep it fixed
       hills.style.position = "fixed";
 
-      c1.style.bottom = `70%`;
+      c1.style.bottom = `60%`;
       c1.style.transform = `translateX(-${scrollInSection * 0.2}px)`;
 
       c2.style.transform = `translateX(${scrollInSection * 0.2}px)`;
 
+      b1.style.transform = `translateX(0px)`;
       b1.style.transform = `translateY(-${scrollInSection * 0.6}px)`;
       b1.style.bottom = "20%";
+      b1.style.left = "-30px";
 
       b2.style.transform = `translateY(${scrollInSection * 0.6}px)`;
     }
@@ -139,18 +140,18 @@ function scrollAnimation() {
       // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
 
-      c1.style.bottom = `47%`;
+      c1.style.bottom = `40%`;
 
       c2.style.right = "0px";
 
-      b2.style.bottom = "53%";
+      b2.style.bottom = "43%";
     } else {
       // Keep it fixed
       hills.style.position = "fixed";
 
-      c1.style.bottom = `70%`;
+      c1.style.bottom = `63%`;
 
-      b2.style.bottom = "80%";
+      b2.style.bottom = "65%";
     }
   }
 
