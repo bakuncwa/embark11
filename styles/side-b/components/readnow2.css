@@ -2,14 +2,15 @@
 
 /* IFRAME */
 .iframe-container {
-  margin-top: 10svh;
-  left: 32vmin;
+  margin-top: 5svh;
+  left: 50%;
+  transform: translateX(-50%);
   position: relative;
-  width: 70%; 
-  height: 80%; 
-  max-width: 1500px; 
-  padding-top: 35%; 
-  z-index: 2;
+  width: 70%;
+  height: 70%;
+  max-width: 1500px;
+  padding-top: 35%;
+  z-index: 10;
   overflow: hidden;
 }
 
@@ -28,7 +29,7 @@
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
-  z-index: 0;
+  z-index: 1;
   rotate: 180deg;
 }
 
@@ -47,298 +48,809 @@
   position: absolute;
   bottom: 5%;
   animation: floatNearOrigin 6s infinite ease-in-out;
+  opacity: 0.85;
   will-change: transform;
 }
 
 #boat {
   width: 30vw;
-  left: -5%;
+  left: -0.5%;
   top: 0%;
-  z-index: 1;
-  display: block;
+  z-index: 2;
 }
 
 #footprint {
-  width: 25vw;
+  width: 30vw;
   right: -10%;
-  top: 10%;
-  z-index: 1;
+  top: 0%;
+  z-index: 3;
   animation-duration: 7s;
+}
+
+/* CONTENT WRAPPER */
+.readnow-content-wrapper {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 /* TEXT BLOCK */
 .readnow2-title {
-  position: absolute;
-  top: 83%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  z-index: 10;
-  width: 30%;
-  max-width: 800px;
+  width: auto;
+  max-width: 900px;
   opacity: 0;
   transition: all 1.5s ease;
+  transform: scale(0.9);
+
+  /* Text styles */
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  color: #f3f3f3;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .readnow2-title.visible {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
+}
+
+.readnow2-title-text {
+  font-style: normal;
+}
+
+.embark-logo-inline {
+  height: 22px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.readnow2-link {
+  text-decoration: none;
 }
 
 .readnow2-text {
-  background-color: #F69B6C;
+  background: #F69B6C;
   border: none;
-  padding: 10px 20px;
   text-decoration: none;
-  size: 0.2rem;
-  color: white;
-  font-weight: bold;
-  display: inline-block;
   cursor: pointer;
-  border-radius: 20px;
-  
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  z-index: 10;
-  width: 15%;
-  max-width: 800px;
+  border-radius: 100px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+
+  /* Button sizing */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 53px;
+  padding: 0px;
+  gap: 7px;
+
+  /* Text styles */
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #110349;
+
   opacity: 0;
-  transition: all 1.5s ease;
+  transition: all 1.5s ease, background 0.3s ease;
+  transform: scale(0.9);
+}
+
+.readnow2-text:hover {
+  background: #F3F3F3;
 }
 
 .readnow2-text.visible {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
 /* FLOATING ANIMATION */
 @keyframes floatNearOrigin {
-  0%   { transform: translateY(0) translateX(0); opacity: 0.85; }
-  25%  { transform: translateY(-5px) translateX(2px); opacity: 0.9; }
-  50%  { transform: translateY(-12px) translateX(-4px); opacity: 0.95; }
-  75%  { transform: translateY(-5px) translateX(4px); opacity: 0.9; }
-  100% { transform: translateY(0) translateX(0); opacity: 0.85; }
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.85;
+  }
+  25% {
+    transform: translateY(-5px) translateX(2px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-12px) translateX(-4px);
+    opacity: 0.95;
+  }
+  75% {
+    transform: translateY(-5px) translateX(4px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.85;
+  }
 }
 
-/* ========================= */
 /* MEDIA QUERIES RESPONSIVE  */
-/* ========================= */
 
-/* Tablets (<=1280px) */
-@media (max-width: 1280px) {
+/* Large Desktops (1920px+) */
+@media (min-width: 1920px) {
+  .iframe-container {
+    width: 65%;
+    height: 65%;
+    margin-top: 3vh;
+  }
+
   .decor2-sphere {
-    width: 300vmin;
-    top: 75%;
+    width: 220vmin;
   }
 
-  #boat, #footprint {
-    width: 30vw;
-  }
-
-  #boat{
-    left: -5%;
-    top: 0%;
-  }
-
-    #footprint{
-    right: -15%;
-    top: 15%;
+  #boat,
+  #footprint {
+    width: 25vw;
   }
 
   .readnow2-title {
-    width: 40%;
-    top: 75%;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .embark-logo-inline {
+    height: 32px;
+    padding-bottom: 6px;
   }
 
   .readnow2-text {
-    width: 30%;
-    top: 85%;
-  }
-
-   .iframe-container {
-   margin-top: 5%;
-   left: 15%;
-    width: 50%;
-    height: auto;
-  }
-  
-    .paragraph-container {
-    z-index: 1000;
-  }
-  .magazine-paragraph{
-     font-size: 0.8rem;
+    font-size: 22px;
+    width: 280px;
+    height: 56px;
   }
 }
 
-/* Tablets (<=1024px) */
-@media (max-width: 1024px) {
+/* Standard Desktops (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .iframe-container {
+    width: 68%;
+    height: 68%;
+    margin-top: 4vh;
+  }
+
   .decor2-sphere {
-    width: 300vmin;
+    width: 240vmin;
+  }
+
+  .readnow2-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .embark-logo-inline {
+    height: 29px;
+    padding-bottom: 5px;
+  }
+
+  .readnow2-text {
+    font-size: 21px;
+    width: 270px;
+    height: 54px;
+  }
+}
+
+/* Laptops (1280px - 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .iframe-container {
+    width: 70%;
+    height: 70%;
+    margin-top: 5vh;
+  }
+
+  .decor2-sphere {
+    width: 250vmin;
+  }
+
+  .readnow2-title {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .embark-logo-inline {
+    height: 22px;
+  }
+}
+
+/* Tablets Portrait (768px - 1023px) */
+@media (max-width: 768px) {
+  .iframe-container {
+    margin-top: 6vh;
+    width: 80%;
+    height: auto;
+    max-height: 55vh;
+    padding-top: 42%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 320vmin;
     top: 75%;
   }
 
-  #boat, #footprint {
-    width: 30vw;
+  #boat,
+  #footprint {
+    width: 38vw;
   }
 
-  #boat{
+  #boat {
     left: -5%;
-    top: 75%;
+    top: 55%;
+    rotate: -2deg;
   }
 
-    #footprint{
-    right: -4%;
+  #footprint {
+    right: -5%;
+    top: 68%;
+    rotate: 2deg;
+  }
+
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 8vh;
+    transform: translate(-50%, 0);
+    top: calc(6vh + 42vw + 8vh);
+  }
+
+  .readnow2-title {
+    max-width: 88%;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 20px;
+    gap: 6px;
+  }
+
+  .embark-logo-inline {
+    height: 18px;
+  }
+
+  .readnow2-text {
+    font-size: 16px;
+    width: 230px;
+    height: 48px;
+  }
+}
+
+/* Small Tablets Portrait (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) and (orientation: portrait) {
+  .iframe-container {
+    margin-top: 7vh;
+    width: 84%;
+    height: auto;
+    max-height: 52vh;
+    padding-top: 44%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 350vmin;
+    top: 77%;
+  }
+
+  #boat,
+  #footprint {
+    width: 42vw;
+  }
+
+  #boat {
+    left: -8%;
+    top: 56%;
+    rotate: -2.5deg;
+  }
+
+  #footprint {
+    right: -7%;
+    top: 68%;
+    rotate: 2.5deg;
+  }
+
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 8vh;
+    transform: translate(-50%, 0);
+    top: calc(7vh + 44vw + 8vh);
+  }
+
+  .readnow2-title {
+    max-width: 90%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 0 18px;
+    gap: 5px;
+  }
+
+  .embark-logo-inline {
+    height: 17px;
+  }
+
+  .readnow2-text {
+    font-size: 15px;
+    width: 215px;
+    height: 46px;
+  }
+}
+
+/* Medium Mobile (480px - 599px) */
+@media (min-width: 425px) and (max-width: 599px) {
+  .iframe-container {
+    margin-top: 8vh;
+    width: 88%;
+    height: auto;
+    max-height: 48vh;
+    padding-top: 45%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 400vmin;
+    top: 80%;
+  }
+
+  #boat,
+  #footprint {
+    width: 50vw;
+  }
+
+  #boat {
+    left: -12%;
+    top: 58%;
+    rotate: -3deg;
+  }
+
+  #footprint {
+    right: -10%;
+    top: 66%;
+    rotate: 3deg;
+  }
+
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 7vh;
+    transform: translate(-50%, 0);
+    top: calc(8vh + 45vw + 7vh);
+  }
+
+  .readnow2-title {
+    max-width: 92%;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 18px;
+    gap: 4px;
+  }
+
+  .embark-logo-inline {
+    height: 15px;
+    padding-bottom: 2px;
+  }
+
+  .readnow2-text {
+    font-size: 14px;
+    width: 200px;
+    height: 44px;
+  }
+}
+
+/* Small Mobile (376px - 479px) */
+@media (min-width: 376px) and (max-width: 479px) {
+  .iframe-container {
+    margin-top: 10vh;
+    width: 90%;
+    height: auto;
+    max-height: 45vh;
+    padding-top: 48%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 450vmin;
     top: 82%;
   }
 
-  .readnow2-title {
-    width: 50%;
-    top: 75%;
-  }
-
-  .readnow2-text {
-    width: 30%;
-    top: 80%;
-  }
-
-   .iframe-container {
-   margin-top: 20%;
-   left: 0;
-    width: 50%;
-    height: auto;
-  }
-  
-    .paragraph-container {
-    z-index: 1000;
-  }
-  .magazine-paragraph{
-     font-size: 0.8rem;
-  }
-}
-
-/* Large Mobile (<=920px) */
-@media (max-width: 920px) {
-  .decor2-sphere {
-    width: 340vmin;
-    top: 78%;
-  }
-
-  #boat, #footprint {
-    width: 48vw;
-    margin: 8%;
-    top: 65%;
-  }
-
-  .readnow2-title {
-    width: 60%;
-    top: 20%;
-  }
-
-  .readnow2-text {
-    width: 95%;
-    top: 48%;
-  }
-
-    .iframe-container {
-      width: 50%; 
-      height: auto;
-  }
-
-  .paragraph-container {
-    min-width: 100%;
-    max-width: 0;
-    z-index: 100;
-    margin: 0 auto; 
-  }  
-}
-
-/* Small Mobile (<=480px) */
-@media (max-width: 480px) {
-  .decor-sphere {
-    width: 420vmin;
-    top: 80%;
-  }
-
-  #boat, #footprint {
+  #boat,
+  #footprint {
     width: 55vw;
-    top: 70%;
   }
 
-  #boat{
-    left: -18%;
+  #boat {
+    left: -15%;
+    top: 50%;
     rotate: -5deg;
-    display: none;
   }
 
-  #footprint{
-    right: -16%;
+  #footprint {
+    right: -12%;
+    top: 64%;
     rotate: 5deg;
   }
 
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 6vh;
+    transform: translate(-50%, 0);
+    top: calc(10vh + 48vw + 6vh);
+  }
+
   .readnow2-title {
-    width: 80%;
-    top: 65%;
+    max-width: 94%;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 15px;
+    gap: 4px;
+  }
+
+  .embark-logo-inline {
+    height: 14px;
   }
 
   .readnow2-text {
-    width: 50%;
-    top: 70%;
-  }
-
-   .iframe-container {
-   margin-top: 55%;
-   left: -0.2%;
-    width: 100%;
-    height: auto;
-  }
-  
-    .paragraph-container {
-    z-index: 1000;
-  }
-  .magazine-paragraph{
-     font-size: 0.8rem;
+    font-size: 13px;
+    width: 190px;
+    height: 42px;
   }
 }
 
-/* Extra Small Mobile (<=375px) */
-@media (max-width: 375px) {
+/* Extra Small Mobile (320px - 375px) */
+@media (min-width: 320px) and (max-width: 375px) {
+  .iframe-container {
+    margin-top: 12vh;
+    width: 92%;
+    height: auto;
+    max-height: 42vh;
+    padding-top: 50%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .decor2-sphere {
     width: 500vmin;
-    top: 87%;
+    top: 85%;
   }
 
-  #boat, #footprint {
+  #boat,
+  #footprint {
     width: 60vw;
-    top: 62%
   }
 
-  #boat{
-    display: none;
+  #boat {
+    left: -18%;
+    top: 50%;
+    rotate: -6deg;
+  }
+
+  #footprint {
+    right: -15%;
+    top: 62%;
+    rotate: 6deg;
+  }
+
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 6vh;
+    transform: translate(-50%, 0);
+    top: calc(12vh + 50vw + 6vh);
   }
 
   .readnow2-title {
-    width: 80%;
-    top: 60%;
+    max-width: 95%;
+    font-size: 13px;
+    line-height: 19px;
+    padding: 0 12px;
+    gap: 3px;
+  }
+
+  .embark-logo-inline {
+    height: 13px;
   }
 
   .readnow2-text {
-    width: 60%;
+    font-size: 12px;
+    width: 180px;
+    height: 40px;
+  }
+}
+
+/* Very Small Mobile (<320px) */
+@media (max-width: 319px) {
+  .iframe-container {
+    margin-top: 14vh;
+    width: 94%;
+    height: auto;
+    max-height: 40vh;
+    padding-top: 52%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 550vmin;
+    top: 88%;
+  }
+
+  #boat,
+  #footprint {
+    width: 65vw;
+  }
+
+  #boat {
+    left: -20%;
+    top: 50%;
+    rotate: -7deg;
+  }
+
+  #footprint {
+    right: -18%;
+    top: 60%;
+    rotate: 7deg;
+  }
+
+  .readnow-content-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    margin-top: 6vh;
+    transform: translate(-50%, 0);
+    top: calc(14vh + 52vw + 6vh);
+  }
+
+  .readnow2-title {
+    max-width: 96%;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 10px;
+    gap: 3px;
+  }
+
+  .embark-logo-inline {
+    height: 12px;
+  }
+
+  .readnow2-text {
+    font-size: 11px;
+    width: 170px;
+    height: 38px;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .iframe-container {
+    margin-top: clamp(4vh, 5vh, 6vh);
+    width: 68%;
+    height: auto;
+    max-height: 55vh;
+    padding-top: 28%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .readnow-content-wrapper {
+    bottom: 4%;
+    gap: 8px;
+  }
+
+  .readnow2-title {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 20px;
+  }
+
+  .embark-logo-inline {
+    height: 15px;
+  }
+
+  .readnow2-text {
+    font-size: 14px;
+    width: 200px;
+    height: 40px;
+  }
+
+  #boat,
+  #footprint {
+    width: 25vw;
+    top: 48%;
+  }
+
+  #boat {
+    left: 2%;
+  }
+
+  #footprint {
+    right: 2%;
+  }
+}
+
+/* Tablet Landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (max-height: 768px) {
+  .iframe-container {
+    margin-top: clamp(3vh, 4vh, 5vh);
+    width: 70%;
+    height: auto;
+    max-height: 58vh;
+    padding-top: 32%;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .decor2-sphere {
+    width: 280vmin;
+    top: 72%;
+  }
+
+  #boat,
+  #footprint {
+    width: 30vw;
+  }
+
+  #boat {
+    left: 0%;
+    top: 0%;
+  }
+
+  #footprint {
+    right: 0%;
     top: 65%;
   }
 
-   .iframe-container {
-   margin-top: 50%;
-   left: -0.2%;
-    width: 100%;
+  .readnow-content-wrapper {
+    bottom: 5%;
+    gap: 10px;
+  }
+
+  .readnow2-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .embark-logo-inline {
+    height: 16px;
+  }
+
+  .readnow2-text {
+    font-size: 15px;
+    width: 210px;
+    height: 44px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) and (orientation: landscape) and (max-height: 500px) {
+  .iframe-container {
+    margin-top: clamp(6vh, 8vh, 10vh);
+    width: 72%;
     height: auto;
+    max-height: 52vh;
+    padding-top: 34%;
+    overflow: hidden;
   }
-  
-    .paragraph-container {
-    z-index: 1000;
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-  .magazine-paragraph{
-     font-size: 0.8rem;
+
+  .readnow-content-wrapper {
+    bottom: 6%;
+    gap: 8px;
   }
-  
+
+  .readnow2-title {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 85%;
+  }
+
+  .embark-logo-inline {
+    height: 14px;
+  }
+
+  .readnow2-text {
+    font-size: 13px;
+    width: 190px;
+    height: 40px;
+  }
+
+  #boat,
+  #footprint {
+    width: 28vw;
+    top: 45%;
+  }
 }
