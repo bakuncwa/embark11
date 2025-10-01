@@ -7,9 +7,17 @@ class SideAReadNow {
     this.boat = document.getElementById('boat');
     this.kite1 = document.getElementById('kite1');
     this.kite2 = document.getElementById('kite2');
+    this.flipButton = document.querySelector('.readnow2-link');
+    this.iframe = document.querySelector('.iframe');
+    
+    // Store both URLs
+    this.sideAUrl = 'https://indd.adobe.com/view/82b148dc-7a5d-49c6-9201-ebf8e64e7a90?startpage=1&allowFullscreen=true';
+    this.sideBUrl = 'https://indd.adobe.com/view/8df8b680-ea2b-4857-8955-7e16d402a9b0?startpage=1&allowFullscreen=true';
+    this.isShowingSideA = true; // Track current state
 
     this.handleScroll = this.handleScroll.bind(this);
     this.handleParallax = this.handleParallax.bind(this);
+    this.handleFlipNarrative = this.handleFlipNarrative.bind(this);
   }
 
   init() {
@@ -18,9 +26,32 @@ class SideAReadNow {
       this.handleParallax();
     });
 
+    // Add click handler for flip button
+    if (this.flipButton) {
+      this.flipButton.addEventListener('click', this.handleFlipNarrative);
+    }
+
     // Run once on load
     this.handleScroll();
     this.handleParallax();
+  }
+
+  handleFlipNarrative(e) {
+    e.preventDefault();
+    
+    if (this.iframe) {
+      // Toggle between the two URLs
+      if (this.isShowingSideA) {
+        this.iframe.src = this.sideBUrl;
+        this.isShowingSideA = false;
+      } else {
+        this.iframe.src = this.sideAUrl;
+        this.isShowingSideA = true;
+      }
+      
+      // Optional: Scroll to iframe smoothly
+      this.iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
   handleScroll() {
