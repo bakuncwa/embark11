@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMBARK 11 - Read Now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Sora:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../styles/side-b/components/readnow1.css" />
     <link rel="stylesheet" href="../../styles/side-b/components/readnow2.css" />
     <link rel="stylesheet" href="../../styles/styles.css" />
   </head>
   <body>
-
     <!-- READ NOW 1 -->
     <section
       class="page-section"
       style="
-        background-color: #56118C;
+        background-color: #56118c;
         display: flex;
         position: relative;
         height: 100vh;
@@ -47,14 +52,18 @@
       </div>
 
       <div class="readnow-text-container">
-        <img
-          class="readnow1-title"
-          src="../../assets/images/readnow1title-b.png"
-        />
-        <img
-          class="readnow1-text"
-          src="../../assets/images/readnow1text-b.png"
-        />
+        <h1 class="readnow1-title">Read Now</h1>
+        <div class="readnow1-text">
+          <p>The loud and the silenced. The seen and the invisible.</p>
+          <p>
+            We live in systems shaped by contrast, by power, privilege, and the
+            stories we are told to accept as truth. But cracks form where
+            binaries try to hold.
+          </p>
+          <p>Here, discomfort becomes clarity.</p>
+          <p></p>
+          <p class="text-bold">This is where we begin again.</p>
+        </div>
       </div>
     </section>
 
@@ -62,7 +71,7 @@
     <section
       class="page-section"
       style="
-        background: #56118C;
+        background: #56118c;
         display: flex;
         position: relative;
         height: 100vh;
@@ -71,12 +80,15 @@
         overflow: hidden;
       "
     >
-
-        <div class="iframe-container">
-            <iframe class="iframe"
-                src="https://indd.adobe.com/view/8df8b680-ea2b-4857-8955-7e16d402a9b0?startpage=1&allowFullscreen=true"
-                frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe>
-        </div>
+      <div class="iframe-container">
+        <iframe
+          class="iframe"
+          src="https://indd.adobe.com/view/8df8b680-ea2b-4857-8955-7e16d402a9b0?startpage=1&allowFullscreen=true"
+          frameborder="0"
+          allowfullscreen="true"
+          allowtransparency="true"
+        ></iframe>
+      </div>
 
       <div class="boat-container">
         <img
@@ -101,16 +113,24 @@
         />
       </div>
 
-      <div class="readnow-text-container">
-        <img
-          class="readnow2-title"
-          src="../../assets/images/readnow2title-b.png"
-        />
+      <div class="readnow-content-wrapper">
+        <h2 class="readnow2-title">
+          <span class="readnow2-title-text">Flip through the pages of</span>
+          <img
+            src="../../assets/images/readnow2text-embark-logo-b.png"
+            alt="EMBARK Vol. 11"
+            class="embark-logo-inline"
+          />
+        </h2>
         <!-- SIDE B READ NOW 2 LINK -->
-        <a href="#"><button class="readnow2-text magazine-paragraph">SWITCH IT UP</button></a>
+        <a href="#" class="readnow2-link"
+          ><button class="readnow2-text magazine-paragraph">
+            SWITCH IT UP
+          </button></a
+        >
       </div>
     </section>
 
-    <script src="../../scripts/side-a/components/readnow1.js"></script>
+    <script src="../../scripts/side-b/components/readnow1.js"></script>
   </body>
 </html>
