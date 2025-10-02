@@ -63,6 +63,11 @@
   will-change: transform;
 }
 
+.card-overlay .volume:nth-of-type(2) {
+  font-size: 0.85rem; 
+  font-weight: 500;   
+}
+
 /* Gradient blur overlay that appears on hover */
 .card::before {
   content: "";
@@ -215,9 +220,9 @@
 
 .yellow-side {
   position: absolute;
-  top: 0.2%;
-  left: 0%;
-  width: 16%;
+  top: -1%;
+  left: -7%;
+  width: 18%;
   z-index: 1;
 }
 
@@ -237,6 +242,12 @@
     right: 0%;
     width: 28%;
     z-index: 1;
+  }
+
+  .yellow-side {
+    width: 22%;
+    z-index: 0;
+    top: 10%;
   }
 }
 
