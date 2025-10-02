@@ -104,6 +104,26 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
+.noise-rectangle-readnow {
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  left: 48%;
+  width: 150%;
+  max-width: fit-content;
+  padding: 0 10px;
+  box-sizing: content-box;
+  z-index: -1;
+  height: auto;
+  opacity: 0;
+  animation: noiseFadeIn 0.5s ease-out 0.8s forwards;
+}
+
+.noise-rectangle-readnow {
+  opacity: 0;
+  animation: noiseFadeIn 0.5s ease-out 0.8s forwards;
+}
+
 .readnow1-text {
   position: absolute;
   top: 45%;
@@ -426,5 +446,32 @@
 
   .readnow1-text p {
     margin: 0 0 14px 0;
+  }
+}
+
+/* ACCESSIBILITY & REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .noise-rectangle-readnow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes noiseFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .noise-rectangle {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
