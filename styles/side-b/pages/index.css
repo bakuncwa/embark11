@@ -1,0 +1,57 @@
+body {
+  background-color: #110349 !important;
+}
+
+/* CRITICAL: Override CSS that prevents scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth;
+  height: auto !important;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  background-color: #110349;
+}
+
+/* Fix hero section to match Side A positioning */
+.hero-page {
+  min-height: 150vh;
+  height: 150vh;
+  width: 100%;
+  position: relative;
+  overflow: visible !important;
+  /* Add padding to account for navbar without affecting hero title position */
+  padding-top: 0;
+  z-index: 1;
+}
+
+/* Ensure hero elements stay within hero section */
+.hero-page #hero-hills,
+.hero-page #hero-character1,
+.hero-page #hero-blob1,
+.hero-page #hero-blob2 {
+  z-index: 1 !important;
+}
+
+/* Character 2 needs higher z-index to appear above hills */
+.hero-page #hero-character2 {
+  z-index: 10 !important;
+}
+
+/* Fix pre-readnow to be in document flow */
+.pre-readnow {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: 10 !important;
+}
