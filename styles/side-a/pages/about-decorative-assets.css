@@ -42,15 +42,15 @@
 
 .mobile-bottom-assets {
   position: absolute;
-  bottom: -200px;
+  bottom: -100px;
   left: 0;
   width: 100vw;
-  height: 70vh;
-  z-index: 1;
+  height: auto;
+  min-height: 400px;
+  max-height: 70vh;
+  z-index: 5;
   pointer-events: none;
-  display: none;
-  object-fit: cover;
-  object-position: bottom center;
+  display: block; 
 }
 
 .mobile-bottom-assets img {
@@ -66,13 +66,14 @@
   .pinwheel-swirl,
   .wave,
   .about-girl {
-    display: none;
+    display: none !important;
   }
 
   .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    bottom: -200px;
+    display: block !important;
+    bottom: -80px;
+    height: auto;
+    min-height: 350px;
   }
 }
 
@@ -97,7 +98,7 @@
   }
 
   .mobile-bottom-assets {
-    display: none;
+    display: block !important;
   }
 }
 
@@ -120,7 +121,7 @@
   }
 
   .mobile-bottom-assets {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -185,24 +186,24 @@
   .pinwheel-swirl {
     left: clamp(-40px, -2vw, 0px);
     top: 20%;
-    height: clamp(600px, 25vh, 500px);
+    height: clamp(500px, 25vh, 600px);
   }
 
   .wave {
     bottom: -600px;
-    height: clamp(1500px, 28vh, 550px);
+    height: clamp(550px, 28vh, 1500px);
   }
 
   .about-girl {
     bottom: -50px;
     right: -150px;
-    height: clamp(680px, 28vh, 550px);
+    height: clamp(550px, 28vh, 680px);
   }
 }
 
 /* LANDSCAPE ORIENTATION */
 
-@media (orientation: landscape) and (max-height: 600px) {
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 769px) {
   .pinwheel-swirl {
     height: 250px;
     left: -60px;
@@ -226,14 +227,15 @@
   .pinwheel-swirl,
   .wave,
   .about-girl {
-    display: none;
+    display: none !important;
   }
 
   .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    width: 100vw;
-    bottom: -200px;
+    display: block !important;
+    height: auto;
+    min-height: 300px;
+    max-height: 80vh;
+    bottom: -100px;
   }
 }
 
@@ -241,47 +243,44 @@
 
 @media (max-width: 375px) {
   .mobile-bottom-assets {
-    display: block;
-    height: 65vh;
-    bottom: -220px;
-    min-height: 65vh;
+    bottom: -70px;
+    min-height: 320px;
   }
 }
 
 @media (min-width: 376px) and (max-width: 480px) {
   .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    bottom: -200px;
+    bottom: -80px;
+    min-height: 350px;
   }
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
   .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    width: 100vw;
-    bottom: -200px;
-    position: absolute;
+    display: block !important;
+    height: auto;
+    min-height: 350px;
+    max-height: 70vh;
+    width: 100%;
+    bottom: -80px;
   }
 }
 
 @media (max-width: 812px) and (orientation: landscape) and (max-height: 480px) {
   .mobile-bottom-assets {
-    display: block;
-    height: 60vh;
-    width: 100vw;
-    bottom: -180px;
-    position: absolute;
+    display: block !important;
+    height: auto;
+    min-height: 280px;
+    max-height: 70vh;
+    width: 100%;
+    bottom: -90px;
   }
 }
 
+/* iOS Safe Area Support */
 @media (max-width: 480px) {
   .mobile-bottom-assets {
-    z-index: -1;
     padding-bottom: env(safe-area-inset-bottom);
-    height: calc(70vh + env(safe-area-inset-bottom));
-    bottom: -200px;
   }
 }
 

@@ -25,16 +25,15 @@ const contentData = [
     html: `
       <p class="paragraph-1">
         Ad Astra is De La Salle-College of Saint Benilde's (DLS-CSB)
-        official student organization tasked to produce the College
-        yearbook, capturing in text and images the graduating batches'
+        official student organization tasked to produce the College yearbook every academic year, capturing in text and images the graduating batches'
         dreams and aspirations, momentous events in school, various
         curricular and extracurricular activities, including messages from
-        their administrators and mentors.
+        their administrators<br>and mentors.
       </p>
-
+      
       <p class="paragraph-2">
-        Ad Astra currently has three major publications produced every
-        academic year:
+        Ad Astra currently has three major publications produce every
+        <br>academic year:
       </p>
 
       <div class="publications-list">
@@ -66,7 +65,7 @@ const contentData = [
       </p>
 
       <p class="paragraph-2">
-        Ad Astra is an organization under the Student Publications Unit (SPU) of the Center for Student Life (CSL). It has a sister organization in SPU named the Benildean Press Corps, which is the student-journalists' organization of DLS-CSB.
+        Ad Astra is an organization under the Student Publications Unit (SPU) of the Center for Student Life (CSL). It has a sister organization in SPU named the Benildean Press Corps, which is the student-journalists' organization of<br>DLS-CSB.
       </p>
     `,
     title: "About Ad Astra",

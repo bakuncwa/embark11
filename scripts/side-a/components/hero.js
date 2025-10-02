@@ -4,15 +4,9 @@ const c2 = document.getElementById("hero-character2");
 const b1 = document.getElementById("hero-blob1");
 const b2 = document.getElementById("hero-blob2");
 const section = document.getElementById("hero-page");
-const heroButton = document.querySelector(".hero-button");
 
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-loaded");
-});
-
-// navigate to Side B
-heroButton.addEventListener("click", () => {
-  window.location.href = "../side-b/index.html";
 });
 
 hills.style.transform = "rotate(4deg)";
@@ -27,8 +21,10 @@ function scrollAnimation() {
   const hillsHeight = hills.offsetHeight;
 
   const scrollInSection = scrollY - sectionTop;
-
+  
+  // If the bottom of the viewport has reached the bottom of the section
   if (viewportBottom >= sectionBottom) {
+    // Stop being fixed — become absolute inside section
     hills.style.position = "absolute";
     hills.style.bottom = "-100px";
     hills.style.width = "100%";
@@ -47,6 +43,7 @@ function scrollAnimation() {
     b2.style.right = "-100px";
     b2.style.bottom = "43%";
   } else {
+    // Keep it fixed
     hills.style.position = "fixed";
     hills.style.bottom = "-100px";
     hills.style.width = "101%";
@@ -67,11 +64,14 @@ function scrollAnimation() {
   }
 
   if (window.matchMedia("(max-width: 1024px").matches) {
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
       hills.style.bottom = "-50px";
       hills.style.width = "100%";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
       hills.style.bottom = "-50px";
       hills.style.width = "101%";
@@ -79,13 +79,16 @@ function scrollAnimation() {
   }
 
   if (window.matchMedia("(max-width: 768px").matches) {
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
       hills.style.bottom = "-25px";
       hills.style.width = "101%";
 
       b1.style.left = "-30px";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
       hills.style.bottom = "-25px";
       hills.style.width = "101%";
@@ -98,7 +101,9 @@ function scrollAnimation() {
     hills.style.right = "-10px";
     hills.style.width = "150%";
     hills.style.bottom = "-50px";
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
 
       c1.style.bottom = `40%`;
@@ -109,6 +114,7 @@ function scrollAnimation() {
       b1.style.bottom = "14%";
       b1.style.left = "-30px";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
 
       c1.style.bottom = `60%`;
@@ -129,7 +135,9 @@ function scrollAnimation() {
     hills.style.right = "-160px";
     hills.style.width = "200%";
     hills.style.bottom = "-50px";
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
 
       c1.style.bottom = `40%`;
@@ -138,6 +146,7 @@ function scrollAnimation() {
 
       b2.style.bottom = "43%";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
 
       c1.style.bottom = `63%`;
@@ -150,9 +159,12 @@ function scrollAnimation() {
     hills.style.right = "-160px";
     hills.style.width = "200%";
     hills.style.bottom = "-20px";
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
     }
   }
@@ -161,9 +173,12 @@ function scrollAnimation() {
     hills.style.right = "-160px";
     hills.style.width = "200%";
     hills.style.bottom = "-20px";
+    // If the bottom of the viewport has reached the bottom of the section
     if (viewportBottom >= sectionBottom) {
+      // Stop being fixed — become absolute inside section
       hills.style.position = "absolute";
     } else {
+      // Keep it fixed
       hills.style.position = "fixed";
     }
   }
