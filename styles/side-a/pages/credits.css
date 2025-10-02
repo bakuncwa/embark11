@@ -450,27 +450,23 @@ html {
   .credits-title {
     font-size: clamp(1.3rem, 2vh, 1.8rem);
     margin-bottom: clamp(5px, 9vh, 80px);
-    margin-top: clamp(1px, 1vh, 20px);
+    top: -3vh;
     line-height: 1.1;
     flex-shrink: 0;
   }
 
-  .noise-rectangle {
-    width: clamp(200px, 60vw, 150px);
-    top: clamp(40px, 7vh, 20px);
-  }
-
   .credits-description {
-    font-size: clamp(0.75rem, 1.5vh, 0.9rem);
+    font-size: clamp(0.55rem, 1vh, 0.7rem);
     width: 100%;
     height: auto;
     flex: 1;
     min-height: 0;
     max-height: none;
-    line-height: 1.25;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 3vh;
   }
 
   .content-slide-creds {
