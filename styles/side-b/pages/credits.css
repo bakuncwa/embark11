@@ -50,7 +50,7 @@ html {
   overflow: hidden;
 }
 
-.card-container {
+.card-container-creds {
   position: relative;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ html {
 
 /* CONTENT SLIDES & DESCRIPTION */
 .credits-description {
-  width: min(876px, 70%);
+  width: min(876px, 70%); 
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -103,9 +103,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
-.content-slide {
+.content-slide-creds {
   width: 100%;
   opacity: 0;
   visibility: hidden;
@@ -119,14 +120,15 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 11;
 }
 
-.content-slide.active {
+.content-slide-creds.active {
   opacity: 1;
   visibility: visible;
 }
 
-.paragraph-1,
+.paragraph-1-creds,
 .paragraph-2,
 .paragraph-3,
 .paragraph-4 {
@@ -147,7 +149,7 @@ html {
 
 
 /* NAVIGATION BUTTONS */
-.nav-button {
+.nav-button-creds {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -162,40 +164,40 @@ html {
   user-select: none;
 }
 
-.nav-button:focus,
-.nav-button:active,
-.nav-button:focus-visible {
+.nav-button-creds:focus,
+.nav-button-creds:active,
+.nav-button-creds:focus-visible {
   outline: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-.nav-button * {
+.nav-button-creds * {
   outline: none !important;
   border: none !important;
 }
 
-.nav-button:hover {
+.nav-button-creds:hover {
   opacity: 0.8;
 }
 
-.nav-button:active {
+.nav-button-creds:active {
   opacity: 0.9;
 }
 
-.left-button {
+.left-button-creds {
   left: -100px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.right-button {
+.right-button-creds {
   right: -100px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.nav-button-svg {
+.nav-button-creds-svg {
   width: 100%;
   height: 100%;
   display: block;
@@ -204,13 +206,13 @@ html {
   border: none !important;
 }
 
-.nav-button:hover .nav-button-svg {
+.nav-button-creds:hover .nav-button-creds-svg {
   filter: none;
   outline: none !important;
 }
 
 /* DOT INDICATORS */
-.dot-indicators {
+.dot-indicators-creds {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +220,7 @@ html {
   margin-top: clamp(30px, 4vw, 30px);
 }
 
-.dot-indicator {
+.dot-indicator-creds {
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -227,15 +229,15 @@ html {
   transition: all 0.3s ease;
 }
 
-.dot-indicator.active {
+.dot-indicator-creds.active {
   background: #3394d8;
 }
 
-.dot-indicator:hover {
+.dot-indicator-creds:hover {
   transform: scale(1.2);
 }
 
-.dot-indicator:active {
+.dot-indicator-creds:active {
   transform: scale(0.9);
 }
 
@@ -288,7 +290,7 @@ html {
     justify-content: center;
   }
 
-  .content-slide {
+  .content-slide-creds {
     padding: 0;
     height: 100%;
     display: flex;
@@ -297,7 +299,7 @@ html {
     align-items: center;
   }
 
-  .paragraph-1,
+  .paragraph-1-creds,
   .paragraph-2,
   .paragraph-3,
   .paragraph-4 {
@@ -313,31 +315,31 @@ html {
     line-height: 1.2;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: 60px;
     height: 70px;
   }
 
-  .left-button {
+  .left-button-creds {
     left: 40%;
     top: auto;
     bottom: clamp(-90px, -25vh, -35px);
     transform: translateX(clamp(-38px, -9vw, -32px));
   }
 
-  .right-button {
+  .right-button-creds {
     right: 40%;
     top: auto;
     bottom: clamp(-90px, -25vh, -35px);
     transform: translateX(clamp(32px, 9vw, 38px));
   }
 
-  .dot-indicator {
+  .dot-indicator-creds {
     width: clamp(4px, 2.5vw, 11px);
     height: clamp(4px, 2.5vw, 11px);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     display: horizontal;
     margin-top: 40px;
   }
@@ -384,7 +386,7 @@ html {
     line-height: 1.35;
   }
 
-  .content-slide {
+  .content-slide-creds {
     padding: 0;
     height: 100%;
     display: flex;
@@ -393,7 +395,7 @@ html {
     align-items: center;
   }
 
-  .paragraph-1,
+  .paragraph-1-creds,
   .paragraph-2,
   .paragraph-3,
   .paragraph-4 {
@@ -409,31 +411,31 @@ html {
     line-height: 1.3;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: clamp(38px, 7vw, 46px);
     height: clamp(38px, 7vw, 46px);
   }
 
-  .left-button {
+  .left-button-creds {
     left: 50%;
     top: auto;
     bottom: clamp(-55px, -12vh, -45px);
     transform: translateX(clamp(-55px, -12vw, -48px));
   }
 
-  .right-button {
+  .right-button-creds {
     right: 50%;
     top: auto;
     bottom: clamp(-55px, -12vh, -45px);
     transform: translateX(clamp(48px, 12vw, 55px));
   }
 
-  .dot-indicator {
+  .dot-indicator-creds {
     width: clamp(10px, 2.5vw, 12px);
     height: clamp(10px, 2.5vw, 12px);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     display: horizontal;
   }
 }
@@ -461,24 +463,24 @@ html {
     height: 320px;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: 52px;
     height: 52px;
   }
 
-  .left-button {
+  .left-button-creds {
     left: -65px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .right-button {
+  .right-button-creds {
     right: -65px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: 25px;
   }
 }
@@ -508,24 +510,24 @@ html {
     height: 350px;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: 52px;
     height: 52px;
   }
 
-  .left-button {
+  .left-button-creds {
     left: -90px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .right-button {
+  .right-button-creds {
     right: -90px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: 25px;
   }
 }
@@ -555,24 +557,24 @@ html {
     height: 400px;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: 54px;
     height: 54px;
   }
 
-  .left-button {
+  .left-button-creds {
     left: -100px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .right-button {
+  .right-button-creds {
     right: -100px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: 27px;
   }
 }
@@ -602,7 +604,7 @@ html {
     height: 420px;
   }
 
-  .paragraph-1,
+  .paragraph-1-creds,
   .paragraph-2 {
     margin-bottom: 20px;
   }
@@ -616,24 +618,24 @@ html {
     margin-bottom: 12px;
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: 30px;
     gap: 8px;
   }
 
-  .dot-indicator {
+  .dot-indicator-creds {
     width: 16px;
     height: 16px;
   }
 
-  .left-button {
+  .left-button-creds {
     left: -80px;
   }
-  .right-button {
+  .right-button-creds {
     right: -80px;
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: 56px;
     height: 56px;
   }
@@ -666,7 +668,7 @@ html {
     height: clamp(480px, 35vh, 600px);
   }
 
-  .paragraph-1,
+  .paragraph-1-creds,
   .paragraph-2,
   .paragraph-3,
   .paragraph-4 {
@@ -682,25 +684,25 @@ html {
     margin-bottom: clamp(15px, 1.5vh, 25px);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: clamp(40px, 5vh, 80px);
     gap: clamp(10px, 1vw, 15px);
   }
 
-  .dot-indicator {
+  .dot-indicator-creds {
     width: clamp(18px, 1.5vw, 24px);
     height: clamp(18px, 1.5vw, 24px);
   }
 
-  .left-button {
+  .left-button-creds {
     left: clamp(-140px, -8vw, -200px);
   }
 
-  .right-button {
+  .right-button-creds {
     right: clamp(-140px, -8vw, -200px);
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: clamp(60px, 4vw, 80px);
     height: clamp(60px, 4vw, 80px);
   }
@@ -736,7 +738,7 @@ html {
     width: clamp(150px, 45vw, 400px);
   }
 
-  .paragraph-1,
+  .paragraph-1-creds,
   .paragraph-2,
   .paragraph-3,
   .paragraph-4 {
@@ -751,16 +753,16 @@ html {
     margin-bottom: clamp(3px, 0.8vh, 6px);
   }
 
-  .dot-indicators {
+  .dot-indicators-creds {
     margin-top: clamp(6px, 1.5vh, 10px);
   }
 
-  .nav-button {
+  .nav-button-creds {
     width: clamp(30px, 5vw, 40px);
     height: clamp(30px, 5vw, 40px);
   }
 
-  .dot-indicator {
+  .dot-indicator-creds {
     width: clamp(8px, 1.8vw, 10px);
     height: clamp(8px, 1.8vw, 10px);
   }
@@ -773,7 +775,7 @@ html {
     line-height: 1.25;
   }
 
-  .content-slide {
+  .content-slide-creds {
     padding: 0;
     height: 100%;
     display: flex;
@@ -784,14 +786,14 @@ html {
 }
 
 @media (orientation: landscape) and (max-height: 600px) and (max-width: 768px) {
-  .left-button {
+  .left-button-creds {
     left: 50%;
     top: auto;
     bottom: clamp(-38px, -8vh, -30px);
     transform: translateX(clamp(-32px, -7vw, -28px));
   }
 
-  .right-button {
+  .right-button-creds {
     right: 50%;
     top: auto;
     bottom: clamp(-38px, -8vh, -30px);
@@ -808,13 +810,13 @@ html {
 }
 
 @media (orientation: landscape) and (max-height: 600px) and (min-width: 769px) {
-  .left-button {
+  .left-button-creds {
     left: -70px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .right-button {
+  .right-button-creds {
     right: -70px;
     top: 50%;
     transform: translateY(-50%);
@@ -854,13 +856,13 @@ html {
   animation: noiseFadeIn 0.5s ease-out 0.8s forwards;
 }
 
-.dot-indicators {
+.dot-indicators-creds {
   opacity: 0;
   transform: translateY(20px);
   animation: indicatorsFadeIn 0.5s ease-out 1.1s forwards;
 }
 
-.nav-button {
+.nav-button-creds {
   opacity: 0;
   animation: buttonsFadeIn 0.5s ease-out 1.3s forwards;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -921,132 +923,132 @@ html {
 
 /* ARROW HOVER */
 
-.nav-button:hover {
+.nav-button-creds:hover {
   opacity: 1;
   transform: scale(1.15);
   filter: brightness(1.1);
 }
 
-.nav-button:active {
+.nav-button-creds:active {
   transform: scale(0.95);
   opacity: 0.8;
   transition: all 0.1s ease;
 }
 
-.nav-button-svg {
+.nav-button-creds-svg {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-origin: center;
 }
 
-.nav-button:hover .nav-button-svg {
+.nav-button-creds:hover .nav-button-creds-svg {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
   transform: translateY(-1px);
 }
 
-.left-button:hover {
+.left-button-creds:hover {
   transform: translateY(-50%) scale(1.15);
 }
 
-.right-button:hover {
+.right-button-creds:hover {
   transform: translateY(-50%) scale(1.15);
 }
 
-.left-button:active {
+.left-button-creds:active {
   transform: translateY(-50%) scale(0.95);
 }
 
-.right-button:active {
+.right-button-creds:active {
   transform: translateY(-50%) scale(0.95);
 }
 
 /* Mobile-specific hover */
 @media (max-width: 480px) {
-  .left-button:hover {
+  .left-button-creds:hover {
     transform: translateX(clamp(-38px, -9vw, -32px)) scale(1.15);
   }
 
-  .right-button:hover {
+  .right-button-creds:hover {
     transform: translateX(clamp(32px, 9vw, 38px)) scale(1.15);
   }
 
-  .left-button:active {
+  .left-button-creds:active {
     transform: translateX(clamp(-38px, -9vw, -32px)) scale(0.95);
   }
 
-  .right-button:active {
+  .right-button-creds:active {
     transform: translateX(clamp(32px, 9vw, 38px)) scale(0.95);
   }
 }
 
 /* Tablet-specific hover */
 @media (min-width: 481px) and (max-width: 768px) {
-  .left-button:hover {
+  .left-button-creds:hover {
     transform: translateX(clamp(-55px, -12vw, -48px)) scale(1.15);
   }
 
-  .right-button:hover {
+  .right-button-creds:hover {
     transform: translateX(clamp(48px, 12vw, 55px)) scale(1.15);
   }
 
-  .left-button:active {
+  .left-button-creds:active {
     transform: translateX(clamp(-55px, -12vw, -48px)) scale(0.95);
   }
 
-  .right-button:active {
+  .right-button-creds:active {
     transform: translateX(clamp(48px, 12vw, 55px)) scale(0.95);
   }
 }
 
 /* Landscape mode hover */
 @media (orientation: landscape) and (max-height: 600px) and (max-width: 768px) {
-  .left-button:hover {
+  .left-button-creds:hover {
     transform: translateX(clamp(-32px, -7vw, -28px)) scale(1.15);
   }
 
-  .right-button:hover {
+  .right-button-creds:hover {
     transform: translateX(clamp(28px, 7vw, 32px)) scale(1.15);
   }
 
-  .left-button:active {
+  .left-button-creds:active {
     transform: translateX(clamp(-32px, -7vw, -28px)) scale(0.95);
   }
 
-  .right-button:active {
+  .right-button-creds:active {
     transform: translateX(clamp(28px, 7vw, 32px)) scale(0.95);
   }
 }
 
 /* Touch device */
 @media (hover: none) and (pointer: coarse) {
-  .nav-button:hover {
+  .nav-button-creds:hover {
     transform: scale(1.08);
     opacity: 0.9;
   }
 
-  .left-button:hover {
+  .left-button-creds:hover {
     transform: translateY(-50%) scale(1.08);
   }
 
-  .right-button:hover {
+  .right-button-creds:hover {
     transform: translateY(-50%) scale(1.08);
   }
 
   @media (max-width: 480px) {
-    .left-button:hover {
+    .left-button-creds:hover {
       transform: translateX(clamp(-38px, -9vw, -32px)) scale(1.08);
     }
 
-    .right-button:hover {
+    .right-button-creds:hover {
       transform: translateX(clamp(32px, 9vw, 38px)) scale(1.08);
     }
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    .left-button:hover {
+    .left-button-creds:hover {
       transform: translateX(clamp(-55px, -12vw, -48px)) scale(1.08);
     }
 
-    .right-button:hover {
+    .right-button-creds:hover {
       transform: translateX(clamp(48px, 12vw, 55px)) scale(1.08);
     }
   }
@@ -1058,34 +1060,34 @@ html {
   .credits-card,
   .credits-title,
   .noise-rectangle,
-  .dot-indicators,
-  .nav-button {
+  .dot-indicators-creds,
+  .nav-button-creds {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 
-  .nav-button,
-  .nav-button-svg {
+  .nav-button-creds,
+  .nav-button-creds-svg {
     transition: opacity 0.2s ease !important;
   }
 
-  .nav-button:hover,
-  .left-button:hover,
-  .right-button:hover {
+  .nav-button-creds:hover,
+  .left-button-creds:hover,
+  .right-button-creds:hover {
     transform: none !important;
     opacity: 0.8 !important;
     filter: none !important;
   }
 
-  .nav-button:active,
-  .left-button:active,
-  .right-button:active {
+  .nav-button-creds:active,
+  .left-button-creds:active,
+  .right-button-creds:active {
     transform: none !important;
     opacity: 0.6 !important;
   }
 
-  .nav-button:hover .nav-button-svg {
+  .nav-button-creds:hover .nav-button-creds-svg {
     transform: none !important;
     filter: none !important;
   }
@@ -1099,7 +1101,7 @@ html {
   right: 0;
   width: auto;
   height: 450px;
-  z-index: 10;
+  z-index: 1;
   pointer-events: auto;
   display: block;
   will-change: transform;
@@ -1111,7 +1113,7 @@ html {
   right: -10%;
   width: auto;
   height: 300px;
-  z-index: 10;
+  z-index: 2;
   pointer-events: auto;
   display: block;
   will-change: transform;
