@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff5db;
+  background: linear-gradient(180deg, #f4f1b8 0%, #fff5db 24.04%);
   position: relative;
   overflow: visible;
   text-align: center;
