@@ -555,8 +555,8 @@
   }
 }
 
-/* Extra Small Mobile (320px - 375px) */
-@media (min-width: 320px) and (max-width: 375px) {
+/* Extra Small Mobile (320px - 414px) */
+@media (min-width: 320px) and (max-width: 414px) {
   .iframe-container {
     margin-top: 12vh;
     width: 92%;
@@ -600,7 +600,7 @@
     position: absolute;
     top: auto;
     bottom: auto;
-    margin-top: 6vh;
+    margin-top: 20vh;
     transform: translate(-50%, 0);
     top: calc(12vh + 50vw + 6vh);
   }
@@ -788,7 +788,7 @@
   }
 
   .readnow-content-wrapper {
-    bottom: 5%;
+    bottom: 10%;
     gap: 10px;
   }
 

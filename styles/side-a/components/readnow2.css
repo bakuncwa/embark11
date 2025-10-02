@@ -268,7 +268,7 @@
   }
 
   .readnow-content-wrapper {
-    top: calc(10vh + 48vw + 10vh);
+    top: calc(15vh + 48vw + 15vh);
     bottom: auto;
     margin-top: 10vh;
     gap: 12px;
