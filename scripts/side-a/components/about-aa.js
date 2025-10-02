@@ -30,7 +30,7 @@ const contentData = [
         curricular and extracurricular activities, including messages from
         their administrators<br>and mentors.
       </p>
-      
+
       <p class="paragraph-2">
         Ad Astra currently has three major publications produce every
         <br>academic year:

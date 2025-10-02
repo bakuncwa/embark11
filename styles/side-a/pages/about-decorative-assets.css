@@ -51,8 +51,6 @@
   z-index: 5;
   pointer-events: none;
   display: block; 
-  object-fit: cover;
-  object-position: bottom center;
 }
 
 /* RESPONSIVE BREAKPOINTS */
