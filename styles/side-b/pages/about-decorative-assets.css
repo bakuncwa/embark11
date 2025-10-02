@@ -1,7 +1,7 @@
 /* (SIDE B) DESKTOP ASSETS */
 
 .left-frame-path {
-  position: fixed;
+  position: absolute;
   left: -50px;
   top: 25%;
   transform: translateY(-50%);
@@ -14,7 +14,7 @@
 }
 
 .right-frame-path {
-  position: fixed;
+  position: absolute;
   bottom: -50px;
   right: 0;
   width: auto;
@@ -28,7 +28,7 @@
 /* MOBILE DECORATIVE ASSETS */
 
 .mobile-bottom-assets {
-  position: fixed;
+  position: absolute;
   bottom: -200px;
   left: 0;
   width: 100vw;
@@ -48,7 +48,7 @@
 }
 
 .mobile-top-assets {
-  position: fixed;
+  position: absolute;
   top: -100px;
   right: -30px;
   width: auto;
@@ -255,14 +255,14 @@
     height: 70vh;
     width: 100vw;
     bottom: -200px;
-    position: fixed;
+    position: absolute;
   }
 
   .mobile-top-assets {
     display: block;
     height: 40vh;
     top: -100px;
-    position: fixed;
+    position: absolute;
   }
 }
 
@@ -272,14 +272,14 @@
     height: 60vh;
     width: 100vw;
     bottom: -180px;
-    position: fixed;
+    position: absolute;
   }
 
   .mobile-top-assets {
     display: block;
     height: 28vh;
     top: -60px;
-    position: fixed;
+    position: absolute;
   }
 }
 
