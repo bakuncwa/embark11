@@ -1,4 +1,4 @@
-// (SIDE B) Credits JS - Responsive Version
+// (SIDE B) Credits JS
 
 let currentIndexCreds = 0;
 
@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeContentCreds();
   initializeNavigationCreds();
   initializeDotIndicatorsCreds();
-  initializeResponsiveText();
 });
 
 // -----------------------------
@@ -16,6 +15,8 @@ const contentDataCreds = [
   {
     html: `
       <div class="editorial-team paragraph-1-creds">
+        <h3 class="team-subheading">Directors</h3>
+
         <div class="team-grid">
           <div class="team-item">
             <h4>Chief Copy Editor</h4>
@@ -53,11 +54,11 @@ const contentDataCreds = [
       </div>
     `,
     title: "Editorial Team",
-    subheading: "Directors",
   },
   {
     html: `
       <div class="editorial-team paragraph-1-creds">
+        <h3 class="team-subheading">Staffers + Apprentices</h3>
         <div class="team-section">
           <h3 class="section-title">Art & Design</h3>
           <div class="team-grid two-cols">
@@ -89,11 +90,11 @@ const contentDataCreds = [
       </div>
     `,
     title: "Editorial Team",
-    subheading: "Staffers + Apprentices",
   },
   {
     html: `
       <div class="editorial-team paragraph-1-creds">
+        <h3 class="team-subheading">Staffers + Apprentices</h3>
         <div class="team-section">
           <h3 class="section-title">Writers</h3>
           <div class="team-grid two-cols">
@@ -123,11 +124,12 @@ const contentDataCreds = [
       </div>
     `,
     title: "Editorial Team",
-    subheading: "Staffers + Apprentices",
   },
   {
     html: `
       <div class="editorial-team paragraph-1-creds">
+        <h3 class="team-subheading">Staffers + Apprentices</h3>
+
         <!-- Photo -->
         <div class="team-section">
           <h3 class="section-title">Photo</h3>
@@ -163,11 +165,12 @@ const contentDataCreds = [
         </div>
     `,
     title: "Editorial Team",
-    subheading: "Staffers + Apprentices",
   },
   {
     html: `
       <div class="editorial-team paragraph-1-creds">
+        <h3 class="team-subheading">Staffers + Apprentices</h3>
+
         <!-- Video -->
         <div class="team-section paragraph-1-creds">
           <h3 class="section-title">Video</h3>
@@ -198,8 +201,7 @@ const contentDataCreds = [
         </div>
     `,
     title: "Editorial Team",
-    subheading: "Staffers + Apprentices",
-  },
+  }
 ];
 
 // -----------------------------
@@ -208,7 +210,6 @@ const contentDataCreds = [
 function initializeContentCreds() {
   const credsDescription = document.querySelector(".credits-description");
   const credsTitle = document.querySelector(".credits-title");
-  const teamSubheading = document.querySelector(".team-subheading-fixed");
 
   credsDescription.innerHTML = "";
 
@@ -221,9 +222,6 @@ function initializeContentCreds() {
   });
 
   credsTitle.innerHTML = contentDataCreds[0].title;
-  if (teamSubheading) {
-    teamSubheading.innerHTML = contentDataCreds[0].subheading;
-  }
 
   if (!document.querySelector(".dot-indicators-creds")) {
     const dotContainer = document.createElement("div");
@@ -242,265 +240,6 @@ function initializeContentCreds() {
 
     credsDescription.parentNode.appendChild(dotContainer);
   }
-}
-
-// -----------------------------
-// Responsive text sizing
-// -----------------------------
-function initializeResponsiveText() {
-  adjustTextSize();
-
-  let resizeTimer;
-  window.addEventListener("resize", function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-      adjustTextSize();
-    }, 250);
-  });
-
-  // Handle orientation changes
-  window.addEventListener("orientationchange", function () {
-    setTimeout(adjustTextSize, 100);
-  });
-}
-
-function adjustTextSize() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  const isLandscape = width > height;
-
-  const root = document.documentElement;
-
-  // Mobile Portrait (up to 480px)
-  if (width <= 480 && !isLandscape) {
-    root.style.setProperty("--credits-title-size", "clamp(1.5rem, 5vw, 2rem)");
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.1rem, 4vw, 1.3rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(0.95rem, 3.5vw, 1.1rem)"
-    );
-    root.style.setProperty("--team-item-h4-size", "clamp(0.85rem, 3vw, 1rem)");
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(0.8rem, 2.8vw, 0.95rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(0.8rem, 3vw, 1.2rem)");
-    root.style.setProperty("--content-padding", "clamp(1rem, 4vw, 1.5rem)");
-  }
-  // Mobile Landscape (up to 812px wide, short height)
-  else if (width <= 812 && isLandscape && height <= 480) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(1.2rem, 3vh, 1.5rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(0.95rem, 2.5vh, 1.1rem)"
-    );
-    root.style.setProperty("--section-title-size", "clamp(0.85rem, 2vh, 1rem)");
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(0.75rem, 1.8vh, 0.9rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(0.7rem, 1.6vh, 0.85rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(0.6rem, 2vh, 1rem)");
-    root.style.setProperty("--content-padding", "clamp(0.8rem, 2vh, 1.2rem)");
-  }
-  // Tablets (481px - 768px)
-  else if (width > 480 && width <= 768) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(1.8rem, 4vw, 2.2rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.3rem, 3vw, 1.5rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.1rem, 2.5vw, 1.3rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(0.95rem, 2vw, 1.1rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(0.9rem, 1.8vw, 1.05rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(1rem, 2.5vw, 1.5rem)");
-    root.style.setProperty("--content-padding", "clamp(1.5rem, 3vw, 2rem)");
-  }
-  // Small Laptops (769px - 1024px)
-  else if (width > 768 && width <= 1024) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(2rem, 3.5vw, 2.5rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.4rem, 2.5vw, 1.7rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.2rem, 2vw, 1.4rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(1rem, 1.6vw, 1.15rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(0.95rem, 1.5vw, 1.1rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(1.2rem, 2vw, 1.8rem)");
-    root.style.setProperty("--content-padding", "clamp(1.8rem, 2.5vw, 2.5rem)");
-  }
-  // Desktop (1025px - 1440px)
-  else if (width > 1024 && width <= 1440) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(2.2rem, 3vw, 2.8rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.5rem, 2.2vw, 1.8rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.3rem, 1.8vw, 1.5rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(1.05rem, 1.4vw, 1.2rem)"
-    );
-    root.style.setProperty("--team-item-p-size", "clamp(1rem, 1.3vw, 1.15rem)");
-    root.style.setProperty("--team-grid-gap", "clamp(1.5rem, 2vw, 2rem)");
-    root.style.setProperty("--content-padding", "clamp(2rem, 2.5vw, 3rem)");
-  }
-  // Large Desktop (1441px - 1919px)
-  else if (width > 1440 && width <= 1919) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(2.5rem, 2.8vw, 3rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.6rem, 2vw, 1.9rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.4rem, 1.6vw, 1.6rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(1.1rem, 1.3vw, 1.25rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(1.05rem, 1.2vw, 1.2rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(1.8rem, 2vw, 2.3rem)");
-    root.style.setProperty("--content-padding", "clamp(2.5rem, 2.8vw, 3.5rem)");
-  }
-  // Ultra Wide (1920px - 2559px)
-  else if (width > 1919 && width <= 2559) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(2.8rem, 2.5vw, 3.2rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.8rem, 1.8vw, 2rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.5rem, 1.5vw, 1.7rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(1.15rem, 1.2vw, 1.3rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(1.1rem, 1.15vw, 1.25rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(2rem, 2.2vw, 2.5rem)");
-    root.style.setProperty("--content-padding", "clamp(3rem, 3vw, 4rem)");
-  }
-  // Extra Ultra Wide (2560px+)
-  else if (width > 2559) {
-    root.style.setProperty(
-      "--credits-title-size",
-      "clamp(3rem, 2.2vw, 3.5rem)"
-    );
-    root.style.setProperty(
-      "--team-subheading-size",
-      "clamp(1.9rem, 1.6vw, 2.2rem)"
-    );
-    root.style.setProperty(
-      "--section-title-size",
-      "clamp(1.6rem, 1.4vw, 1.8rem)"
-    );
-    root.style.setProperty(
-      "--team-item-h4-size",
-      "clamp(1.2rem, 1.1vw, 1.4rem)"
-    );
-    root.style.setProperty(
-      "--team-item-p-size",
-      "clamp(1.15rem, 1.05vw, 1.3rem)"
-    );
-    root.style.setProperty("--team-grid-gap", "clamp(2.2rem, 2vw, 2.8rem)");
-    root.style.setProperty("--content-padding", "clamp(3.5rem, 2.8vw, 4.5rem)");
-  }
-
-  // Apply styles to elements
-  applyResponsiveStyles();
-}
-
-function applyResponsiveStyles() {
-  const credsTitle = document.querySelector(".credits-title");
-  const teamSubheadings = document.querySelectorAll(".team-subheading");
-  const sectionTitles = document.querySelectorAll(".section-title");
-  const teamItemH4s = document.querySelectorAll(".team-item h4");
-  const teamItemPs = document.querySelectorAll(".team-item p, .team-grid p");
-  const teamGrids = document.querySelectorAll(".team-grid");
-  const editorialTeams = document.querySelectorAll(".editorial-team");
-
-  if (credsTitle) {
-    credsTitle.style.fontSize = "var(--credits-title-size)";
-  }
-
-  teamSubheadings.forEach((el) => {
-    el.style.fontSize = "var(--team-subheading-size)";
-  });
-
-  sectionTitles.forEach((el) => {
-    el.style.fontSize = "var(--section-title-size)";
-  });
-
-  teamItemH4s.forEach((el) => {
-    el.style.fontSize = "var(--team-item-h4-size)";
-  });
-
-  teamItemPs.forEach((el) => {
-    el.style.fontSize = "var(--team-item-p-size)";
-    el.style.lineHeight = "1.5";
-  });
-
-  teamGrids.forEach((el) => {
-    el.style.gap = "var(--team-grid-gap)";
-  });
-
-  editorialTeams.forEach((el) => {
-    el.style.padding = "var(--content-padding)";
-  });
 }
 
 // -----------------------------
@@ -525,7 +264,6 @@ function updateSlideCreds(newIndex, direction = "none") {
 
   const credsSlides = document.querySelectorAll(".content-slide-creds");
   const credsTitle = document.querySelector(".credits-title");
-  const teamSubheading = document.querySelector(".team-subheading-fixed");
 
   credsSlides.forEach((slide) => slide.classList.remove("active"));
 
@@ -533,17 +271,10 @@ function updateSlideCreds(newIndex, direction = "none") {
     if (credsSlides[currentIndexCreds]) {
       credsSlides[currentIndexCreds].classList.add("active");
       credsTitle.innerHTML = contentDataCreds[currentIndexCreds].title;
-      if (teamSubheading) {
-        teamSubheading.innerHTML =
-          contentDataCreds[currentIndexCreds].subheading;
-      }
-      adjustTextSize(); // Reapply responsive sizing after slide change
     }
   }, 50);
 
-  console.log(
-    `Switched to content ${currentIndexCreds + 1}, direction: ${direction}`
-  );
+  console.log(`Switched to content ${currentIndexCreds + 1}, direction: ${direction}`);
 }
 
 // -----------------------------
@@ -555,17 +286,13 @@ function initializeNavigationCreds() {
 
   leftButton.addEventListener("click", function () {
     const newIndex =
-      currentIndexCreds > 0
-        ? currentIndexCreds - 1
-        : contentDataCreds.length - 1;
+      currentIndexCreds > 0 ? currentIndexCreds - 1 : contentDataCreds.length - 1;
     updateSlideCreds(newIndex, "left");
   });
 
   rightButton.addEventListener("click", function () {
     const newIndex =
-      currentIndexCreds < contentDataCreds.length - 1
-        ? currentIndexCreds + 1
-        : 0;
+      currentIndexCreds < contentDataCreds.length - 1 ? currentIndexCreds + 1 : 0;
     updateSlideCreds(newIndex, "right");
   });
 

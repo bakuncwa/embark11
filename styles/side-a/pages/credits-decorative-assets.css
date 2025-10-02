@@ -1,6 +1,13 @@
 /* CREDITS PAGE DECORATIVE ASSETS (SIDE A) */
 /* Vendor illustrations and mobile bottom assets */
 
+/* KEYFRAMES FOR FLOATING EFFECT */
+@keyframes floatAnimation {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
 /* VENDORS CONTAINER */
 .vendors-container {
   position: absolute;
@@ -13,7 +20,7 @@
 .vendor1 {
   position: absolute;
   left: 0;
-  bottom: -100px;
+  bottom: 0; 
   width: auto;
   height: 45vh;
   z-index: 1;
@@ -21,13 +28,14 @@
   display: block;
   will-change: transform;
   transform-origin: left bottom;
+  animation: floatAnimation 4s infinite ease-in-out;
 }
 
 /* RIGHT VENDOR */
 .vendor2 {
   position: absolute;
   right: 0;
-  bottom: -100px;
+  bottom: 0; 
   width: auto;
   height: 45vh;
   z-index: 1;
@@ -35,13 +43,14 @@
   display: block;
   will-change: transform;
   transform-origin: right bottom;
+  animation: floatAnimation 3.5s infinite ease-in-out 0.2s;
 }
 
-/* LEFT PINWHEEL (above vendor1) - MOVED FURTHER LEFT */
+/* LEFT PINWHEEL */
 .pinwheel1 {
   position: absolute;
   left: -8%;
-  bottom: 35vh;
+  bottom: 30vh;
   width: auto;
   height: 40vh;
   z-index: 2;
@@ -49,9 +58,10 @@
   display: block;
   will-change: transform;
   transform-origin: center;
+  animation: floatAnimation 3.5s infinite ease-in-out 0.2s;
 }
 
-/* RIGHT BARS (above vendor2) - MOVED HIGHER UP */
+/* RIGHT BARS */
 .bars2 {
   position: absolute;
   right: -2%;
@@ -63,6 +73,7 @@
   display: block;
   will-change: transform;
   transform-origin: center;
+  animation: floatAnimation 4s infinite ease-in-out;
 }
 
 /* MOBILE BOTTOM ASSETS */
@@ -100,12 +111,24 @@
 
 /* Mobile Phones (up to 480px) */
 @media (max-width: 480px) {
-  .vendor1,
   .wave,
-  .vendor2,
-  .pinwheel1,
-  .bars2 {
+  .vendor1,
+  .vendor2 {
     display: none;
+  }
+
+  .pinwheel1{
+    display: block;
+    height: 30vh;
+    top: 600px;
+    left: -28%;
+  }
+
+  .bars2{
+    display: block;
+    height: 30vh;
+    top: 50px;
+    right: -18%;
   }
 
   .mobile-bottom-assets {
@@ -185,13 +208,13 @@
   }
 
   .pinwheel1 {
-    left: -7%;
-    bottom: 30vh;
+    left: -25%;
+    bottom: 35vh;
     height: 35vh;
   }
 
   .bars2 {
-    right: -3%;
+    right: -10%;
     bottom: 42vh;
     height: 35vh;
   }
