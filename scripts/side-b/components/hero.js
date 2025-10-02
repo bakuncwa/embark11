@@ -2,9 +2,15 @@ const hills = document.getElementById("hero-hills");
 const b1 = document.getElementById("hero-blob1");
 const b2 = document.getElementById("hero-blob2");
 const section = document.getElementById("hero-page");
+const heroButton = document.querySelector(".hero-button");
 
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-loaded");
+});
+
+// Add click event to navigate to Side A
+heroButton.addEventListener("click", () => {
+  window.location.href = "../side-a/index.html";
 });
 
 function updateImageB1() {
@@ -27,9 +33,9 @@ function scrollAnimation() {
 
   const scrollInSection = scrollY - sectionTop;
 
-  // If the bottom of the viewport has reached the bottom of the section
+  
   if (viewportBottom >= sectionBottom) {
-    // Stop being fixed — become absolute inside section
+    
     hills.style.position = "absolute";
     hills.style.width = "100%";
 
@@ -41,7 +47,7 @@ function scrollAnimation() {
     b2.style.right = "-20px";
     b2.style.top = "43%";
   } else {
-    // Keep it fixed
+    
     hills.style.position = "fixed";
     hills.style.width = "100%";
 
@@ -57,29 +63,29 @@ function scrollAnimation() {
   }
 
   if (window.matchMedia("(max-width: 1024px").matches) {
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
       hills.style.width = "100%";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
       hills.style.width = "101%";
     }
   }
 
   if (window.matchMedia("(max-width: 768px").matches) {
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
       hills.style.width = "101%";
 
       b1.style.left = "0px";
       b1.style.top = "39%";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
       hills.style.width = "101%";
 
@@ -92,9 +98,9 @@ function scrollAnimation() {
     hills.style.right = "0px";
     hills.style.width = "200%";
     hills.style.bottom = "0px";
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
 
       b1.style.bottom = "14%";
@@ -102,7 +108,7 @@ function scrollAnimation() {
 
       b2.style.top = "63%";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
 
       b1.style.transform = `translateX(${scrollInSection * 0.4}px)`;
@@ -115,15 +121,15 @@ function scrollAnimation() {
   }
 
   if (window.matchMedia("(max-width: 425px").matches) {
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
 
       b2.style.top = "70%";
       b2.style.bottom = "43%";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
 
       b2.style.top = "55%";
@@ -131,23 +137,23 @@ function scrollAnimation() {
   }
 
   if (window.matchMedia("(max-width: 375px").matches) {
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
     }
   }
 
   if (window.matchMedia("(max-width: 320px").matches) {
-    // If the bottom of the viewport has reached the bottom of the section
+    
     if (viewportBottom >= sectionBottom) {
-      // Stop being fixed — become absolute inside section
+      
       hills.style.position = "absolute";
     } else {
-      // Keep it fixed
+      
       hills.style.position = "fixed";
 
       b2.style.top = "";
@@ -159,4 +165,7 @@ function scrollAnimation() {
 updateImageB1();
 scrollAnimation();
 window.addEventListener("scroll", scrollAnimation);
-window.addEventListener("resize", scrollAnimation, updateImageB1);
+window.addEventListener("resize", () => {
+  scrollAnimation();
+  updateImageB1();
+});
