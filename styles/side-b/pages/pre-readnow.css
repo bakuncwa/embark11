@@ -22,14 +22,24 @@ html {
 }
 
 /* MAIN CONTAINER & BACKGROUND */
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
 .pre-readnow {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1920 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.3'/%3E%3C/svg%3E"),
-    linear-gradient(180deg, #110349 30%, #402c89 100%);
-  background-size: 100% 100%;
-  background-attachment: absolute;
+  background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+    center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,12 +104,9 @@ html {
 /* Mobile Phones (up to 480px) */
 @media (max-width: 480px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 480 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='mobileNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.45' numOctaves='2' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23mobileNoiseFilter)' opacity='0.4'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: cover;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
     padding: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .content-container {
@@ -122,10 +129,8 @@ html {
 /* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='tabletNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='2' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.25 0.35 0.45 0.55 0.65 0.75 0.85 0.95 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23tabletNoiseFilter)' opacity='0.35'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
-    background-position: center;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {
@@ -148,9 +153,8 @@ html {
 /* Small Laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 768' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='laptopNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.32' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23laptopNoiseFilter)' opacity='0.32'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {
@@ -168,9 +172,8 @@ html {
 /* Desktop (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 900' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='desktopNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23desktopNoiseFilter)' opacity='0.3'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {
@@ -189,9 +192,8 @@ html {
 /* Large Desktop (1441px - 1919px) */
 @media (min-width: 1441px) and (max-width: 1919px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1920 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='largeDesktopNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.28' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23largeDesktopNoiseFilter)' opacity='0.28'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {
@@ -209,9 +211,8 @@ html {
 /* Ultra Wide (1920px - 2559px) */
 @media (min-width: 1920px) and (max-width: 2559px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 2560 1440' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='ultraWideNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.25' numOctaves='4' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.15 0.25 0.35 0.45 0.55 0.65 0.75 0.85 0.95 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23ultraWideNoiseFilter)' opacity='0.25'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {
@@ -229,9 +230,8 @@ html {
 /* Extra Ultra Wide (2560px+) */
 @media (min-width: 2560px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 3840 2160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='extraUltraWideNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22' numOctaves='4' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='2.0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23extraUltraWideNoiseFilter)' opacity='0.22'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
     transform-origin: center center;
   }
 
@@ -266,10 +266,8 @@ html {
 /* LANDSCAPE ORIENTATION */
 @media (orientation: landscape) and (max-height: 600px) {
   .pre-readnow {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='landscapeNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.38' numOctaves='2' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0.25 0.35 0.45 0.55 0.65 0.75 0.85 0.95 1'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='saturate' values='1.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23landscapeNoiseFilter)' opacity='0.35'/%3E%3C/svg%3E"),
-      linear-gradient(180deg, #110349 30%, #402c89 100%);
-    background-size: 100% 100%;
-    background-position: center;
+    background: url("../../assets/images/side-b/pre-readnow/side-b-pre-readnow-bg.png")
+      center center / cover no-repeat;
   }
 
   .content-container {

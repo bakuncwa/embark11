@@ -130,7 +130,7 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
   .left-frame-path {
     left: -60px;
-    top: 25%;
+    top: 20%;
     height: 350px;
   }
 
@@ -144,7 +144,7 @@
 @media (min-width: 1441px) and (max-width: 1919px) {
   .left-frame-path {
     left: -60px;
-    top: 23%;
+    top: 28%;
     height: 380px;
   }
 
@@ -158,7 +158,7 @@
 @media (min-width: 1920px) and (max-width: 2559px) {
   .left-frame-path {
     left: -70px;
-    top: 20%;
+    top: 25%;
     height: 450px;
   }
 
