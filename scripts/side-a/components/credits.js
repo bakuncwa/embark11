@@ -70,17 +70,16 @@ const contentDataCreds = [
             <div>
                 <p>Charm Chua</p>
                 <p>Dres Deña</p>
-                <p>Andrei Esguerra</p>
                 <p>Amrish Guido</p>
+                <p>Tommy Mallari</p>
             </div>
             <div>
-                <p>Tommy Mallari</p>
                 <p>Sem Malvar</p>
                 <p>Shaine Mias</p>
                 <p>Jurela Oh</p>
+                <p>Ella Oreta</p>
             </div>
             <div>
-                <p>Ella Oreta</p>
                 <p>Gabriel Rosales</p>
                 <p>Kring Sangual</p>
                 <p>Kas Tongco</p>
@@ -175,6 +174,7 @@ const contentDataCreds = [
           <div class="team-grid two-cols">
             <div>
               <p>Irish Cristobal</p>
+              <p>Jilyanne Sio</p>
             </div>
             <div>
               <p>Shane Picardal</p>
