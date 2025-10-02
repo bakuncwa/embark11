@@ -97,7 +97,7 @@ html {
   line-height: 140%;
   text-align: center;
   color: #F3F3F3;
-  margin: 0;
+  margin: 2vw;
   position: relative;
   height: 250px;
   display: flex;
@@ -1079,6 +1079,8 @@ html {
   display: block;
   will-change: transform;
   transform-origin: left bottom;
+  animation: simpleFlicker 0.10s infinite alternate 0.5s;
+  /* animation: filterFlicker 1.0s infinite steps(1); */
 }
 
 /* RIGHT VENDOR */
@@ -1094,64 +1096,78 @@ html {
   display: block;
   will-change: transform;
   transform-origin: right top;
+  animation: simpleFlicker 0.2s infinite alternate 0.5s;
+  /* animation: filterFlicker 1.0s infinite steps(1); */
 }
 
-/* MOBILE DECORATIVE ASSETS */
-
-.mobile-bottom-assets {
-  position: fixed;
-  bottom: -200px;
-  left: 0;
-  width: 100vw;
-  height: 70vh;
-  z-index: 1;
-  pointer-events: none;
-  display: none;
-  object-fit: cover;
-  object-position: bottom center;
+@keyframes simpleFlicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  75% {
+    opacity: 0.85;
+  }
 }
 
-.mobile-bottom-assets img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom center;
+@keyframes filterFlicker {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  15%, 55%, 80% {
+    filter: brightness(0.8) contrast(1.2);
+  }
+  35%, 70% {
+    filter: brightness(1.1);
+  }
 }
 
 /* RESPONSIVE BREAKPOINTS */
 
 @media (max-width: 480px) {
-  .vendor1,
-  .wave,
-  .vendor2 {
+  .wave {
     display: none;
   }
 
-  .mobile-bottom-assets {
+  .vendor1{
     display: block;
-    height: 70vh;
-    bottom: -200px;
+    height: 30vh;
+    top: 590px;
+    left: -12%;
+  }
+
+  .vendor2 {
+    display: block;
+    height: 30vh;
+    top: 50px;
+    right: -8%;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .vendor1 {
-    left: -80px;
-    top: 20%;
-    height: 280px;
-    pointer-events: auto;
-  }
 
   .wave {
     bottom: -120px;
     height: 350px;
   }
 
+  .vendor1{
+    display: block;
+    height: 30vh;
+    top: 690px;
+    left: -12%;
+  }
+
   .vendor2 {
-    bottom: -40px;
-    height: 320px;
-    right: -90px;
-    pointer-events: auto;
+    display: block;
+    height: 30vh;
+    top: 50px;
+    right: -8%;
   }
 
   .mobile-bottom-assets {
@@ -1285,61 +1301,6 @@ html {
   .wave,
   .vendor2 {
     display: none;
-  }
-
-  .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    width: 100vw;
-    bottom: -200px;
-  }
-}
-
-/* MOBILE SPECIFIC ADJUSTMENTS */
-
-@media (max-width: 375px) {
-  .mobile-bottom-assets {
-    display: block;
-    height: 65vh;
-    bottom: -220px;
-    min-height: 65vh;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 480px) {
-  .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    bottom: -200px;
-  }
-}
-
-@media (max-width: 480px) and (orientation: portrait) {
-  .mobile-bottom-assets {
-    display: block;
-    height: 70vh;
-    width: 100vw;
-    bottom: -200px;
-    position: fixed;
-  }
-}
-
-@media (max-width: 812px) and (orientation: landscape) and (max-height: 480px) {
-  .mobile-bottom-assets {
-    display: block;
-    height: 60vh;
-    width: 100vw;
-    bottom: -180px;
-    position: fixed;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobile-bottom-assets {
-    z-index: -1;
-    padding-bottom: env(safe-area-inset-bottom);
-    height: calc(70vh + env(safe-area-inset-bottom));
-    bottom: -200px;
   }
 }
 

@@ -87,7 +87,7 @@ html {
   line-height: 140%;
   text-align: center;
   color: #110349;
-  margin: 0;
+  margin: 2vw;
   position: relative;
   height: 250px;
   display: flex;
@@ -1128,4 +1128,71 @@ html {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* EDITORIAL TEAM SECTION */
+
+.editorial-team {
+  text-align: center;
+}
+
+.team-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.team-subheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em 4em;
+  justify-items: center;
+}
+
+.team-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.team-item p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.team-columns {
+  columns: 3;          
+  column-gap: 2em;     
+  text-align: center;  
+}
+
+.team-columns p {
+  margin: 0.4em 0;
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8em;
+}
+
+.team-grid.two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em 4em;
+  max-width: 700px;
+  margin: 0 auto 3em auto;
+  text-align: center;
+}
+
+.team-section p {
+  margin: 0.3em 0;
+  font-size: 1rem;
 }
