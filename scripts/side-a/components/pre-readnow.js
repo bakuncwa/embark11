@@ -1,4 +1,4 @@
-// (SIDE A) PRE-READ NOW ASSETS
+// (SIDE A) PRE-READ NOW
 
 class PreReadNowAssets {
   constructor() {
@@ -10,21 +10,32 @@ class PreReadNowAssets {
       rightBoy: document.querySelector(".right-boy"),
     };
 
+    this.textElements = {
+      line1: document.querySelector(".line-1"),
+      line2: document.querySelector(".line-2"),
+    };
+
     this.init();
   }
 
   init() {
     this.checkReducedMotion();
-    this.setupIntersectionObserver();
-    this.setupParallaxEffect();
+
+    if (!this.prefersReducedMotion) {
+      this.setupGSAPAnimations();
+      this.setupParallaxEffect();
+    } else {
+      // Fallback for reduced motion
+      this.setupBasicIntersectionObserver();
+    }
   }
 
   checkReducedMotion() {
-    const prefersReducedMotion = window.matchMedia(
+    this.prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (prefersReducedMotion) {
+    if (this.prefersReducedMotion) {
       Object.values(this.assets).forEach((asset) => {
         if (asset) {
           asset.style.animation = "none";
@@ -32,10 +43,117 @@ class PreReadNowAssets {
           asset.style.transform = "none";
         }
       });
+
+      if (this.textElements.line1) this.textElements.line1.style.opacity = "1";
+      if (this.textElements.line2) this.textElements.line2.style.opacity = "1";
     }
   }
 
-  setupIntersectionObserver() {
+  setupGSAPAnimations() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set(this.textElements.line1, {
+      x: "-100vw",
+      opacity: 0,
+    });
+
+    gsap.set(this.textElements.line2, {
+      x: "100vw",
+      opacity: 0,
+    });
+
+    gsap.to(this.textElements.line1, {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".pre-readnow",
+        start: "top 65%",
+        end: "top 25%",
+        scrub: 3,
+        markers: false,
+      },
+    });
+
+    gsap.to(this.textElements.line2, {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".pre-readnow",
+        start: "top 65%",
+        end: "top 25%",
+        scrub: 3,
+        markers: false,
+      },
+    });
+  }
+
+  setupParallaxEffect() {
+    if (this.assets.leftCamera) {
+      gsap.to(this.assets.leftCamera, {
+        y: 200,
+        scrollTrigger: {
+          trigger: ".pre-readnow",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    if (this.assets.rightNoise) {
+      gsap.to(this.assets.rightNoise, {
+        y: 150,
+        scrollTrigger: {
+          trigger: ".pre-readnow",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    if (this.assets.rightBoy) {
+      gsap.to(this.assets.rightBoy, {
+        y: 180,
+        scrollTrigger: {
+          trigger: ".pre-readnow",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    if (this.assets.leftNoise) {
+      gsap.to(this.assets.leftNoise, {
+        y: 120,
+        scrollTrigger: {
+          trigger: ".pre-readnow",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    if (this.assets.leftGirl) {
+      gsap.to(this.assets.leftGirl, {
+        y: 100,
+        scrollTrigger: {
+          trigger: ".pre-readnow",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+  }
+
+  setupBasicIntersectionObserver() {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -57,67 +175,16 @@ class PreReadNowAssets {
     });
   }
 
-  setupParallaxEffect() {
-    let ticking = false;
-
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          this.updateParallax();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
+  pauseAnimations() {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.disable());
   }
 
-  updateParallax() {
-    const scrollY = window.scrollY;
-    const parallaxSpeed = 0.3;
-
-    if (this.assets.leftCamera) {
-      this.assets.leftCamera.style.transform = `translateY(${
-        scrollY * parallaxSpeed
-      }px)`;
-    }
-
-    if (this.assets.rightNoise) {
-      this.assets.rightNoise.style.transform = `translateY(${
-        scrollY * parallaxSpeed * 0.5
-      }px)`;
-    }
-
-    if (this.assets.rightBoy) {
-      this.assets.rightBoy.style.transform = `translateY(${
-        scrollY * parallaxSpeed * 0.7
-      }px)`;
-    }
-
-    if (this.assets.leftNoise) {
-      this.assets.leftNoise.style.transform = `translateY(${
-        scrollY * parallaxSpeed * 0.4
-      }px)`;
-    }
+  resumeAnimations() {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
   }
 
-  toggleFloatingAnimation(pause = false) {
-    if (this.assets.leftGirl) {
-      if (pause) {
-        this.assets.leftGirl.style.animationPlayState = "paused";
-      } else {
-        this.assets.leftGirl.style.animationPlayState = "running";
-      }
-    }
-  }
-
-  setFloatingSpeed(duration = 3) {
-    if (this.assets.leftGirl) {
-      const currentAnimation = this.assets.leftGirl.style.animation;
-      this.assets.leftGirl.style.animation = currentAnimation.replace(
-        /floatGirl \d+s/,
-        `floatGirl ${duration}s`
-      );
-    }
+  refreshScrollTrigger() {
+    ScrollTrigger.refresh();
   }
 }
 

@@ -120,6 +120,7 @@ class SideANavbar {
   }
 
   transformToSideB(navbar, logoImg) {
+    // Add visual transition
     navbar.style.background = "#561487";
 
     logoImg.src =
@@ -146,7 +147,10 @@ class SideANavbar {
       toggle.style.background = "#110349";
     });
 
-    this.loadSideBStyles();
+    // Redirect to Side B
+    setTimeout(() => {
+      window.location.href = "../side-b/index.html";
+    }, 10);
   }
 
   transformToSideA(navbar, logoImg) {
@@ -225,7 +229,7 @@ class SideANavbar {
       }
     });
 
-    // Close dropdown on scroll 
+    // Close dropdown on scroll
     let isScrolling = false;
 
     window.addEventListener("scroll", () => {
