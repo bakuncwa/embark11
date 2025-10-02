@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector(".volumes-section-b");
   const container = document.querySelector(".cards-container");
   const cards = Array.from(container.querySelectorAll(".card"));
+  const rightSide = document.querySelector(".right-side");
+  const leftSide = document.querySelector(".left-side");
 
   container.style.visibility = "hidden";
 
@@ -68,5 +70,50 @@ document.addEventListener("DOMContentLoaded", () => {
     window.innerHeight || document.documentElement.clientHeight;
   if (sectionRect.top < viewportHeight && sectionRect.bottom > 0) {
     setTimeout(() => container.classList.add("spread"), 150);
+  }
+
+  // ScrollTrigger animations
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Right side image
+    if (rightSide) {
+      gsap.fromTo(
+        rightSide,
+        {
+          y: -200, 
+        },
+        {
+          y: 0, 
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom", 
+            end: "bottom top", 
+            scrub: 1, 
+          },
+        }
+      );
+    }
+
+    // Left side image
+    if (leftSide) {
+      gsap.fromTo(
+        leftSide,
+        {
+          y: 200, 
+        },
+        {
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+          },
+        }
+      );
+    }
   }
 });
