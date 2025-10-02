@@ -1,17 +1,50 @@
-<!-- Side A Navbar HTML -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMBARK 11 - Side A</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/side-a/pages/index.css" />
     <link rel="stylesheet" href="../../styles/side-a/components/navbar.css" />
-    <link rel="stylesheet" href="../../styles/side-a/components/readnow1.css" />
     <link rel="stylesheet" href="../../styles/side-a/components/footer.css" />
     <link rel="stylesheet" href="../../styles/side-a/components/hero.css" />
-    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/side-a/pages/pre-readnow.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/side-a/pages/pre-readnow-assets.css"
+    />
+    <link rel="stylesheet" href="../../styles/side-a/components/readnow1.css" />
+    <link rel="stylesheet" href="../../styles/side-a/components/readnow2.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/side-a/pages/about-decorative-assets.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/side-a/pages/about-ad-astra.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/side-a/components/prev-embarks.css"
+    />
+    <link rel="stylesheet" href="../../styles/side-a/components/SPU-EB-a.css" />
+    <link rel="stylesheet" href="../../styles/side-a/pages/credits.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../img/favicon.png" />
   </head>
   <body>
+    <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-left">
@@ -26,21 +59,27 @@
 
         <div class="navbar-center">
           <ul class="navbar-menu">
-            <li><a href="#about">About EMBARK 11</a></li>
             <li><a href="#read">Read Now</a></li>
+            <li><a href="#about">About EMBARK 11</a></li>
             <li><a href="#team">EMBARK Team</a></li>
           </ul>
 
-          <div class="toggle-switch desktop-toggle">
-            <div class="toggle-track"></div>
-            <div class="toggle-thumb"></div>
+          <div class="toggle-switch-wrapper">
+            <div class="toggle-switch desktop-toggle">
+              <div class="toggle-track"></div>
+              <div class="toggle-thumb"></div>
+            </div>
+            <div class="toggle-tooltip">Flip the narrative!</div>
           </div>
         </div>
 
         <div class="navbar-right">
-          <div class="toggle-switch mobile-toggle">
-            <div class="toggle-track"></div>
-            <div class="toggle-thumb"></div>
+          <div class="toggle-switch-wrapper">
+            <div class="toggle-switch mobile-toggle">
+              <div class="toggle-track"></div>
+              <div class="toggle-thumb"></div>
+            </div>
+            <div class="toggle-tooltip">Flip the narrative!</div>
           </div>
 
           <img
@@ -58,8 +97,7 @@
       </div>
     </nav>
 
-    <main style="padding-top: 70px"></main>
-
+    <!-- Dropdown Menu -->
     <div class="dropdown-menu" id="dropdownMenu">
       <div class="dropdown-content">
         <div class="dropdown-header">MENU</div>
@@ -137,188 +175,608 @@
       </div>
     </div>
 
-    <section class="hero-page" id="hero-page">
-      <div class="hero-title fade-in-on-load delay-1">
-        <img src="../../assets/images/hero-EMBARK-a.png" class="hero-EMBARK" />
-        <p class="hero-Vol11">Vol. 11</p>
-        <button class="hero-button">
-          <p class="hero-button-text">FLIP THE NARRATIVE</p>
-          <div class="hero-button-play">
-            <div class="hero-button-play-circle">
-              <svg
-                class="svg-icon"
-                style="
-                  width: 0.8em;
-                  height: 0.8em;
-                  vertical-align: middle;
-                  fill: currentColor;
-                  overflow: hidden;
-                "
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M852.727563 392.447107C956.997809 458.473635 956.941389 565.559517 852.727563 631.55032L281.888889 993.019655C177.618644 1059.046186 93.090909 1016.054114 93.090909 897.137364L93.090909 126.860063C93.090909 7.879206 177.675064-35.013033 281.888889 30.977769L852.727563 392.447107 852.727563 392.447107Z"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-      <img
-        src="../../assets/images/hero-blob1-a.png"
-        class="hero-blob1 fade-in-on-load delay-2"
-        id="hero-blob1"
-      />
-      <img
-        src="../../assets/images/hero-blob2-a.png"
-        class="hero-blob2 fade-in-on-load delay-3"
-        id="hero-blob2"
-      />
-      <img
-        src="../../assets/images/hero-character1-a.png"
-        class="hero-character1 fade-in-on-load delay-4"
-        id="hero-character1"
-      />
-      <img
-        src="../../assets/images/hero-character2-a.png"
-        class="hero-character2 fade-in-on-load delay-5"
-        id="hero-character2"
-      />
-      <img
-        src="../../assets/images/hero-hills-a.png"
-        id="hero-hills"
-        class="hero-hills fade-in-on-load delay-3"
-      />
-    </section>
-    <section
-      class="page-section"
-      style="
-        background-color: #ff60d7;
-        display: flex;
-        position: relative;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
-      "
-    >
-      <div class="ppl1-container">
-        <img
-          class="ppl"
-          id="ppl1"
-          src="../../assets/images/readnow1ppl1-a.png"
-        />
-      </div>
-
-      <div class="kite1-container">
-        <img id="kite1" src="../../assets/images/readnow1kite1-a.png" />
-      </div>
-
-      <div class="star-container">
-        <img id="star" src="../../assets/images/readnow1star-a.png" />
-      </div>
-
-      <div class="kite2-container">
-        <img id="kite2" src="../../assets/images/readnow1kite2-a.png" />
-      </div>
-
-      <div class="ppl2-container">
-        <img
-          class="ppl"
-          id="ppl2"
-          src="../../assets/images/readnow1ppl2-a.png"
-        />
-      </div>
-
-      <div class="decor-container">
-        <img
-          src="../../assets/images/readnow1sphere-a.png"
-          class="decor-sphere"
-        />
-      </div>
-
-      <div class="readnow-text-container">
-        <img
-          class="readnow1-title"
-          src="../../assets/images/readnow1title-a.png"
-        />
-        <img
-          class="readnow1-text"
-          src="../../assets/images/readnow1text-a.png"
-        />
-      </div>
-    </section>
-
-    <script src="../../scripts/side-a/components/navbar.js"></script>
-    <script src="../../scripts/side-a/components/readnow1.js"></script>
-    <script src="../../scripts/side-a/components/hero.js"></script>
-  </body>
-  <footer class="footer">
-    <div class="footer-location">
-      <div class="footer-text">
-        <p class="footer-header">Ad Astra</p>
-        <p>9/F The Atrium @ Benilde</p>
-        <p>1140 Arellano Ave cor.,</p>
-        <p>C. Ayala St., Don Pedro St.,</p>
-        <p>Malate, Manila</p>
-      </div>
-    </div>
-    <div class="footer-logo">
-      <img
-        src="../../assets/images/shared/logos/side-a-footer-ad-astra-logo.png"
-        alt="Ad Astra Logo"
-      />
-      <p>© Ad Astra: The Benildean Yearbook 2025</p>
-    </div>
-    <div class="footer-socials">
-      <div class="footer-text">
-        <p class="footer-header">Socials</p>
-        <div class="footer-socials-container">
-          <p>/theadastra</p>
-          <a href="https://www.facebook.com/theadastra/">
-            <img
-              src="../../assets/images/shared/icons/side-a-facebook.png"
-              class="footer-social-icons"
-              alt="Facebook"
-            />
-          </a>
-        </div>
-        <div class="footer-socials-container">
-          <p>@theadastra</p>
-          <a href="https://www.instagram.com/theadastra/">
-            <img
-              src="../../assets/images/shared/icons/side-a-instagram.png"
-              class="footer-social-icons"
-              alt="Instagram"
-            />
-          </a>
-          <a href="https://x.com/theAdAstra">
-            <img
-              src="../../assets/images/shared/icons/side-a-x.png"
-              class="footer-social-icons"
-              alt="X"
-            />
-          </a>
-          <a href="https://www.tiktok.com/@theadastra">
-            <img
-              src="../../assets/images/shared/icons/side-a-tiktok.png"
-              class="footer-social-icons"
-              alt="Tiktok"
-            />
-          </a>
-        </div>
-        <div class="footer-socials-container">
-          <p>adastra@benilde.edu.ph</p>
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-page" id="hero-page">
+        <div class="hero-title fade-in-on-load delay-1">
           <img
-            src="../../assets/images/shared/icons/side-a-mail.png"
-            class="footer-social-icons"
-            alt="Mail"
-            style="height: 12px; align-self: center"
+            src="../../assets/images/hero-EMBARK-a.png"
+            class="hero-EMBARK"
+          />
+          <p class="hero-Vol11">Vol. 11</p>
+          <button class="hero-button">
+            <p class="hero-button-text">FLIP THE NARRATIVE</p>
+            <div class="hero-button-play">
+              <div class="hero-button-play-circle">
+                <svg
+                  class="svg-icon"
+                  style="
+                    width: 0.8em;
+                    height: 0.8em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M852.727563 392.447107C956.997809 458.473635 956.941389 565.559517 852.727563 631.55032L281.888889 993.019655C177.618644 1059.046186 93.090909 1016.054114 93.090909 897.137364L93.090909 126.860063C93.090909 7.879206 177.675064-35.013033 281.888889 30.977769L852.727563 392.447107 852.727563 392.447107Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <img
+          src="../../assets/images/hero-blob1-a.png"
+          class="hero-blob1 fade-in-on-load delay-2"
+          id="hero-blob1"
+        />
+        <img
+          src="../../assets/images/hero-blob2-a.png"
+          class="hero-blob2 fade-in-on-load delay-3"
+          id="hero-blob2"
+        />
+        <img
+          src="../../assets/images/hero-character1-a.png"
+          class="hero-character1 fade-in-on-load delay-4"
+          id="hero-character1"
+        />
+        <img
+          src="../../assets/images/hero-character2-a.png"
+          class="hero-character2 fade-in-on-load delay-5"
+          id="hero-character2"
+        />
+        <img
+          src="../../assets/images/hero-hills-a.png"
+          id="hero-hills"
+          class="hero-hills fade-in-on-load delay-3"
+        />
+      </section>
+
+      <!-- Pre-ReadNow Section -->
+      <section class="pre-readnow">
+        <!-- Decorative Assets -->
+        <img
+          src="../../assets/images/side-a/pre-readnow/side-a-pre-readnow-left-camera.png"
+          alt="Camera decoration"
+          class="decorative-asset left-camera"
+        />
+        <img
+          src="../../assets/images/side-a/pre-readnow/side-a-pre-readnow-left-noise.png"
+          alt="Noise decoration"
+          class="decorative-asset left-noise"
+        />
+        <img
+          src="../../assets/images/side-a/pre-readnow/side-a-pre-readnow-left-girl.png"
+          alt="Girl decoration"
+          class="decorative-asset left-girl"
+        />
+        <img
+          src="../../assets/images/side-a/pre-readnow/side-a-pre-readnow-right-noise.png"
+          alt="Noise decoration"
+          class="decorative-asset right-noise"
+        />
+        <img
+          src="../../assets/images/side-a/pre-readnow/side-a-pre-readnow-right-boy.png"
+          alt="Boy decoration"
+          class="decorative-asset right-boy"
+        />
+
+        <div class="content-container">
+          <div class="main-text">
+            <span class="text-line line-1">This is just one side</span>
+            <span class="text-line line-2">of the story.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- READ NOW 1 -->
+      <section
+        class="page-section"
+        id="read"
+        style="
+          background-color: #ff60d7;
+          display: flex;
+          position: relative;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+        "
+      >
+        <div class="ppl1-container">
+          <img
+            class="ppl"
+            id="ppl1"
+            src="../../assets/images/readnow1ppl1-a.png"
           />
         </div>
+
+        <div class="kite1-container">
+          <img id="kite1" src="../../assets/images/readnow1kite1-a.png" />
+        </div>
+
+        <div class="star-container">
+          <img id="star" src="../../assets/images/readnow1star-a.png" />
+        </div>
+
+        <div class="kite2-container">
+          <img id="kite2" src="../../assets/images/readnow1kite2-a.png" />
+        </div>
+
+        <div class="ppl2-container">
+          <img
+            class="ppl"
+            id="ppl2"
+            src="../../assets/images/readnow1ppl2-a.png"
+          />
+        </div>
+
+        <div class="decor-container">
+          <img
+            src="../../assets/images/readnow1sphere-a.png"
+            class="decor-sphere"
+          />
+        </div>
+
+        <div class="readnow-text-container">
+          <h1 class="readnow1-title">Read Now</h1>
+          <div class="readnow1-text">
+            <p>The good and the bad. The beautiful and the ugly.</p>
+            <p>
+              We are in the world continuously governed by that of which we deem
+              polarities: two opposing sides. But it's never been black and
+              white, has it?
+            </p>
+            <p class="embark-paragraph">
+              <img
+                src="../../assets/images/readnow1text-embark-logo-a.png"
+                alt="EMBARK 11"
+                class="embark-logo"
+              />
+              allows us to see beyond false dichotomies and binaries. The path
+              ahead is unlimited.
+            </p>
+            <p></p>
+            <p class="text-bold">The space between is where we begin.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- READ NOW 2 -->
+      <section
+        class="page-section"
+        style="
+          background: linear-gradient(to bottom, #ff60d7, #ffffff);
+          display: flex;
+          position: relative;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+        "
+      >
+        <div class="iframe-container">
+          <iframe
+            class="iframe"
+            src="https://indd.adobe.com/view/82b148dc-7a5d-49c6-9201-ebf8e64e7a90?startpage=1&allowFullscreen=true"
+            frameborder="0"
+            allowfullscreen="true"
+            allowtransparency="true"
+          ></iframe>
+        </div>
+
+        <div class="boat-container">
+          <img
+            class="readnow2-assets"
+            id="boat"
+            src="../../assets/images/readnow2boat-a.png"
+          />
+        </div>
+
+        <div class="footprint-container">
+          <img
+            class="readnow2-assets"
+            id="footprint"
+            src="../../assets/images/readnow2footprint-a.png"
+          />
+        </div>
+
+        <div class="decor2-container">
+          <img
+            src="../../assets/images/readnow1sphere-a.png"
+            class="decor2-sphere"
+          />
+        </div>
+
+        <div class="readnow-content-wrapper">
+          <h2 class="readnow2-title">
+            <span class="readnow2-title-text">Flip through the pages of</span>
+            <img
+              src="../../assets/images/readnow2text-embark-logo-a.png"
+              alt="EMBARK Vol. 11"
+              class="embark-logo-inline"
+            />
+          </h2>
+          <!-- SIDE B READ NOW 2 LINK -->
+          <a href="#" class="readnow2-link"
+            ><button class="readnow2-text magazine-paragraph">
+              FLIP THE NARRATIVE
+            </button></a
+          >
+        </div>
+      </section>
+
+      <!-- Previous EMBARK Volumes Section -->
+      <section class="volumes-section" id="embark-section">
+        <h2>Previous EMBARK Volumes</h2>
+
+        <div class="cards-container">
+          <div
+            class="card"
+            style="
+              background-image: url('../../assets/images/prev-volume10.png');
+            "
+          >
+            <div class="card-overlay">
+              <p class="volume">Volume 10</p>
+              <a
+                href="https://theadastra.org/embark10/index.html"
+                target="_blank"
+                class="read"
+                >Read now</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              background-image: url('../../assets/images/prev-volume9.png');
+            "
+          >
+            <div class="card-overlay">
+              <p class="volume">Volume 9</p>
+              <a
+                href="https://theadastra.org/embark9/index.html"
+                target="_blank"
+                class="read"
+                >Read now</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              background-image: url('../../assets/images/prev-volume8.png');
+            "
+          >
+            <div class="card-overlay">
+              <p class="volume">Volume 8</p>
+              <a
+                href="https://theadastra.org/embark8/index.html"
+                target="_blank"
+                class="read"
+                >Read now</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              background-image: url('../../assets/images/prev-volume7.png');
+            "
+          >
+            <div class="card-overlay">
+              <p class="volume">Volume 7</p>
+              <a
+                href="https://embark7.theadastra.org/"
+                target="_blank"
+                class="read"
+                >Read now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <img src="../../assets/images/prev-kite.png" class="kite" />
+        <img src="../../assets/images/prev-rightside.png" class="red-side" />
+        <img
+          src="../../assets/images/prev-leftside.png"
+          alt=""
+          class="yellow-side"
+        />
+      </section>
+
+      <!-- About Ad Astra Section -->
+      <section class="about-ad-astra" id="about">
+        <!-- Decorative Pinwheel Swirl - Left Side (Desktop Only) -->
+        <img
+          src="../../assets/images/side-a/about/side-a-about-pinwheel-swirl.png"
+          alt="Pinwheel Swirl Decoration"
+          class="pinwheel-swirl"
+        />
+
+        <!-- Wave - Bottom Right -->
+        <img
+          src="../../assets/images/side-a/about/side-a-about-wave.png"
+          alt="Wave Decoration"
+          class="wave"
+        />
+
+        <!-- Girl - Bottom Right -->
+        <img
+          src="../../assets/images/side-a/about/side-a-about-girl.png"
+          alt="Girl Decoration"
+          class="about-girl"
+        />
+
+        <!-- Mobile Bottom Assets -->
+        <img
+          src="../../assets/images/side-a/about/side-a-mobile-about-bottom-assets.png"
+          alt="Mobile Bottom Assets"
+          class="mobile-bottom-assets"
+        />
+
+        <div class="card-container">
+          <button class="nav-button left-button" aria-label="Previous">
+            <img
+              src="../../assets/images/side-a/about/side-a-left-btn.svg"
+              alt="Previous"
+              class="nav-button-svg"
+            />
+          </button>
+
+          <button class="nav-button right-button" aria-label="Next">
+            <img
+              src="../../assets/images/side-a/about/side-a-right-btn.svg"
+              alt="Next"
+              class="nav-button-svg"
+            />
+          </button>
+
+          <!-- Card Container -->
+          <div class="about-card">
+            <img
+              src="../../assets/images/side-a/about/side-a-about-aa-noise-rectangle.png"
+              alt="Noise Rectangle"
+              class="noise-rectangle"
+            />
+            <h1 class="about-title">About Ad Astra</h1>
+            <div class="about-description"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Publications Unit & Editorial Board Section -->
+      <section class="spu-section" id="team">
+        <!-- Upper heading -->
+        <h2 class="spu-heading">Student Publications Unit</h2>
+
+        <!-- Top 3 portraits -->
+        <div class="spu-top-portraits">
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-msriza.png" alt="Ms. Rizalyn Lagman-Manalili">
+            <p class="name">Ms. Rizalyn Lagman-Manalili</p>
+            <p class="position">Student Development Coordinator</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-msdayan.png" alt="Ms. Dayanara Cudal">
+            <p class="name">Ms. Dayanara Cudal</p>
+            <p class="position">Head</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-mscathy.png" alt="Ms. Catherine Bucud-Valles">
+            <p class="name">Ms. Catherine Bucud-Valles</p>
+            <p class="position">Operations Assistant</p>
+          </div>
+        </div>
+
+        <!-- Lower heading -->
+        <h2 class="spu-heading">Editorial Board</h2>
+        <h3 class="spu-sub-heading">Third Term P.Y. 2024-2025</h3>
+
+        <!-- 12 portraits -->
+        <div class="spu-grid-portraits">
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-max.png" alt="Max Soliman">
+            <p class="name">Max Soliman</p>
+            <p class="position">Editor in Chief</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-limmy.png" alt="Limmy Limbo">
+            <p class="name">Limmy Limbo</p>
+            <p class="position">Associate Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-jurela.png" alt="Jurela Ann Oh">
+            <p class="name">Jurela Ann Oh</p>
+            <p class="position">Creative Director</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-brix.png" alt="Brix Rañeses">
+            <p class="name">Brix Rañeses</p>
+            <p class="position">Managing Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-bianca.png" alt="Bianca Mae Elpedes">
+            <p class="name">Bianca Mae Elpedes</p>
+            <p class="position">Assistant Managing Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-shaine.png" alt="Shaine Harry Mias">
+            <p class="name">Shaine Harry Mias</p>
+            <p class="position">Art & Design Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-kobe.png" alt="Kobe Uy">
+            <p class="name">Kobe Uy</p>
+            <p class="position">Content Development Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-elmer.png" alt="John Elmer Lacson">
+            <p class="name">John Elmer Lacson</p>
+            <p class="position">Customer Support Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-irish.png" alt="Irish Goco">
+            <p class="name">Irish Goco</p>
+            <p class="position">Marketing Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-hazel.png" alt="Hazel Ann Miranda">
+            <p class="name">Hazel Ann Miranda</p>
+            <p class="position">Photo Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-shane.png" alt="Shane Picardal">
+            <p class="name">Shane Picardal</p>
+            <p class="position">Video Editor</p>
+          </div>
+          <div class="portrait-card">
+            <img src="../../assets/images/spu-gaby.png" alt="Gabrielle Ysabel Almirol">
+            <p class="name">Gabrielle Ysabel Almirol</p>
+            <p class="position">Web Development Editor</p>
+          </div>
+        </div>
+
+        <img src="../../assets/images/spu-right-banner.png" class="right-banner" alt="Right Banner">
+        <img src="../../assets/images/spu-left-banner.png" class="left-banner" alt="Left Banner">
+
+        <img src="../../assets/images/spu-right-confetti.png" class="right-confetti" alt="Right Confetti">
+        <img src="../../assets/images/spu-left-confetti.png" class="left-confetti" alt="Left Confetti">
+      </section>
+
+      <!-- Credits Section -->
+      <section class="credits-ad-astra" id="credits">
+        <img 
+          src="../../assets/images/creditslogo-ab.png" 
+          class="creditslogo" 
+          alt="Credits Logo"
+        />
+        <img
+          src="../../assets/images/creditsvendor1-a.png"
+          class="vendor1"
+          alt="Vendor 1"
+        />
+
+        <img
+          src="../../assets/images/creditsvendor2-a.png"
+          class="vendor2"
+          alt="Vendor 2"
+        />
+
+        <div class="card-container">
+          <button class="nav-button left-button" aria-label="Previous">
+            <img
+              src="../../assets/images/side-a/about/side-a-left-btn.svg"
+              alt="Previous"
+              class="nav-button-svg"
+            />
+          </button>
+
+          <button class="nav-button right-button" aria-label="Next">
+            <img
+              src="../../assets/images/side-a/about/side-a-right-btn.svg"
+              alt="Next"
+              class="nav-button-svg"
+            />
+          </button>
+
+          <!-- Card Container -->
+          <div class="credits-card">
+            <h1 class="credits-title">Editorial Team</h1>
+            <div class="credits-description"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-location">
+        <div class="footer-text">
+          <p class="footer-header">Ad Astra</p>
+          <p>9/F The Atrium @ Benilde</p>
+          <p>1140 Arellano Ave cor.,</p>
+          <p>C. Ayala St., Don Pedro St.,</p>
+          <p>Malate, Manila</p>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer-logo">
+        <img
+          src="../../assets/images/shared/logos/side-a-footer-ad-astra-logo.png"
+          alt="Ad Astra Logo"
+        />
+        <p>© Ad Astra: The Benildean Yearbook 2025</p>
+      </div>
+      <div class="footer-socials">
+        <div class="footer-text">
+          <p class="footer-header">Socials</p>
+          <div class="footer-socials-container">
+            <p>/theadastra</p>
+            <a href="https://www.facebook.com/theadastra/">
+              <img
+                src="../../assets/images/shared/icons/side-a-facebook.png"
+                class="footer-social-icons"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+          <div class="footer-socials-container">
+            <p>@theadastra</p>
+            <a href="https://www.instagram.com/theadastra/">
+              <img
+                src="../../assets/images/shared/icons/side-a-instagram.png"
+                class="footer-social-icons"
+                alt="Instagram"
+              />
+            </a>
+            <a href="https://x.com/theAdAstra">
+              <img
+                src="../../assets/images/shared/icons/side-a-x.png"
+                class="footer-social-icons"
+                alt="X"
+              />
+            </a>
+            <a href="https://www.tiktok.com/@theadastra">
+              <img
+                src="../../assets/images/shared/icons/side-a-tiktok.png"
+                class="footer-social-icons"
+                alt="Tiktok"
+              />
+            </a>
+          </div>
+          <div class="footer-socials-container">
+            <p>adastra@benilde.edu.ph</p>
+            <img
+              src="../../assets/images/shared/icons/side-a-mail.png"
+              class="footer-social-icons"
+              alt="Mail"
+              style="height: 12px; align-self: center"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- GSAP Scripts - Add BEFORE your custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Your Custom Scripts -->
+    <script src="../../scripts/side-a/components/navbar.js"></script>
+    <script src="../../scripts/side-a/components/hero.js"></script>
+    <script src="../../scripts/side-a/components/pre-readnow.js"></script>
+    <script src="../../scripts/side-a/components/readnow1.js"></script>
+    <script src="../../scripts/side-a/components/about-aa.js"></script>
+    <script src="../../scripts/side-a/components/prev-embarks.js"></script>
+    <script src="../../scripts/side-a/components/credits.js"></script>
+  </body>
 </html>
