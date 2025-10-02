@@ -21,7 +21,6 @@ function scrollAnimation() {
   const hillsHeight = hills.offsetHeight;
 
   const scrollInSection = scrollY - sectionTop;
-
   // If the bottom of the viewport has reached the bottom of the section
   if (viewportBottom >= sectionBottom) {
     // Stop being fixed — become absolute inside section
