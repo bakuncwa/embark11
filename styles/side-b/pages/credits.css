@@ -23,13 +23,13 @@ html {
 
 /* MAIN CONTAINER & BACKGROUND */
 
-.creditslogo{
-    position: absolute;
-    left: 5%;
-    display: block;
-    top: 5%;
-    width: 150px;
-    height: auto;
+.creditslogo {
+  position: absolute;
+  left: 5%;
+  display: block;
+  top: 5%;
+  width: 150px;
+  height: auto;
 }
 
 .credits-ad-astra {
@@ -38,9 +38,11 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(180deg, #6F1B94 11.63%, #CF3EAD 100%);
-  background-size: 100% 100%;
-  background-attachment: fixed;
+  background-image: url('../../../assets/images/credits-bg-b.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +84,7 @@ html {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.2;
   text-align: center;
-  color: #F3F3F3;
+  color: #f3f3f3;
   margin-bottom: clamp(20px, 4vw, 40px);
   position: relative;
   z-index: 2;
@@ -90,13 +92,13 @@ html {
 
 /* CONTENT SLIDES & DESCRIPTION */
 .credits-description {
-  width: min(876px, 70%); 
+  width: min(876px, 70%);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   line-height: 140%;
   text-align: center;
-  color: #F3F3F3;
+  color: #f3f3f3;
   margin: 2vw;
   position: relative;
   height: 250px;
@@ -146,7 +148,6 @@ html {
   display: inline-block;
   width: 100%;
 }
-
 
 /* NAVIGATION BUTTONS */
 .nav-button-creds {
@@ -477,7 +478,7 @@ html {
     margin-top: 25px;
   }
 
-  .vendor2{
+  .vendor2 {
     top: 10%;
   }
 }
@@ -1062,9 +1063,9 @@ html {
 /* SIDE B DECORATIVE ASSETS */
 .vendors-container {
   position: absolute;
-  inset: 0;                 
-  pointer-events: none;   
-  z-index: 1;      
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* LEFT VENDOR */
@@ -1073,13 +1074,13 @@ html {
   left: clamp(50px, 10vw, 150px);
   top: clamp(25vh, 4.5vw, 100px);
   width: auto;
-  height: clamp(450px, 60vh, 800px); 
+  height: clamp(450px, 60vh, 800px);
   z-index: 1;
   pointer-events: none;
   display: block;
   will-change: transform;
   transform-origin: left bottom;
-  animation: simpleFlicker 0.10s infinite alternate 0.5s;
+  animation: simpleFlicker 0.1s infinite alternate 0.5s;
   /* animation: filterFlicker 1.0s infinite steps(1); */
 }
 
@@ -1101,7 +1102,8 @@ html {
 }
 
 @keyframes simpleFlicker {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   25% {
@@ -1116,13 +1118,17 @@ html {
 }
 
 @keyframes filterFlicker {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1);
   }
-  15%, 55%, 80% {
+  15%,
+  55%,
+  80% {
     filter: brightness(0.8) contrast(1.2);
   }
-  35%, 70% {
+  35%,
+  70% {
     filter: brightness(1.1);
   }
 }
@@ -1134,7 +1140,7 @@ html {
     display: none;
   }
 
-  .vendor1{
+  .vendor1 {
     display: block;
     height: 30vh;
     top: 515px;
@@ -1150,13 +1156,12 @@ html {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-
   .wave {
     bottom: -120px;
     height: 350px;
   }
 
-  .vendor1{
+  .vendor1 {
     display: block;
     height: 30vh;
     top: 690px;
@@ -1373,9 +1378,9 @@ html {
 }
 
 .team-columns {
-  columns: 3;          
-  column-gap: 2em;     
-  text-align: center;  
+  columns: 3;
+  column-gap: 2em;
+  text-align: center;
 }
 
 .team-columns p {
