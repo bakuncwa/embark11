@@ -2,7 +2,6 @@ body {
   background-color: #ffe495 !important;
 }
 
-/* CRITICAL: Override CSS that prevents scrolling */
 html,
 body {
   margin: 0;
@@ -20,7 +19,12 @@ main {
   background-color: #ffe495;
 }
 
-/* Fix hero section - Updated to match new hero.css */
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+}
+
 .hero-page {
   min-height: 150vh;
   height: 150vh;
@@ -28,23 +32,20 @@ main {
   position: relative;
   overflow: visible !important;
   padding-top: 0;
-  z-index: 1; /* Add z-index */
+  z-index: 1;
 }
 
-/* Ensure hero elements stay within hero section */
 .hero-page #hero-hills,
 .hero-page #hero-character1,
 .hero-page #hero-blob1,
 .hero-page #hero-blob2 {
-  z-index: 1 !important; /* Keep hero elements below pre-readnow */
+  z-index: 1 !important; 
 }
 
-/* Character 2 needs higher z-index to appear above hills */
 .hero-page #hero-character2 {
   z-index: 10 !important;
 }
 
-/* Fix pre-readnow to be in document flow */
 .pre-readnow {
   min-height: 100vh;
   height: 100vh;
@@ -52,5 +53,5 @@ main {
   position: relative !important;
   top: auto !important;
   left: auto !important;
-  z-index: 10 !important; /* Higher z-index to appear above hero elements */
+  z-index: 10 !important;
 }

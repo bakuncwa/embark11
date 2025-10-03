@@ -799,6 +799,10 @@
     padding: 15px 20px;
   }
 
+  .dropdown-menu.active {
+    margin-top: 10px;
+  }
+
   .desktop-toggle {
     display: none !important;
   }
@@ -818,7 +822,7 @@
   }
 
   .mobile-toggle .toggle-thumb {
-    top: 4px;
+    top: 5px;
     left: 5px;
     width: 18px;
     height: 18px;
