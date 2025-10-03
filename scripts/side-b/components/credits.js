@@ -156,10 +156,13 @@ const contentDataCreds = [
               <div>
                   <p>Reine Albania</p>
                   <p>Ehra Gail Dizon</p>
-              </div>
-              <div>
                   <p>Irish Goco</p>
                   <p>Maruel Lui</p>
+              </div>
+              <div>
+                  <p>Tommy Mallari</p>
+                  <p>Mary Grace Nilo</p>
+                  <p>Julianne Pajarillo</p>
               </div>
           </div>
         </div>

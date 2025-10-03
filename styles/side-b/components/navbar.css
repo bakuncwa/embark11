@@ -125,7 +125,7 @@
   left: 6px;
   width: 58px;
   height: 32px;
-  background: #F3F3F3;
+  background: #f3f3f3;
   border-radius: 100px;
 }
 
@@ -161,8 +161,8 @@
   top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%);
-  background: #F05F7D;
-  color: #F3F3F3;
+  background: #f05f7d;
+  color: #f3f3f3;
   padding: 8px 16px;
   border-radius: 100px;
   font-family: "Sora", sans-serif;
@@ -183,7 +183,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 6px solid transparent;
-  border-bottom-color: #F05F7D;
+  border-bottom-color: #f05f7d;
 }
 
 .toggle-switch-wrapper:hover .toggle-tooltip {
@@ -543,7 +543,7 @@
 
   .mobile-toggle .toggle-thumb {
     top: 6px;
-    left: 8px;
+    left: 3px;
     width: 24px;
     height: 24px;
     background: #f69b6c;
@@ -798,6 +798,10 @@
     padding: 15px 20px;
   }
 
+  .dropdown-menu.active {
+    margin-top: 10px;
+  }
+
   .desktop-toggle {
     display: none !important;
   }
@@ -817,8 +821,8 @@
   }
 
   .mobile-toggle .toggle-thumb {
-    top: 4px;
-    left: 5px;
+    top: 5px;
+    left: 4px;
     width: 18px;
     height: 18px;
     background: #f69b6c;
