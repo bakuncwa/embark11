@@ -1,3 +1,5 @@
+[![Embark11 Cover](https://github.com/bakuncwa/embark11/blob/main/assets/images/shared/backgrounds/E11-readme-cover.jpg)](https://theadastra.org/embark11/pages/side-a/index.html)
+
 # EMBARK Volume 11
 
 Hi E11 Devs! Here's our project setup and file structure for our references and guide with the files and directories.
