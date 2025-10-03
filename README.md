@@ -19,7 +19,7 @@ Some directories are still subject to change and samples/templates only. You may
   - Focus: `pages/side-b/` and related dark theme assets
   - Dark theme styling, Side B interactions
 
-### 📌 Web Delegations 📌 | WEBSITE RELEASE DATE: OCTOBER 3, 2025
+### 📌 Web Delegations 📌 | **WEBSITE RELEASE DATE: OCTOBER 3, 2025**
 - **Teaser Page**: Hazel
     - Initial Checking: September 22 | Target Release Date: September 24 
 - **Navbar + Switch Function**: Luds 
@@ -32,6 +32,7 @@ Some directories are still subject to change and samples/templates only. You may
 - **SPU + EB**: Kurt
 - **Editorial Team**: Gabby
 - **Footer**: Hazel
+- **Sides A & B Integration**: Luds & Gabby
 
 ### Shared Responsibilities
 - Toggle switch functionality
@@ -39,7 +40,7 @@ Some directories are still subject to change and samples/templates only. You may
 - Base CSS variables and utilities
 - Common JS utilities
 
-## File Structure Guide (as of Sept. 29)
+## File Structure Guide (as of Oct. 4)
 
 ```
 embark11/
@@ -48,7 +49,7 @@ C:.
 │   .gitignore
 │   README.md
 │   teaser.html
-│
+│   
 ├───assets
 │   └───images
 │       │   credits-bars2-a.png
@@ -132,6 +133,8 @@ C:.
 │       │
 │       ├───shared
 │       │   ├───backgrounds
+│       │   │       E11-readme-cover.jpg
+│       │   │
 │       │   ├───icons
 │       │   │   │   side-a-facebook.png
 │       │   │   │   side-a-instagram.png
