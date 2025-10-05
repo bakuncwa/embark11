@@ -261,13 +261,39 @@
 .dropdown-content {
   position: absolute;
   width: 400px;
-  height: auto;
+  max-height: calc(100vh - 120px);
   background: rgba(240, 95, 125, 0.95);
   border-radius: 20px;
   top: 95px;
   right: 30px;
   padding: 30px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+  background: rgba(255, 245, 219, 0.1);
+  border-radius: 10px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  background: #ffe495;
+  border-radius: 10px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #561487;
+}
+
+/* Firefox scrollbar */
+.dropdown-content {
+  scrollbar-width: thin;
+  scrollbar-color: #f05f7d rgba(255, 245, 219, 0.1);
 }
 
 .dropdown-header {
