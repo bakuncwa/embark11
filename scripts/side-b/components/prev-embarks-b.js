@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.fromTo(
         rightSide,
         {
-          y: -200, 
+          y: -150, 
         },
         {
           y: 0, 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: section,
             start: "top bottom", 
             end: "bottom top", 
-            scrub: 1, 
+            scrub: 3, 
           },
         }
       );
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.fromTo(
         leftSide,
         {
-          y: 200, 
+          y: 150, 
         },
         {
           y: 0,
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: section,
             start: "top bottom",
             end: "bottom top",
-            scrub: 1,
+            scrub: 3,
           },
         }
       );
