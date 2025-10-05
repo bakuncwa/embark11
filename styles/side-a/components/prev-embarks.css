@@ -6,6 +6,39 @@
 }
 
 /* ---------- section --------- */
+/* Desktop gradient background */
+.prev-desktop-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #f4f1b8 0%, #fff5db 24.04%);
+  z-index: 1;
+}
+
+/* Mobile background image */
+.prev-mobile-background-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .prev-desktop-bg {
+    display: none;
+  }
+  
+  .prev-mobile-background-image {
+    display: block;
+  }
+}
+
 .volumes-section {
   min-height: 65vh;
   display: flex;
@@ -13,7 +46,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #f4f1b8 0%, #fff5db 24.04%);
+  /* background: linear-gradient(180deg, #f4f1b8 0%, #fff5db 24.04%); */
   position: relative;
   overflow: visible;
   text-align: center;
@@ -28,6 +61,7 @@
   margin-bottom: 1.75rem;
   -webkit-font-smoothing: antialiased;
   font-family: "Sora", sans-serif;
+  z-index: 1;
 }
 
 /* ---------- cards grid ------ */
@@ -183,11 +217,11 @@
   .volumes-section {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-image: url("/assets/images/prev-mobile-bg.png");
+    /* background-image: url("/assets/images/prev-mobile-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: transparent; */
   }
   .cards-container {
     grid-template-columns: 1fr;
