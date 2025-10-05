@@ -7,6 +7,17 @@
 }
 
 /* ---------- SPU SECTION ---------- */
+/* Background image */
+.spu-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .spu-section-b {
   min-height: 150vh;
   padding: 4rem 2rem;
@@ -14,15 +25,17 @@
   flex-direction: column;
   align-items: center;
   font-family: "Sora", sans-serif;
-
   align-items: center;
   justify-content: center;
   position: relative;
-
   overflow: hidden;
+  /* background-image line removed */
+}
 
-  /* Gradient background */
-  background-image: url("/assets/images/spu-bg-b.png");
+/* Add this */
+.spu-section-b > *:not(.spu-background-image) {
+  position: relative;
+  z-index: 1;
 }
 
 .spu-heading-b {
@@ -214,11 +227,11 @@
     margin-bottom: 1.5rem;
   }
 
-  .spu-section-b {
-    /* background: linear-gradient(to bottom, #FFF5DB 40%, #ff61c8af 100%); */
+  /* .spu-section-b {
+    background: linear-gradient(to bottom, #FFF5DB 40%, #ff61c8af 100%);
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
 
   .right-confetti,
   .left-confetti {
