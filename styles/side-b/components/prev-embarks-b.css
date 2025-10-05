@@ -6,6 +6,38 @@
 }
 
 /* ---------- section --------- */
+/* Background images */
+.prevb-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.prevb-mobile-background-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+@media (max-width: 480px) {
+  .prevb-background-image {
+    display: none;
+  }
+  
+  .prevb-mobile-background-image {
+    display: block;
+  }
+}
+
 .volumes-section-b {
   min-height: 65vh;
   display: flex;
@@ -13,7 +45,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/assets/images/prevb-background.png");
+  /* background-image: url("/assets/images/prevb-background.png"); */
   position: relative;
   overflow: visible;
   text-align: center;
@@ -183,11 +215,11 @@
   .volumes-section-b {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-image: url("/assets/images/prevb-mobile-bg.png");
+    /* background-image: url("/assets/images/prevb-mobile-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: transparent; */
   }
   .cards-container {
     grid-template-columns: 1fr;
